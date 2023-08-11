@@ -1,0 +1,284 @@
+version 3
+run General-0-20230810-08:42:47-5712
+attr configname General
+attr datetime 20230810-08:42:47
+attr datetimef 20230810-084247
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network fogsim1.Network
+attr processid 5712
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config debug-on-errors true
+config network fogsim1.Network
+
+par Network.pc1.out.channel typename "\"ned.DelayChannel\""
+par Network.pc1.out.channel disabled false
+attr mutable ""
+par Network.pc1.out.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.fogNode1.out1.channel typename "\"ned.DelayChannel\""
+par Network.fogNode1.out1.channel disabled false
+attr mutable ""
+par Network.fogNode1.out1.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.pc2.out.channel typename "\"ned.DelayChannel\""
+par Network.pc2.out.channel disabled false
+attr mutable ""
+par Network.pc2.out.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.fogNode1.out2.channel typename "\"ned.DelayChannel\""
+par Network.fogNode1.out2.channel disabled false
+attr mutable ""
+par Network.fogNode1.out2.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.Server.out1.channel typename "\"ned.DelayChannel\""
+par Network.Server.out1.channel disabled false
+attr mutable ""
+par Network.Server.out1.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.fogNode1.out3.channel typename "\"ned.DelayChannel\""
+par Network.fogNode1.out3.channel disabled false
+attr mutable ""
+par Network.fogNode1.out3.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.fogNode2.out4.channel typename "\"ned.DelayChannel\""
+par Network.fogNode2.out4.channel disabled false
+attr mutable ""
+par Network.fogNode2.out4.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.fogNode1.out4.channel typename "\"ned.DelayChannel\""
+par Network.fogNode1.out4.channel disabled false
+attr mutable ""
+par Network.fogNode1.out4.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.fogNode1.out5.channel typename "\"ned.DelayChannel\""
+par Network.fogNode1.out5.channel disabled false
+attr mutable ""
+par Network.fogNode1.out5.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.pc3.out.channel typename "\"ned.DelayChannel\""
+par Network.pc3.out.channel disabled false
+attr mutable ""
+par Network.pc3.out.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.fogNode2.out1.channel typename "\"ned.DelayChannel\""
+par Network.fogNode2.out1.channel disabled false
+attr mutable ""
+par Network.fogNode2.out1.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.pc4.out.channel typename "\"ned.DelayChannel\""
+par Network.pc4.out.channel disabled false
+attr mutable ""
+par Network.pc4.out.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.fogNode2.out2.channel typename "\"ned.DelayChannel\""
+par Network.fogNode2.out2.channel disabled false
+attr mutable ""
+par Network.fogNode2.out2.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.Server.out2.channel typename "\"ned.DelayChannel\""
+par Network.Server.out2.channel disabled false
+attr mutable ""
+par Network.Server.out2.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.fogNode2.out3.channel typename "\"ned.DelayChannel\""
+par Network.fogNode2.out3.channel disabled false
+attr mutable ""
+par Network.fogNode2.out3.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.fogNode3.out4.channel typename "\"ned.DelayChannel\""
+par Network.fogNode3.out4.channel disabled false
+attr mutable ""
+par Network.fogNode3.out4.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.fogNode2.out5.channel typename "\"ned.DelayChannel\""
+par Network.fogNode2.out5.channel disabled false
+attr mutable ""
+par Network.fogNode2.out5.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.pc5.out.channel typename "\"ned.DelayChannel\""
+par Network.pc5.out.channel disabled false
+attr mutable ""
+par Network.pc5.out.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.fogNode3.out1.channel typename "\"ned.DelayChannel\""
+par Network.fogNode3.out1.channel disabled false
+attr mutable ""
+par Network.fogNode3.out1.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.pc6.out.channel typename "\"ned.DelayChannel\""
+par Network.pc6.out.channel disabled false
+attr mutable ""
+par Network.pc6.out.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.fogNode3.out2.channel typename "\"ned.DelayChannel\""
+par Network.fogNode3.out2.channel disabled false
+attr mutable ""
+par Network.fogNode3.out2.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.Server.out3.channel typename "\"ned.DelayChannel\""
+par Network.Server.out3.channel disabled false
+attr mutable ""
+par Network.Server.out3.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.fogNode3.out3.channel typename "\"ned.DelayChannel\""
+par Network.fogNode3.out3.channel disabled false
+attr mutable ""
+par Network.fogNode3.out3.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.fogNode4.out4.channel typename "\"ned.DelayChannel\""
+par Network.fogNode4.out4.channel disabled false
+attr mutable ""
+par Network.fogNode4.out4.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.fogNode3.out5.channel typename "\"ned.DelayChannel\""
+par Network.fogNode3.out5.channel disabled false
+attr mutable ""
+par Network.fogNode3.out5.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.pc7.out.channel typename "\"ned.DelayChannel\""
+par Network.pc7.out.channel disabled false
+attr mutable ""
+par Network.pc7.out.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.fogNode4.out1.channel typename "\"ned.DelayChannel\""
+par Network.fogNode4.out1.channel disabled false
+attr mutable ""
+par Network.fogNode4.out1.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.pc8.out.channel typename "\"ned.DelayChannel\""
+par Network.pc8.out.channel disabled false
+attr mutable ""
+par Network.pc8.out.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.fogNode4.out2.channel typename "\"ned.DelayChannel\""
+par Network.fogNode4.out2.channel disabled false
+attr mutable ""
+par Network.fogNode4.out2.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.Server.out4.channel typename "\"ned.DelayChannel\""
+par Network.Server.out4.channel disabled false
+attr mutable ""
+par Network.Server.out4.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.fogNode4.out3.channel typename "\"ned.DelayChannel\""
+par Network.fogNode4.out3.channel disabled false
+attr mutable ""
+par Network.fogNode4.out3.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.fogNode5.out4.channel typename "\"ned.DelayChannel\""
+par Network.fogNode5.out4.channel disabled false
+attr mutable ""
+par Network.fogNode5.out4.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.fogNode4.out5.channel typename "\"ned.DelayChannel\""
+par Network.fogNode4.out5.channel disabled false
+attr mutable ""
+par Network.fogNode4.out5.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.pc9.out.channel typename "\"ned.DelayChannel\""
+par Network.pc9.out.channel disabled false
+attr mutable ""
+par Network.pc9.out.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.fogNode5.out1.channel typename "\"ned.DelayChannel\""
+par Network.fogNode5.out1.channel disabled false
+attr mutable ""
+par Network.fogNode5.out1.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.pc10.out.channel typename "\"ned.DelayChannel\""
+par Network.pc10.out.channel disabled false
+attr mutable ""
+par Network.pc10.out.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.fogNode5.out2.channel typename "\"ned.DelayChannel\""
+par Network.fogNode5.out2.channel disabled false
+attr mutable ""
+par Network.fogNode5.out2.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.Server.out5.channel typename "\"ned.DelayChannel\""
+par Network.Server.out5.channel disabled false
+attr mutable ""
+par Network.Server.out5.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.fogNode5.out3.channel typename "\"ned.DelayChannel\""
+par Network.fogNode5.out3.channel disabled false
+attr mutable ""
+par Network.fogNode5.out3.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.fogNode5.out5.channel typename "\"ned.DelayChannel\""
+par Network.fogNode5.out5.channel disabled false
+attr mutable ""
+par Network.fogNode5.out5.channel delay 0.001s
+attr mutable ""
+attr unit s
+par Network.pc1 typename "\"fogsim1.HostNode\""
+par Network.pc2 typename "\"fogsim1.HostNode\""
+par Network.pc3 typename "\"fogsim1.HostNode\""
+par Network.pc4 typename "\"fogsim1.HostNode\""
+par Network.pc5 typename "\"fogsim1.HostNode\""
+par Network.pc6 typename "\"fogsim1.HostNode\""
+par Network.pc7 typename "\"fogsim1.HostNode\""
+par Network.pc8 typename "\"fogsim1.HostNode\""
+par Network.pc9 typename "\"fogsim1.HostNode\""
+par Network.pc10 typename "\"fogsim1.HostNode\""
+par Network.fogNode1.queue typename "\"fogsim1.MyQueue\""
+par Network.fogNode1 typename "\"fogsim1.FogNode\""
+par Network.fogNode2.queue typename "\"fogsim1.MyQueue\""
+par Network.fogNode2 typename "\"fogsim1.FogNode\""
+par Network.fogNode3.queue typename "\"fogsim1.MyQueue\""
+par Network.fogNode3 typename "\"fogsim1.FogNode\""
+par Network.fogNode4.queue typename "\"fogsim1.MyQueue\""
+par Network.fogNode4 typename "\"fogsim1.FogNode\""
+par Network.fogNode5.queue typename "\"fogsim1.MyQueue\""
+par Network.fogNode5 typename "\"fogsim1.FogNode\""
+par Network.Server typename "\"fogsim1.ServerNode\""
+par Network typename "\"fogsim1.Network\""
+

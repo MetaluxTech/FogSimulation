@@ -1,0 +1,1593 @@
+E # 0 t 0 m 1 ce -1 msg -1
+SB v 1030 rid General-0-20230808-17:06:18-6432 b 1000
+KF p -1 c "" s ""
+MC id 1 c cModule t fogsim1.Network n Network cm 1
+MS id 1 d bgb=866,571;bgl=2
+MC id 2 c HostNode t fogsim1.HostNode pid 1 n pc1
+GC m 2 g 0 n in o 0
+GC m 2 g 3 n out o 1
+MS id 2 d p=33,406
+MC id 3 c HostNode t fogsim1.HostNode pid 1 n pc2
+GC m 3 g 0 n in o 0
+GC m 3 g 3 n out o 1
+MS id 3 d p=111,406
+MC id 4 c HostNode t fogsim1.HostNode pid 1 n pc3
+GC m 4 g 0 n in o 0
+GC m 4 g 3 n out o 1
+MS id 4 d p=194,406
+MC id 5 c HostNode t fogsim1.HostNode pid 1 n pc4
+GC m 5 g 0 n in o 0
+GC m 5 g 3 n out o 1
+MS id 5 d p=278,406
+MC id 6 c HostNode t fogsim1.HostNode pid 1 n pc5
+GC m 6 g 0 n in o 0
+GC m 6 g 3 n out o 1
+MS id 6 d p=357,406
+MC id 7 c HostNode t fogsim1.HostNode pid 1 n pc6
+GC m 7 g 0 n in o 0
+GC m 7 g 3 n out o 1
+MS id 7 d p=442,406
+MC id 8 c HostNode t fogsim1.HostNode pid 1 n pc7
+GC m 8 g 0 n in o 0
+GC m 8 g 3 n out o 1
+MS id 8 d p=543,406
+MC id 9 c HostNode t fogsim1.HostNode pid 1 n pc8
+GC m 9 g 0 n in o 0
+GC m 9 g 3 n out o 1
+MS id 9 d p=642,406
+MC id 10 c HostNode t fogsim1.HostNode pid 1 n pc9
+GC m 10 g 0 n in o 0
+GC m 10 g 3 n out o 1
+MS id 10 d p=730,406
+MC id 11 c HostNode t fogsim1.HostNode pid 1 n pc10
+GC m 11 g 0 n in o 0
+GC m 11 g 3 n out o 1
+MS id 11 d p=807,406
+MC id 12 c cModule t fogsim1.FogNode pid 1 n fogNode1 cm 1
+GC m 12 g 0 n in1 o 0
+GC m 12 g 2 n in2 o 0
+GC m 12 g 4 n in3 o 0
+GC m 12 g 6 n in4 o 0
+GC m 12 g 8 n in5 o 0
+GC m 12 g 11 n out1 o 1
+GC m 12 g 13 n out2 o 1
+GC m 12 g 15 n out3 o 1
+GC m 12 g 17 n out4 o 1
+GC m 12 g 19 n out5 o 1
+MS id 12 d p=81,288
+MC id 13 c cModule t fogsim1.FogNode pid 1 n fogNode2 cm 1
+GC m 13 g 0 n in1 o 0
+GC m 13 g 2 n in2 o 0
+GC m 13 g 4 n in3 o 0
+GC m 13 g 6 n in4 o 0
+GC m 13 g 8 n in5 o 0
+GC m 13 g 11 n out1 o 1
+GC m 13 g 13 n out2 o 1
+GC m 13 g 15 n out3 o 1
+GC m 13 g 17 n out4 o 1
+GC m 13 g 19 n out5 o 1
+MS id 13 d p=233,288
+MC id 14 c cModule t fogsim1.FogNode pid 1 n fogNode3 cm 1
+GC m 14 g 0 n in1 o 0
+GC m 14 g 2 n in2 o 0
+GC m 14 g 4 n in3 o 0
+GC m 14 g 6 n in4 o 0
+GC m 14 g 8 n in5 o 0
+GC m 14 g 11 n out1 o 1
+GC m 14 g 13 n out2 o 1
+GC m 14 g 15 n out3 o 1
+GC m 14 g 17 n out4 o 1
+GC m 14 g 19 n out5 o 1
+MS id 14 d p=414,288
+MC id 15 c cModule t fogsim1.FogNode pid 1 n fogNode4 cm 1
+GC m 15 g 0 n in1 o 0
+GC m 15 g 2 n in2 o 0
+GC m 15 g 4 n in3 o 0
+GC m 15 g 6 n in4 o 0
+GC m 15 g 8 n in5 o 0
+GC m 15 g 11 n out1 o 1
+GC m 15 g 13 n out2 o 1
+GC m 15 g 15 n out3 o 1
+GC m 15 g 17 n out4 o 1
+GC m 15 g 19 n out5 o 1
+MS id 15 d p=594,288
+MC id 16 c cModule t fogsim1.FogNode pid 1 n fogNode5 cm 1
+GC m 16 g 0 n in1 o 0
+GC m 16 g 2 n in2 o 0
+GC m 16 g 4 n in3 o 0
+GC m 16 g 6 n in4 o 0
+GC m 16 g 8 n in5 o 0
+GC m 16 g 11 n out1 o 1
+GC m 16 g 13 n out2 o 1
+GC m 16 g 15 n out3 o 1
+GC m 16 g 17 n out4 o 1
+GC m 16 g 19 n out5 o 1
+MS id 16 d p=778,288
+MC id 17 c ServerNode t fogsim1.ServerNode pid 1 n Server
+GC m 17 g 0 n in1 o 0
+GC m 17 g 2 n in2 o 0
+GC m 17 g 4 n in3 o 0
+GC m 17 g 6 n in4 o 0
+GC m 17 g 8 n in5 o 0
+GC m 17 g 11 n out1 o 1
+GC m 17 g 13 n out2 o 1
+GC m 17 g 15 n out3 o 1
+GC m 17 g 17 n out4 o 1
+GC m 17 g 19 n out5 o 1
+MS id 17 d p=414,33
+CC sm 2 sg 3 dm 12 dg 0
+CS sm 2 sg 3 d ""
+CC sm 12 sg 11 dm 2 dg 0
+CS sm 12 sg 11 d ""
+CC sm 3 sg 3 dm 12 dg 2
+CS sm 3 sg 3 d ""
+CC sm 12 sg 13 dm 3 dg 0
+CS sm 12 sg 13 d ""
+CC sm 17 sg 11 dm 12 dg 4
+CS sm 17 sg 11 d ""
+CC sm 12 sg 15 dm 17 dg 0
+CS sm 12 sg 15 d ""
+CC sm 13 sg 17 dm 12 dg 6
+CS sm 13 sg 17 d ""
+CC sm 12 sg 17 dm 13 dg 6
+CS sm 12 sg 17 d ""
+CC sm 12 sg 19 dm 12 dg 8
+CS sm 12 sg 19 d ""
+CC sm 4 sg 3 dm 13 dg 0
+CS sm 4 sg 3 d ""
+CC sm 13 sg 11 dm 4 dg 0
+CS sm 13 sg 11 d ""
+CC sm 5 sg 3 dm 13 dg 2
+CS sm 5 sg 3 d ""
+CC sm 13 sg 13 dm 5 dg 0
+CS sm 13 sg 13 d ""
+CC sm 17 sg 13 dm 13 dg 4
+CS sm 17 sg 13 d ""
+CC sm 13 sg 15 dm 17 dg 2
+CS sm 13 sg 15 d ""
+CC sm 14 sg 17 dm 13 dg 8
+CS sm 14 sg 17 d ""
+CC sm 13 sg 19 dm 14 dg 6
+CS sm 13 sg 19 d ""
+CC sm 6 sg 3 dm 14 dg 0
+CS sm 6 sg 3 d ""
+CC sm 14 sg 11 dm 6 dg 0
+CS sm 14 sg 11 d ""
+CC sm 7 sg 3 dm 14 dg 2
+CS sm 7 sg 3 d ""
+CC sm 14 sg 13 dm 7 dg 0
+CS sm 14 sg 13 d ""
+CC sm 17 sg 15 dm 14 dg 4
+CS sm 17 sg 15 d ""
+CC sm 14 sg 15 dm 17 dg 4
+CS sm 14 sg 15 d ""
+CC sm 15 sg 17 dm 14 dg 8
+CS sm 15 sg 17 d ""
+CC sm 14 sg 19 dm 15 dg 6
+CS sm 14 sg 19 d ""
+CC sm 8 sg 3 dm 15 dg 0
+CS sm 8 sg 3 d ""
+CC sm 15 sg 11 dm 8 dg 0
+CS sm 15 sg 11 d ""
+CC sm 9 sg 3 dm 15 dg 2
+CS sm 9 sg 3 d ""
+CC sm 15 sg 13 dm 9 dg 0
+CS sm 15 sg 13 d ""
+CC sm 17 sg 17 dm 15 dg 4
+CS sm 17 sg 17 d ""
+CC sm 15 sg 15 dm 17 dg 6
+CS sm 15 sg 15 d ""
+CC sm 16 sg 17 dm 15 dg 8
+CS sm 16 sg 17 d ""
+CC sm 15 sg 19 dm 16 dg 6
+CS sm 15 sg 19 d ""
+CC sm 10 sg 3 dm 16 dg 0
+CS sm 10 sg 3 d ""
+CC sm 16 sg 11 dm 10 dg 0
+CS sm 16 sg 11 d ""
+CC sm 11 sg 3 dm 16 dg 2
+CS sm 11 sg 3 d ""
+CC sm 16 sg 13 dm 11 dg 0
+CS sm 16 sg 13 d ""
+CC sm 17 sg 19 dm 16 dg 4
+CS sm 17 sg 19 d ""
+CC sm 16 sg 15 dm 17 dg 8
+CS sm 16 sg 15 d ""
+CC sm 16 sg 19 dm 16 dg 8
+CS sm 16 sg 19 d ""
+MC id 18 c MyQueue t fogsim1.MyQueue pid 12 n queue
+GC m 18 g 0 n in1 o 0
+GC m 18 g 2 n in2 o 0
+GC m 18 g 4 n in3 o 0
+GC m 18 g 6 n in4 o 0
+GC m 18 g 8 n in5 o 0
+GC m 18 g 11 n out1 o 1
+GC m 18 g 13 n out2 o 1
+GC m 18 g 15 n out3 o 1
+GC m 18 g 17 n out4 o 1
+GC m 18 g 19 n out5 o 1
+MS id 18 d ""
+CC sm 12 sg 0 dm 18 dg 0
+CC sm 12 sg 2 dm 18 dg 2
+CC sm 12 sg 4 dm 18 dg 4
+CC sm 12 sg 6 dm 18 dg 6
+CC sm 12 sg 8 dm 18 dg 8
+CC sm 18 sg 11 dm 12 dg 11
+CC sm 18 sg 13 dm 12 dg 13
+CC sm 18 sg 15 dm 12 dg 15
+CC sm 18 sg 17 dm 12 dg 17
+CC sm 18 sg 19 dm 12 dg 19
+MC id 19 c MyQueue t fogsim1.MyQueue pid 13 n queue
+GC m 19 g 0 n in1 o 0
+GC m 19 g 2 n in2 o 0
+GC m 19 g 4 n in3 o 0
+GC m 19 g 6 n in4 o 0
+GC m 19 g 8 n in5 o 0
+GC m 19 g 11 n out1 o 1
+GC m 19 g 13 n out2 o 1
+GC m 19 g 15 n out3 o 1
+GC m 19 g 17 n out4 o 1
+GC m 19 g 19 n out5 o 1
+MS id 19 d ""
+CC sm 13 sg 0 dm 19 dg 0
+CC sm 13 sg 2 dm 19 dg 2
+CC sm 13 sg 4 dm 19 dg 4
+CC sm 13 sg 6 dm 19 dg 6
+CC sm 13 sg 8 dm 19 dg 8
+CC sm 19 sg 11 dm 13 dg 11
+CC sm 19 sg 13 dm 13 dg 13
+CC sm 19 sg 15 dm 13 dg 15
+CC sm 19 sg 17 dm 13 dg 17
+CC sm 19 sg 19 dm 13 dg 19
+MC id 20 c MyQueue t fogsim1.MyQueue pid 14 n queue
+GC m 20 g 0 n in1 o 0
+GC m 20 g 2 n in2 o 0
+GC m 20 g 4 n in3 o 0
+GC m 20 g 6 n in4 o 0
+GC m 20 g 8 n in5 o 0
+GC m 20 g 11 n out1 o 1
+GC m 20 g 13 n out2 o 1
+GC m 20 g 15 n out3 o 1
+GC m 20 g 17 n out4 o 1
+GC m 20 g 19 n out5 o 1
+MS id 20 d ""
+CC sm 14 sg 0 dm 20 dg 0
+CC sm 14 sg 2 dm 20 dg 2
+CC sm 14 sg 4 dm 20 dg 4
+CC sm 14 sg 6 dm 20 dg 6
+CC sm 14 sg 8 dm 20 dg 8
+CC sm 20 sg 11 dm 14 dg 11
+CC sm 20 sg 13 dm 14 dg 13
+CC sm 20 sg 15 dm 14 dg 15
+CC sm 20 sg 17 dm 14 dg 17
+CC sm 20 sg 19 dm 14 dg 19
+MC id 21 c MyQueue t fogsim1.MyQueue pid 15 n queue
+GC m 21 g 0 n in1 o 0
+GC m 21 g 2 n in2 o 0
+GC m 21 g 4 n in3 o 0
+GC m 21 g 6 n in4 o 0
+GC m 21 g 8 n in5 o 0
+GC m 21 g 11 n out1 o 1
+GC m 21 g 13 n out2 o 1
+GC m 21 g 15 n out3 o 1
+GC m 21 g 17 n out4 o 1
+GC m 21 g 19 n out5 o 1
+MS id 21 d ""
+CC sm 15 sg 0 dm 21 dg 0
+CC sm 15 sg 2 dm 21 dg 2
+CC sm 15 sg 4 dm 21 dg 4
+CC sm 15 sg 6 dm 21 dg 6
+CC sm 15 sg 8 dm 21 dg 8
+CC sm 21 sg 11 dm 15 dg 11
+CC sm 21 sg 13 dm 15 dg 13
+CC sm 21 sg 15 dm 15 dg 15
+CC sm 21 sg 17 dm 15 dg 17
+CC sm 21 sg 19 dm 15 dg 19
+MC id 22 c MyQueue t fogsim1.MyQueue pid 16 n queue
+GC m 22 g 0 n in1 o 0
+GC m 22 g 2 n in2 o 0
+GC m 22 g 4 n in3 o 0
+GC m 22 g 6 n in4 o 0
+GC m 22 g 8 n in5 o 0
+GC m 22 g 11 n out1 o 1
+GC m 22 g 13 n out2 o 1
+GC m 22 g 15 n out3 o 1
+GC m 22 g 17 n out4 o 1
+GC m 22 g 19 n out5 o 1
+MS id 22 d ""
+CC sm 16 sg 0 dm 22 dg 0
+CC sm 16 sg 2 dm 22 dg 2
+CC sm 16 sg 4 dm 22 dg 4
+CC sm 16 sg 6 dm 22 dg 6
+CC sm 16 sg 8 dm 22 dg 8
+CC sm 22 sg 11 dm 16 dg 11
+CC sm 22 sg 13 dm 16 dg 13
+CC sm 22 sg 15 dm 16 dg 15
+CC sm 22 sg 17 dm 16 dg 17
+CC sm 22 sg 19 dm 16 dg 19
+MB sm 1 tm 2 m initialize(0)
+CM id 0 tid 0 eid 0 etid 0 c cMessage n "encrypted data" pe -1
+BS id 0 tid 0 eid 0 etid 0 c cMessage n "encrypted data" pe 0
+ES t 0.010097627004
+ME
+MB sm 1 tm 3 m initialize(0)
+CM id 1 tid 1 eid 1 etid 1 c cMessage n "encrypted data" pe -1
+BS id 1 tid 1 eid 1 etid 1 c cMessage n "encrypted data" pe 0
+ES t 0.010185689232
+ME
+MB sm 1 tm 4 m initialize(0)
+CM id 2 tid 2 eid 2 etid 2 c cMessage n "encrypted data" pe -1
+BS id 2 tid 2 eid 2 etid 2 c cMessage n "encrypted data" pe 0
+ES t 0.010430378729
+ME
+MB sm 1 tm 5 m initialize(0)
+CM id 3 tid 3 eid 3 etid 3 c cMessage n "encrypted data" pe -1
+BS id 3 tid 3 eid 3 etid 3 c cMessage n "encrypted data" pe 0
+ES t 0.010688531488
+ME
+MB sm 1 tm 6 m initialize(0)
+CM id 4 tid 4 eid 4 etid 4 c cMessage n "encrypted data" pe -1
+BS id 4 tid 4 eid 4 etid 4 c cMessage n "encrypted data" pe 0
+ES t 0.01020552674
+ME
+MB sm 1 tm 7 m initialize(0)
+CM id 5 tid 5 eid 5 etid 5 c cMessage n "encrypted data" pe -1
+BS id 5 tid 5 eid 5 etid 5 c cMessage n "encrypted data" pe 0
+ES t 0.010715891239
+ME
+MB sm 1 tm 8 m initialize(0)
+CM id 6 tid 6 eid 6 etid 6 c cMessage n "encrypted data" pe -1
+BS id 6 tid 6 eid 6 etid 6 c cMessage n "encrypted data" pe 0
+ES t 0.010089766354
+ME
+MB sm 1 tm 9 m initialize(0)
+CM id 7 tid 7 eid 7 etid 7 c cMessage n "encrypted data" pe -1
+BS id 7 tid 7 eid 7 etid 7 c cMessage n "encrypted data" pe 0
+ES t 0.010694503474
+ME
+MB sm 1 tm 10 m initialize(0)
+CM id 8 tid 8 eid 8 etid 8 c cMessage n "encrypted data" pe -1
+BS id 8 tid 8 eid 8 etid 8 c cMessage n "encrypted data" pe 0
+ES t 0.009847309593
+ME
+MB sm 1 tm 11 m initialize(0)
+CM id 9 tid 9 eid 9 etid 9 c cMessage n "encrypted data" pe -1
+BS id 9 tid 9 eid 9 etid 9 c cMessage n "encrypted data" pe 0
+ES t 0.010247127392
+ME
+MB sm 1 tm 12 m initialize(0)
+ME
+MB sm 1 tm 18 m initialize(0)
+ME
+MB sm 1 tm 13 m initialize(0)
+ME
+MB sm 1 tm 19 m initialize(0)
+ME
+MB sm 1 tm 14 m initialize(0)
+ME
+MB sm 1 tm 20 m initialize(0)
+ME
+MB sm 1 tm 15 m initialize(0)
+ME
+MB sm 1 tm 21 m initialize(0)
+ME
+MB sm 1 tm 16 m initialize(0)
+ME
+MB sm 1 tm 22 m initialize(0)
+ME
+MB sm 1 tm 17 m initialize(0)
+ME
+
+E # 1 t 0.009847309593 m 10 ce 0 msg 8
+BS id 8 tid 8 eid 8 etid 8 c cMessage n "encrypted data" pe 1
+CL id 8 tid 8 eid 8 etid 8 c cMessage n "encrypted data" pe 1 cid 10
+SH sm 10 sg 3 pd 0.001
+SH sm 16 sg 0
+ES t 0.010847309593
+CM id 11 tid 11 eid 11 etid 11 c cMessage n "encrypted data" pe -1
+BS id 11 tid 11 eid 11 etid 11 c cMessage n "encrypted data" pe 1
+ES t 0.020139097823
+- Node Name: pc9 Message: encrypted data Sender: pc9 Receiver: queue Arrival Gate: in1
+
+E # 2 t 0.010089766354 m 8 ce 0 msg 6
+BS id 6 tid 6 eid 6 etid 6 c cMessage n "encrypted data" pe 2
+CL id 6 tid 6 eid 6 etid 6 c cMessage n "encrypted data" pe 2 cid 12
+SH sm 8 sg 3 pd 0.001
+SH sm 15 sg 0
+ES t 0.011089766354
+CM id 13 tid 13 eid 13 etid 13 c cMessage n "encrypted data" pe -1
+BS id 13 tid 13 eid 13 etid 13 c cMessage n "encrypted data" pe 2
+ES t 0.01985852977
+- Node Name: pc7 Message: encrypted data Sender: pc7 Receiver: queue Arrival Gate: in1
+
+E # 3 t 0.010097627004 m 2 ce 0 msg 0
+BS id 0 tid 0 eid 0 etid 0 c cMessage n "encrypted data" pe 3
+CL id 0 tid 0 eid 0 etid 0 c cMessage n "encrypted data" pe 3 cid 14
+SH sm 2 sg 3 pd 0.001
+SH sm 12 sg 0
+ES t 0.011097627004
+CM id 15 tid 15 eid 15 etid 15 c cMessage n "encrypted data" pe -1
+BS id 15 tid 15 eid 15 etid 15 c cMessage n "encrypted data" pe 3
+ES t 0.019972801423
+- Node Name: pc1 Message: encrypted data Sender: pc1 Receiver: queue Arrival Gate: in1
+
+E # 4 t 0.010185689232 m 3 ce 0 msg 1
+BS id 1 tid 1 eid 1 etid 1 c cMessage n "encrypted data" pe 4
+CL id 1 tid 1 eid 1 etid 1 c cMessage n "encrypted data" pe 4 cid 16
+SH sm 3 sg 3 pd 0.001
+SH sm 12 sg 2
+ES t 0.011185689232
+CM id 17 tid 17 eid 17 etid 17 c cMessage n "encrypted data" pe -1
+BS id 17 tid 17 eid 17 etid 17 c cMessage n "encrypted data" pe 4
+ES t 0.019780758442
+- Node Name: pc2 Message: encrypted data Sender: pc2 Receiver: queue Arrival Gate: in2
+
+E # 5 t 0.01020552674 m 6 ce 0 msg 4
+BS id 4 tid 4 eid 4 etid 4 c cMessage n "encrypted data" pe 5
+CL id 4 tid 4 eid 4 etid 4 c cMessage n "encrypted data" pe 5 cid 18
+SH sm 6 sg 3 pd 0.001
+SH sm 14 sg 0
+ES t 0.01120552674
+CM id 19 tid 19 eid 19 etid 19 c cMessage n "encrypted data" pe -1
+BS id 19 tid 19 eid 19 etid 19 c cMessage n "encrypted data" pe 5
+ES t 0.020989072743
+- Node Name: pc5 Message: encrypted data Sender: pc5 Receiver: queue Arrival Gate: in1
+
+E # 6 t 0.010247127392 m 11 ce 0 msg 9
+BS id 9 tid 9 eid 9 etid 9 c cMessage n "encrypted data" pe 6
+CL id 9 tid 9 eid 9 etid 9 c cMessage n "encrypted data" pe 6 cid 20
+SH sm 11 sg 3 pd 0.001
+SH sm 16 sg 2
+ES t 0.011247127392
+CM id 21 tid 21 eid 21 etid 21 c cMessage n "encrypted data" pe -1
+BS id 21 tid 21 eid 21 etid 21 c cMessage n "encrypted data" pe 6
+ES t 0.019360553343
+- Node Name: pc10 Message: encrypted data Sender: pc10 Receiver: queue Arrival Gate: in2
+
+E # 7 t 0.010430378729 m 4 ce 0 msg 2
+BS id 2 tid 2 eid 2 etid 2 c cMessage n "encrypted data" pe 7
+CL id 2 tid 2 eid 2 etid 2 c cMessage n "encrypted data" pe 7 cid 22
+SH sm 4 sg 3 pd 0.001
+SH sm 13 sg 0
+ES t 0.011430378729
+CM id 23 tid 23 eid 23 etid 23 c cMessage n "encrypted data" pe -1
+BS id 23 tid 23 eid 23 etid 23 c cMessage n "encrypted data" pe 7
+ES t 0.021357704257
+- Node Name: pc3 Message: encrypted data Sender: pc3 Receiver: queue Arrival Gate: in1
+
+E # 8 t 0.010688531488 m 5 ce 0 msg 3
+BS id 3 tid 3 eid 3 etid 3 c cMessage n "encrypted data" pe 8
+CL id 3 tid 3 eid 3 etid 3 c cMessage n "encrypted data" pe 8 cid 24
+SH sm 5 sg 3 pd 0.001
+SH sm 13 sg 2
+ES t 0.011688531488
+CM id 25 tid 25 eid 25 etid 25 c cMessage n "encrypted data" pe -1
+BS id 25 tid 25 eid 25 etid 25 c cMessage n "encrypted data" pe 8
+ES t 0.020233844077
+- Node Name: pc4 Message: encrypted data Sender: pc4 Receiver: queue Arrival Gate: in2
+
+E # 9 t 0.010694503474 m 9 ce 0 msg 7
+BS id 7 tid 7 eid 7 etid 7 c cMessage n "encrypted data" pe 9
+CL id 7 tid 7 eid 7 etid 7 c cMessage n "encrypted data" pe 9 cid 26
+SH sm 9 sg 3 pd 0.001
+SH sm 15 sg 2
+ES t 0.011694503474
+CM id 27 tid 27 eid 27 etid 27 c cMessage n "encrypted data" pe -1
+BS id 27 tid 27 eid 27 etid 27 c cMessage n "encrypted data" pe 9
+ES t 0.020461386516
+- Node Name: pc8 Message: encrypted data Sender: pc8 Receiver: queue Arrival Gate: in2
+
+E # 10 t 0.010715891239 m 7 ce 0 msg 5
+BS id 5 tid 5 eid 5 etid 5 c cMessage n "encrypted data" pe 10
+CL id 5 tid 5 eid 5 etid 5 c cMessage n "encrypted data" pe 10 cid 28
+SH sm 7 sg 3 pd 0.001
+SH sm 14 sg 2
+ES t 0.011715891239
+CM id 29 tid 29 eid 29 etid 29 c cMessage n "encrypted data" pe -1
+BS id 29 tid 29 eid 29 etid 29 c cMessage n "encrypted data" pe 10
+ES t 0.020671221462
+- Node Name: pc6 Message: encrypted data Sender: pc6 Receiver: queue Arrival Gate: in2
+
+E # 11 t 0.010847309593 m 22 ce 1 msg 8
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc9 Receiver: queue Arrival Gate: in1
+
+E # 12 t 0.011089766354 m 21 ce 2 msg 6
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc7 Receiver: queue Arrival Gate: in1
+
+E # 13 t 0.011097627004 m 18 ce 3 msg 0
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc1 Receiver: queue Arrival Gate: in1
+
+E # 14 t 0.011185689232 m 18 ce 4 msg 1
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc2 Receiver: queue Arrival Gate: in2
+
+E # 15 t 0.01120552674 m 20 ce 5 msg 4
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc5 Receiver: queue Arrival Gate: in1
+
+E # 16 t 0.011247127392 m 22 ce 6 msg 9
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc10 Receiver: queue Arrival Gate: in2
+
+E # 17 t 0.011430378729 m 19 ce 7 msg 2
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc3 Receiver: queue Arrival Gate: in1
+
+E # 18 t 0.011688531488 m 19 ce 8 msg 3
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc4 Receiver: queue Arrival Gate: in2
+
+E # 19 t 0.011694503474 m 21 ce 9 msg 7
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc8 Receiver: queue Arrival Gate: in2
+
+E # 20 t 0.011715891239 m 20 ce 10 msg 5
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc6 Receiver: queue Arrival Gate: in2
+
+E # 21 t 0.019360553343 m 11 ce 6 msg 21
+BS id 21 tid 21 eid 21 etid 21 c cMessage n "encrypted data" pe 21
+CL id 21 tid 21 eid 21 etid 21 c cMessage n "encrypted data" pe 21 cid 30
+SH sm 11 sg 3 pd 0.001
+SH sm 16 sg 2
+ES t 0.020360553343
+CM id 31 tid 31 eid 31 etid 31 c cMessage n "encrypted data" pe -1
+BS id 31 tid 31 eid 31 etid 31 c cMessage n "encrypted data" pe 21
+ES t 0.029944003409
+- Node Name: pc10 Message: encrypted data Sender: pc10 Receiver: queue Arrival Gate: in2
+
+E # 22 t 0.019780758442 m 3 ce 4 msg 17
+BS id 17 tid 17 eid 17 etid 17 c cMessage n "encrypted data" pe 22
+CL id 17 tid 17 eid 17 etid 17 c cMessage n "encrypted data" pe 22 cid 32
+SH sm 3 sg 3 pd 0.001
+SH sm 12 sg 2
+ES t 0.020780758442
+CM id 33 tid 33 eid 33 etid 33 c cMessage n "encrypted data" pe -1
+BS id 33 tid 33 eid 33 etid 33 c cMessage n "encrypted data" pe 22
+ES t 0.030405095894
+- Node Name: pc2 Message: encrypted data Sender: pc2 Receiver: queue Arrival Gate: in2
+
+E # 23 t 0.01985852977 m 8 ce 2 msg 13
+BS id 13 tid 13 eid 13 etid 13 c cMessage n "encrypted data" pe 23
+CL id 13 tid 13 eid 13 etid 13 c cMessage n "encrypted data" pe 23 cid 34
+SH sm 8 sg 3 pd 0.001
+SH sm 15 sg 0
+ES t 0.02085852977
+CM id 35 tid 35 eid 35 etid 35 c cMessage n "encrypted data" pe -1
+BS id 35 tid 35 eid 35 etid 35 c cMessage n "encrypted data" pe 23
+ES t 0.029916319613
+- Node Name: pc7 Message: encrypted data Sender: pc7 Receiver: queue Arrival Gate: in1
+
+E # 24 t 0.019972801423 m 2 ce 3 msg 15
+BS id 15 tid 15 eid 15 etid 15 c cMessage n "encrypted data" pe 24
+CL id 15 tid 15 eid 15 etid 15 c cMessage n "encrypted data" pe 24 cid 36
+SH sm 2 sg 3 pd 0.001
+SH sm 12 sg 0
+ES t 0.020972801423
+CM id 37 tid 37 eid 37 etid 37 c cMessage n "encrypted data" pe -1
+BS id 37 tid 37 eid 37 etid 37 c cMessage n "encrypted data" pe 24
+ES t 0.029932755765
+- Node Name: pc1 Message: encrypted data Sender: pc1 Receiver: queue Arrival Gate: in1
+
+E # 25 t 0.020139097823 m 10 ce 1 msg 11
+BS id 11 tid 11 eid 11 etid 11 c cMessage n "encrypted data" pe 25
+CL id 11 tid 11 eid 11 etid 11 c cMessage n "encrypted data" pe 25 cid 38
+SH sm 10 sg 3 pd 0.001
+SH sm 16 sg 0
+ES t 0.021139097823
+CM id 39 tid 39 eid 39 etid 39 c cMessage n "encrypted data" pe -1
+BS id 39 tid 39 eid 39 etid 39 c cMessage n "encrypted data" pe 25
+ES t 0.03027518695
+- Node Name: pc9 Message: encrypted data Sender: pc9 Receiver: queue Arrival Gate: in1
+
+E # 26 t 0.020233844077 m 5 ce 8 msg 25
+BS id 25 tid 25 eid 25 etid 25 c cMessage n "encrypted data" pe 26
+CL id 25 tid 25 eid 25 etid 25 c cMessage n "encrypted data" pe 26 cid 40
+SH sm 5 sg 3 pd 0.001
+SH sm 13 sg 2
+ES t 0.021233844077
+CM id 41 tid 41 eid 41 etid 41 c cMessage n "encrypted data" pe -1
+BS id 41 tid 41 eid 41 etid 41 c cMessage n "encrypted data" pe 26
+ES t 0.030019413663
+- Node Name: pc4 Message: encrypted data Sender: pc4 Receiver: queue Arrival Gate: in2
+
+E # 27 t 0.020360553343 m 22 ce 21 msg 21
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc10 Receiver: queue Arrival Gate: in2
+
+E # 28 t 0.020461386516 m 9 ce 9 msg 27
+BS id 27 tid 27 eid 27 etid 27 c cMessage n "encrypted data" pe 28
+CL id 27 tid 27 eid 27 etid 27 c cMessage n "encrypted data" pe 28 cid 42
+SH sm 9 sg 3 pd 0.001
+SH sm 15 sg 2
+ES t 0.021461386516
+CM id 43 tid 43 eid 43 etid 43 c cMessage n "encrypted data" pe -1
+BS id 43 tid 43 eid 43 etid 43 c cMessage n "encrypted data" pe 28
+ES t 0.031312579782
+- Node Name: pc8 Message: encrypted data Sender: pc8 Receiver: queue Arrival Gate: in2
+
+E # 29 t 0.020671221462 m 7 ce 10 msg 29
+BS id 29 tid 29 eid 29 etid 29 c cMessage n "encrypted data" pe 29
+CL id 29 tid 29 eid 29 etid 29 c cMessage n "encrypted data" pe 29 cid 44
+SH sm 7 sg 3 pd 0.001
+SH sm 14 sg 2
+ES t 0.021671221462
+CM id 45 tid 45 eid 45 etid 45 c cMessage n "encrypted data" pe -1
+BS id 45 tid 45 eid 45 etid 45 c cMessage n "encrypted data" pe 29
+ES t 0.031343378999
+- Node Name: pc6 Message: encrypted data Sender: pc6 Receiver: queue Arrival Gate: in2
+
+E # 30 t 0.020780758442 m 18 ce 22 msg 17
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc2 Receiver: queue Arrival Gate: in2
+
+E # 31 t 0.02085852977 m 21 ce 23 msg 13
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc7 Receiver: queue Arrival Gate: in1
+
+E # 32 t 0.020972801423 m 18 ce 24 msg 15
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc1 Receiver: queue Arrival Gate: in1
+
+E # 33 t 0.020989072743 m 6 ce 5 msg 19
+BS id 19 tid 19 eid 19 etid 19 c cMessage n "encrypted data" pe 33
+CL id 19 tid 19 eid 19 etid 19 c cMessage n "encrypted data" pe 33 cid 46
+SH sm 6 sg 3 pd 0.001
+SH sm 14 sg 0
+ES t 0.021989072743
+CM id 47 tid 47 eid 47 etid 47 c cMessage n "encrypted data" pe -1
+BS id 47 tid 47 eid 47 etid 47 c cMessage n "encrypted data" pe 33
+ES t 0.03013114486
+- Node Name: pc5 Message: encrypted data Sender: pc5 Receiver: queue Arrival Gate: in1
+
+E # 34 t 0.021139097823 m 22 ce 25 msg 11
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc9 Receiver: queue Arrival Gate: in1
+
+E # 35 t 0.021233844077 m 19 ce 26 msg 25
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc4 Receiver: queue Arrival Gate: in2
+
+E # 36 t 0.021357704257 m 4 ce 7 msg 23
+BS id 23 tid 23 eid 23 etid 23 c cMessage n "encrypted data" pe 36
+CL id 23 tid 23 eid 23 etid 23 c cMessage n "encrypted data" pe 36 cid 48
+SH sm 4 sg 3 pd 0.001
+SH sm 13 sg 0
+ES t 0.022357704257
+CM id 49 tid 49 eid 49 etid 49 c cMessage n "encrypted data" pe -1
+BS id 49 tid 49 eid 49 etid 49 c cMessage n "encrypted data" pe 36
+ES t 0.03103249658
+- Node Name: pc3 Message: encrypted data Sender: pc3 Receiver: queue Arrival Gate: in1
+
+E # 37 t 0.021461386516 m 21 ce 28 msg 27
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc8 Receiver: queue Arrival Gate: in2
+
+E # 38 t 0.021671221462 m 20 ce 29 msg 29
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc6 Receiver: queue Arrival Gate: in2
+
+E # 39 t 0.021989072743 m 20 ce 33 msg 19
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc5 Receiver: queue Arrival Gate: in1
+
+E # 40 t 0.022357704257 m 19 ce 36 msg 23
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc3 Receiver: queue Arrival Gate: in1
+
+E # 41 t 0.029916319613 m 8 ce 23 msg 35
+BS id 35 tid 35 eid 35 etid 35 c cMessage n "encrypted data" pe 41
+CL id 35 tid 35 eid 35 etid 35 c cMessage n "encrypted data" pe 41 cid 50
+SH sm 8 sg 3 pd 0.001
+SH sm 15 sg 0
+ES t 0.030916319613
+CM id 51 tid 51 eid 51 etid 51 c cMessage n "encrypted data" pe -1
+BS id 51 tid 51 eid 51 etid 51 c cMessage n "encrypted data" pe 41
+ES t 0.039090578206
+- Node Name: pc7 Message: encrypted data Sender: pc7 Receiver: queue Arrival Gate: in1
+
+E # 42 t 0.029932755765 m 2 ce 24 msg 37
+BS id 37 tid 37 eid 37 etid 37 c cMessage n "encrypted data" pe 42
+CL id 37 tid 37 eid 37 etid 37 c cMessage n "encrypted data" pe 42 cid 52
+SH sm 2 sg 3 pd 0.001
+SH sm 12 sg 0
+ES t 0.030932755765
+CM id 53 tid 53 eid 53 etid 53 c cMessage n "encrypted data" pe -1
+BS id 53 tid 53 eid 53 etid 53 c cMessage n "encrypted data" pe 42
+ES t 0.040229099518
+- Node Name: pc1 Message: encrypted data Sender: pc1 Receiver: queue Arrival Gate: in1
+
+E # 43 t 0.029944003409 m 11 ce 21 msg 31
+BS id 31 tid 31 eid 31 etid 31 c cMessage n "encrypted data" pe 43
+CL id 31 tid 31 eid 31 etid 31 c cMessage n "encrypted data" pe 43 cid 54
+SH sm 11 sg 3 pd 0.001
+SH sm 16 sg 2
+ES t 0.030944003409
+CM id 55 tid 55 eid 55 etid 55 c cMessage n "encrypted data" pe -1
+BS id 55 tid 55 eid 55 etid 55 c cMessage n "encrypted data" pe 43
+ES t 0.038984440207
+- Node Name: pc10 Message: encrypted data Sender: pc10 Receiver: queue Arrival Gate: in2
+
+E # 44 t 0.030019413663 m 5 ce 26 msg 41
+BS id 41 tid 41 eid 41 etid 41 c cMessage n "encrypted data" pe 44
+CL id 41 tid 41 eid 41 etid 41 c cMessage n "encrypted data" pe 44 cid 56
+SH sm 5 sg 3 pd 0.001
+SH sm 13 sg 2
+ES t 0.031019413663
+CM id 57 tid 57 eid 57 etid 57 c cMessage n "encrypted data" pe -1
+BS id 57 tid 57 eid 57 etid 57 c cMessage n "encrypted data" pe 44
+ES t 0.039755896737
+- Node Name: pc4 Message: encrypted data Sender: pc4 Receiver: queue Arrival Gate: in2
+
+E # 45 t 0.03013114486 m 6 ce 33 msg 47
+BS id 47 tid 47 eid 47 etid 47 c cMessage n "encrypted data" pe 45
+CL id 47 tid 47 eid 47 etid 47 c cMessage n "encrypted data" pe 45 cid 58
+SH sm 6 sg 3 pd 0.001
+SH sm 14 sg 0
+ES t 0.03113114486
+CM id 59 tid 59 eid 59 etid 59 c cMessage n "encrypted data" pe -1
+BS id 59 tid 59 eid 59 etid 59 c cMessage n "encrypted data" pe 45
+ES t 0.040796384545
+- Node Name: pc5 Message: encrypted data Sender: pc5 Receiver: queue Arrival Gate: in1
+
+E # 46 t 0.03027518695 m 10 ce 25 msg 39
+BS id 39 tid 39 eid 39 etid 39 c cMessage n "encrypted data" pe 46
+CL id 39 tid 39 eid 39 etid 39 c cMessage n "encrypted data" pe 46 cid 60
+SH sm 10 sg 3 pd 0.001
+SH sm 16 sg 0
+ES t 0.03127518695
+CM id 61 tid 61 eid 61 etid 61 c cMessage n "encrypted data" pe -1
+BS id 61 tid 61 eid 61 etid 61 c cMessage n "encrypted data" pe 46
+ES t 0.041189497258
+- Node Name: pc9 Message: encrypted data Sender: pc9 Receiver: queue Arrival Gate: in1
+
+E # 47 t 0.030405095894 m 3 ce 22 msg 33
+BS id 33 tid 33 eid 33 etid 33 c cMessage n "encrypted data" pe 47
+CL id 33 tid 33 eid 33 etid 33 c cMessage n "encrypted data" pe 47 cid 62
+SH sm 3 sg 3 pd 0.001
+SH sm 12 sg 2
+ES t 0.031405095894
+CM id 63 tid 63 eid 63 etid 63 c cMessage n "encrypted data" pe -1
+BS id 63 tid 63 eid 63 etid 63 c cMessage n "encrypted data" pe 47
+ES t 0.040961409407
+- Node Name: pc2 Message: encrypted data Sender: pc2 Receiver: queue Arrival Gate: in2
+
+E # 48 t 0.030916319613 m 21 ce 41 msg 35
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc7 Receiver: queue Arrival Gate: in1
+
+E # 49 t 0.030932755765 m 18 ce 42 msg 37
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc1 Receiver: queue Arrival Gate: in1
+
+E # 50 t 0.030944003409 m 22 ce 43 msg 31
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc10 Receiver: queue Arrival Gate: in2
+
+E # 51 t 0.031019413663 m 19 ce 44 msg 41
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc4 Receiver: queue Arrival Gate: in2
+
+E # 52 t 0.03103249658 m 4 ce 36 msg 49
+BS id 49 tid 49 eid 49 etid 49 c cMessage n "encrypted data" pe 52
+CL id 49 tid 49 eid 49 etid 49 c cMessage n "encrypted data" pe 52 cid 64
+SH sm 4 sg 3 pd 0.001
+SH sm 13 sg 0
+ES t 0.03203249658
+CM id 65 tid 65 eid 65 etid 65 c cMessage n "encrypted data" pe -1
+BS id 65 tid 65 eid 65 etid 65 c cMessage n "encrypted data" pe 52
+ES t 0.040313198134
+- Node Name: pc3 Message: encrypted data Sender: pc3 Receiver: queue Arrival Gate: in1
+
+E # 53 t 0.03113114486 m 20 ce 45 msg 47
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc5 Receiver: queue Arrival Gate: in1
+
+E # 54 t 0.03127518695 m 22 ce 46 msg 39
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc9 Receiver: queue Arrival Gate: in1
+
+E # 55 t 0.031312579782 m 9 ce 28 msg 43
+BS id 43 tid 43 eid 43 etid 43 c cMessage n "encrypted data" pe 55
+CL id 43 tid 43 eid 43 etid 43 c cMessage n "encrypted data" pe 55 cid 66
+SH sm 9 sg 3 pd 0.001
+SH sm 15 sg 2
+ES t 0.032312579782
+CM id 67 tid 67 eid 67 etid 67 c cMessage n "encrypted data" pe -1
+BS id 67 tid 67 eid 67 etid 67 c cMessage n "encrypted data" pe 55
+ES t 0.042052604072
+- Node Name: pc8 Message: encrypted data Sender: pc8 Receiver: queue Arrival Gate: in2
+
+E # 56 t 0.031343378999 m 7 ce 29 msg 45
+BS id 45 tid 45 eid 45 etid 45 c cMessage n "encrypted data" pe 56
+CL id 45 tid 45 eid 45 etid 45 c cMessage n "encrypted data" pe 56 cid 68
+SH sm 7 sg 3 pd 0.001
+SH sm 14 sg 2
+ES t 0.032343378999
+CM id 69 tid 69 eid 69 etid 69 c cMessage n "encrypted data" pe -1
+BS id 69 tid 69 eid 69 etid 69 c cMessage n "encrypted data" pe 56
+ES t 0.042083553501
+- Node Name: pc6 Message: encrypted data Sender: pc6 Receiver: queue Arrival Gate: in2
+
+E # 57 t 0.031405095894 m 18 ce 47 msg 33
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc2 Receiver: queue Arrival Gate: in2
+
+E # 58 t 0.03203249658 m 19 ce 52 msg 49
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc3 Receiver: queue Arrival Gate: in1
+
+E # 59 t 0.032312579782 m 21 ce 55 msg 43
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc8 Receiver: queue Arrival Gate: in2
+
+E # 60 t 0.032343378999 m 20 ce 56 msg 45
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc6 Receiver: queue Arrival Gate: in2
+
+E # 61 t 0.038984440207 m 11 ce 43 msg 55
+BS id 55 tid 55 eid 55 etid 55 c cMessage n "encrypted data" pe 61
+CL id 55 tid 55 eid 55 etid 55 c cMessage n "encrypted data" pe 61 cid 70
+SH sm 11 sg 3 pd 0.001
+SH sm 16 sg 2
+ES t 0.039984440207
+CM id 71 tid 71 eid 71 etid 71 c cMessage n "encrypted data" pe -1
+BS id 71 tid 71 eid 71 etid 71 c cMessage n "encrypted data" pe 61
+ES t 0.049941676892
+- Node Name: pc10 Message: encrypted data Sender: pc10 Receiver: queue Arrival Gate: in2
+
+E # 62 t 0.039090578206 m 8 ce 41 msg 51
+BS id 51 tid 51 eid 51 etid 51 c cMessage n "encrypted data" pe 62
+CL id 51 tid 51 eid 51 etid 51 c cMessage n "encrypted data" pe 62 cid 72
+SH sm 8 sg 3 pd 0.001
+SH sm 15 sg 0
+ES t 0.040090578206
+CM id 73 tid 73 eid 73 etid 73 c cMessage n "encrypted data" pe -1
+BS id 73 tid 73 eid 73 etid 73 c cMessage n "encrypted data" pe 62
+ES t 0.049037794286
+- Node Name: pc7 Message: encrypted data Sender: pc7 Receiver: queue Arrival Gate: in1
+
+E # 63 t 0.039755896737 m 5 ce 44 msg 57
+BS id 57 tid 57 eid 57 etid 57 c cMessage n "encrypted data" pe 63
+CL id 57 tid 57 eid 57 etid 57 c cMessage n "encrypted data" pe 63 cid 74
+SH sm 5 sg 3 pd 0.001
+SH sm 13 sg 2
+ES t 0.040755896737
+CM id 75 tid 75 eid 75 etid 75 c cMessage n "encrypted data" pe -1
+BS id 75 tid 75 eid 75 etid 75 c cMessage n "encrypted data" pe 63
+ES t 0.050354213864
+- Node Name: pc4 Message: encrypted data Sender: pc4 Receiver: queue Arrival Gate: in2
+
+E # 64 t 0.039984440207 m 22 ce 61 msg 55
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc10 Receiver: queue Arrival Gate: in2
+
+E # 65 t 0.040090578206 m 21 ce 62 msg 51
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc7 Receiver: queue Arrival Gate: in1
+
+E # 66 t 0.040229099518 m 2 ce 42 msg 53
+BS id 53 tid 53 eid 53 etid 53 c cMessage n "encrypted data" pe 66
+CL id 53 tid 53 eid 53 etid 53 c cMessage n "encrypted data" pe 66 cid 76
+SH sm 2 sg 3 pd 0.001
+SH sm 12 sg 0
+ES t 0.041229099518
+CM id 77 tid 77 eid 77 etid 77 c cMessage n "encrypted data" pe -1
+BS id 77 tid 77 eid 77 etid 77 c cMessage n "encrypted data" pe 66
+ES t 0.050830921022
+- Node Name: pc1 Message: encrypted data Sender: pc1 Receiver: queue Arrival Gate: in1
+
+E # 67 t 0.040313198134 m 4 ce 52 msg 65
+BS id 65 tid 65 eid 65 etid 65 c cMessage n "encrypted data" pe 67
+CL id 65 tid 65 eid 65 etid 65 c cMessage n "encrypted data" pe 67 cid 78
+SH sm 4 sg 3 pd 0.001
+SH sm 13 sg 0
+ES t 0.041313198134
+CM id 79 tid 79 eid 79 etid 79 c cMessage n "encrypted data" pe -1
+BS id 79 tid 79 eid 79 etid 79 c cMessage n "encrypted data" pe 67
+ES t 0.050236156859
+- Node Name: pc3 Message: encrypted data Sender: pc3 Receiver: queue Arrival Gate: in1
+
+E # 68 t 0.040755896737 m 19 ce 63 msg 57
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc4 Receiver: queue Arrival Gate: in2
+
+E # 69 t 0.040796384545 m 6 ce 45 msg 59
+BS id 59 tid 59 eid 59 etid 59 c cMessage n "encrypted data" pe 69
+CL id 59 tid 59 eid 59 etid 59 c cMessage n "encrypted data" pe 69 cid 80
+SH sm 6 sg 3 pd 0.001
+SH sm 14 sg 0
+ES t 0.041796384545
+CM id 81 tid 81 eid 81 etid 81 c cMessage n "encrypted data" pe -1
+BS id 81 tid 81 eid 81 etid 81 c cMessage n "encrypted data" pe 69
+ES t 0.050837339505
+- Node Name: pc5 Message: encrypted data Sender: pc5 Receiver: queue Arrival Gate: in1
+
+E # 70 t 0.040961409407 m 3 ce 47 msg 63
+BS id 63 tid 63 eid 63 etid 63 c cMessage n "encrypted data" pe 70
+CL id 63 tid 63 eid 63 etid 63 c cMessage n "encrypted data" pe 70 cid 82
+SH sm 3 sg 3 pd 0.001
+SH sm 12 sg 2
+ES t 0.041961409407
+CM id 83 tid 83 eid 83 etid 83 c cMessage n "encrypted data" pe -1
+BS id 83 tid 83 eid 83 etid 83 c cMessage n "encrypted data" pe 70
+ES t 0.051522467758
+- Node Name: pc2 Message: encrypted data Sender: pc2 Receiver: queue Arrival Gate: in2
+
+E # 71 t 0.041189497258 m 10 ce 46 msg 61
+BS id 61 tid 61 eid 61 etid 61 c cMessage n "encrypted data" pe 71
+CL id 61 tid 61 eid 61 etid 61 c cMessage n "encrypted data" pe 71 cid 84
+SH sm 10 sg 3 pd 0.001
+SH sm 16 sg 0
+ES t 0.042189497258
+CM id 85 tid 85 eid 85 etid 85 c cMessage n "encrypted data" pe -1
+BS id 85 tid 85 eid 85 etid 85 c cMessage n "encrypted data" pe 71
+ES t 0.051547256325
+- Node Name: pc9 Message: encrypted data Sender: pc9 Receiver: queue Arrival Gate: in1
+
+E # 72 t 0.041229099518 m 18 ce 66 msg 53
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc1 Receiver: queue Arrival Gate: in1
+
+E # 73 t 0.041313198134 m 19 ce 67 msg 65
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc3 Receiver: queue Arrival Gate: in1
+
+E # 74 t 0.041796384545 m 20 ce 69 msg 59
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc5 Receiver: queue Arrival Gate: in1
+
+E # 75 t 0.041961409407 m 18 ce 70 msg 63
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc2 Receiver: queue Arrival Gate: in2
+
+E # 76 t 0.042052604072 m 9 ce 55 msg 67
+BS id 67 tid 67 eid 67 etid 67 c cMessage n "encrypted data" pe 76
+CL id 67 tid 67 eid 67 etid 67 c cMessage n "encrypted data" pe 76 cid 86
+SH sm 9 sg 3 pd 0.001
+SH sm 15 sg 2
+ES t 0.043052604072
+CM id 87 tid 87 eid 87 etid 87 c cMessage n "encrypted data" pe -1
+BS id 87 tid 87 eid 87 etid 87 c cMessage n "encrypted data" pe 76
+ES t 0.051289152919
+- Node Name: pc8 Message: encrypted data Sender: pc8 Receiver: queue Arrival Gate: in2
+
+E # 77 t 0.042083553501 m 7 ce 56 msg 69
+BS id 69 tid 69 eid 69 etid 69 c cMessage n "encrypted data" pe 77
+CL id 69 tid 69 eid 69 etid 69 c cMessage n "encrypted data" pe 77 cid 88
+SH sm 7 sg 3 pd 0.001
+SH sm 14 sg 2
+ES t 0.043083553501
+CM id 89 tid 89 eid 89 etid 89 c cMessage n "encrypted data" pe -1
+BS id 89 tid 89 eid 89 etid 89 c cMessage n "encrypted data" pe 77
+ES t 0.052524818804
+- Node Name: pc6 Message: encrypted data Sender: pc6 Receiver: queue Arrival Gate: in2
+
+E # 78 t 0.042189497258 m 22 ce 71 msg 61
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc9 Receiver: queue Arrival Gate: in1
+
+E # 79 t 0.043052604072 m 21 ce 76 msg 67
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc8 Receiver: queue Arrival Gate: in2
+
+E # 80 t 0.043083553501 m 20 ce 77 msg 69
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc6 Receiver: queue Arrival Gate: in2
+
+E # 81 t 0.049037794286 m 8 ce 62 msg 73
+BS id 73 tid 73 eid 73 etid 73 c cMessage n "encrypted data" pe 81
+CL id 73 tid 73 eid 73 etid 73 c cMessage n "encrypted data" pe 81 cid 90
+SH sm 8 sg 3 pd 0.001
+SH sm 15 sg 0
+ES t 0.050037794286
+CM id 91 tid 91 eid 91 etid 91 c cMessage n "encrypted data" pe -1
+BS id 91 tid 91 eid 91 etid 91 c cMessage n "encrypted data" pe 81
+ES t 0.059317636319
+- Node Name: pc7 Message: encrypted data Sender: pc7 Receiver: queue Arrival Gate: in1
+
+E # 82 t 0.049941676892 m 11 ce 61 msg 71
+BS id 71 tid 71 eid 71 etid 71 c cMessage n "encrypted data" pe 82
+CL id 71 tid 71 eid 71 etid 71 c cMessage n "encrypted data" pe 82 cid 92
+SH sm 11 sg 3 pd 0.001
+SH sm 16 sg 2
+ES t 0.050941676892
+CM id 93 tid 93 eid 93 etid 93 c cMessage n "encrypted data" pe -1
+BS id 93 tid 93 eid 93 etid 93 c cMessage n "encrypted data" pe 82
+ES t 0.060105716474
+- Node Name: pc10 Message: encrypted data Sender: pc10 Receiver: queue Arrival Gate: in2
+
+E # 83 t 0.050037794286 m 21 ce 81 msg 73
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc7 Receiver: queue Arrival Gate: in1
+
+E # 84 t 0.050236156859 m 4 ce 67 msg 79
+BS id 79 tid 79 eid 79 etid 79 c cMessage n "encrypted data" pe 84
+CL id 79 tid 79 eid 79 etid 79 c cMessage n "encrypted data" pe 84 cid 94
+SH sm 4 sg 3 pd 0.001
+SH sm 13 sg 0
+ES t 0.051236156859
+CM id 95 tid 95 eid 95 etid 95 c cMessage n "encrypted data" pe -1
+BS id 95 tid 95 eid 95 etid 95 c cMessage n "encrypted data" pe 84
+ES t 0.05952286343
+- Node Name: pc3 Message: encrypted data Sender: pc3 Receiver: queue Arrival Gate: in1
+
+E # 85 t 0.050354213864 m 5 ce 63 msg 75
+BS id 75 tid 75 eid 75 etid 75 c cMessage n "encrypted data" pe 85
+CL id 75 tid 75 eid 75 etid 75 c cMessage n "encrypted data" pe 85 cid 96
+SH sm 5 sg 3 pd 0.001
+SH sm 13 sg 2
+ES t 0.051354213864
+CM id 97 tid 97 eid 97 etid 97 c cMessage n "encrypted data" pe -1
+BS id 97 tid 97 eid 97 etid 97 c cMessage n "encrypted data" pe 85
+ES t 0.06042896032
+- Node Name: pc4 Message: encrypted data Sender: pc4 Receiver: queue Arrival Gate: in2
+
+E # 86 t 0.050830921022 m 2 ce 66 msg 77
+BS id 77 tid 77 eid 77 etid 77 c cMessage n "encrypted data" pe 86
+CL id 77 tid 77 eid 77 etid 77 c cMessage n "encrypted data" pe 86 cid 98
+SH sm 2 sg 3 pd 0.001
+SH sm 12 sg 0
+ES t 0.051830921022
+CM id 99 tid 99 eid 99 etid 99 c cMessage n "encrypted data" pe -1
+BS id 99 tid 99 eid 99 etid 99 c cMessage n "encrypted data" pe 86
+ES t 0.061720258859
+- Node Name: pc1 Message: encrypted data Sender: pc1 Receiver: queue Arrival Gate: in1
+
+E # 87 t 0.050837339505 m 6 ce 69 msg 81
+BS id 81 tid 81 eid 81 etid 81 c cMessage n "encrypted data" pe 87
+CL id 81 tid 81 eid 81 etid 81 c cMessage n "encrypted data" pe 87 cid 100
+SH sm 6 sg 3 pd 0.001
+SH sm 14 sg 0
+ES t 0.051837339505
+CM id 101 tid 101 eid 101 etid 101 c cMessage n "encrypted data" pe -1
+BS id 101 tid 101 eid 101 etid 101 c cMessage n "encrypted data" pe 87
+ES t 0.061354570745
+- Node Name: pc5 Message: encrypted data Sender: pc5 Receiver: queue Arrival Gate: in1
+
+E # 88 t 0.050941676892 m 22 ce 82 msg 71
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc10 Receiver: queue Arrival Gate: in2
+
+E # 89 t 0.051236156859 m 19 ce 84 msg 79
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc3 Receiver: queue Arrival Gate: in1
+
+E # 90 t 0.051289152919 m 9 ce 76 msg 87
+BS id 87 tid 87 eid 87 etid 87 c cMessage n "encrypted data" pe 90
+CL id 87 tid 87 eid 87 etid 87 c cMessage n "encrypted data" pe 90 cid 102
+SH sm 9 sg 3 pd 0.001
+SH sm 15 sg 2
+ES t 0.052289152919
+CM id 103 tid 103 eid 103 etid 103 c cMessage n "encrypted data" pe -1
+BS id 103 tid 103 eid 103 etid 103 c cMessage n "encrypted data" pe 90
+ES t 0.061332849575
+- Node Name: pc8 Message: encrypted data Sender: pc8 Receiver: queue Arrival Gate: in2
+
+E # 91 t 0.051354213864 m 19 ce 85 msg 75
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc4 Receiver: queue Arrival Gate: in2
+
+E # 92 t 0.051522467758 m 3 ce 70 msg 83
+BS id 83 tid 83 eid 83 etid 83 c cMessage n "encrypted data" pe 92
+CL id 83 tid 83 eid 83 etid 83 c cMessage n "encrypted data" pe 92 cid 104
+SH sm 3 sg 3 pd 0.001
+SH sm 12 sg 2
+ES t 0.052522467758
+CM id 105 tid 105 eid 105 etid 105 c cMessage n "encrypted data" pe -1
+BS id 105 tid 105 eid 105 etid 105 c cMessage n "encrypted data" pe 92
+ES t 0.06073428297
+- Node Name: pc2 Message: encrypted data Sender: pc2 Receiver: queue Arrival Gate: in2
+
+E # 93 t 0.051547256325 m 10 ce 71 msg 85
+BS id 85 tid 85 eid 85 etid 85 c cMessage n "encrypted data" pe 93
+CL id 85 tid 85 eid 85 etid 85 c cMessage n "encrypted data" pe 93 cid 106
+SH sm 10 sg 3 pd 0.001
+SH sm 16 sg 0
+ES t 0.052547256325
+CM id 107 tid 107 eid 107 etid 107 c cMessage n "encrypted data" pe -1
+BS id 107 tid 107 eid 107 etid 107 c cMessage n "encrypted data" pe 93
+ES t 0.061376580207
+- Node Name: pc9 Message: encrypted data Sender: pc9 Receiver: queue Arrival Gate: in1
+
+E # 94 t 0.051830921022 m 18 ce 86 msg 77
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc1 Receiver: queue Arrival Gate: in1
+
+E # 95 t 0.051837339505 m 20 ce 87 msg 81
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc5 Receiver: queue Arrival Gate: in1
+
+E # 96 t 0.052289152919 m 21 ce 90 msg 87
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc8 Receiver: queue Arrival Gate: in2
+
+E # 97 t 0.052522467758 m 18 ce 92 msg 83
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc2 Receiver: queue Arrival Gate: in2
+
+E # 98 t 0.052524818804 m 7 ce 77 msg 89
+BS id 89 tid 89 eid 89 etid 89 c cMessage n "encrypted data" pe 98
+CL id 89 tid 89 eid 89 etid 89 c cMessage n "encrypted data" pe 98 cid 108
+SH sm 7 sg 3 pd 0.001
+SH sm 14 sg 2
+ES t 0.053524818804
+CM id 109 tid 109 eid 109 etid 109 c cMessage n "encrypted data" pe -1
+BS id 109 tid 109 eid 109 etid 109 c cMessage n "encrypted data" pe 98
+ES t 0.062472019649
+- Node Name: pc6 Message: encrypted data Sender: pc6 Receiver: queue Arrival Gate: in2
+
+E # 99 t 0.052547256325 m 22 ce 93 msg 85
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc9 Receiver: queue Arrival Gate: in1
+
+E # 100 t 0.053524818804 m 20 ce 98 msg 89
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc6 Receiver: queue Arrival Gate: in2
+
+E # 101 t 0.059317636319 m 8 ce 81 msg 91
+BS id 91 tid 91 eid 91 etid 91 c cMessage n "encrypted data" pe 101
+CL id 91 tid 91 eid 91 etid 91 c cMessage n "encrypted data" pe 101 cid 110
+SH sm 8 sg 3 pd 0.001
+SH sm 15 sg 0
+ES t 0.060317636319
+CM id 111 tid 111 eid 111 etid 111 c cMessage n "encrypted data" pe -1
+BS id 111 tid 111 eid 111 etid 111 c cMessage n "encrypted data" pe 101
+ES t 0.068846747541
+- Node Name: pc7 Message: encrypted data Sender: pc7 Receiver: queue Arrival Gate: in1
+
+E # 102 t 0.05952286343 m 4 ce 84 msg 95
+BS id 95 tid 95 eid 95 etid 95 c cMessage n "encrypted data" pe 102
+CL id 95 tid 95 eid 95 etid 95 c cMessage n "encrypted data" pe 102 cid 112
+SH sm 4 sg 3 pd 0.001
+SH sm 13 sg 0
+ES t 0.06052286343
+CM id 113 tid 113 eid 113 etid 113 c cMessage n "encrypted data" pe -1
+BS id 113 tid 113 eid 113 etid 113 c cMessage n "encrypted data" pe 102
+ES t 0.068895528119
+- Node Name: pc3 Message: encrypted data Sender: pc3 Receiver: queue Arrival Gate: in1
+
+E # 103 t 0.060105716474 m 11 ce 82 msg 93
+BS id 93 tid 93 eid 93 etid 93 c cMessage n "encrypted data" pe 103
+CL id 93 tid 93 eid 93 etid 93 c cMessage n "encrypted data" pe 103 cid 114
+SH sm 11 sg 3 pd 0.001
+SH sm 16 sg 2
+ES t 0.061105716474
+CM id 115 tid 115 eid 115 etid 115 c cMessage n "encrypted data" pe -1
+BS id 115 tid 115 eid 115 etid 115 c cMessage n "encrypted data" pe 103
+ES t 0.070654183847
+- Node Name: pc10 Message: encrypted data Sender: pc10 Receiver: queue Arrival Gate: in2
+
+E # 104 t 0.060317636319 m 21 ce 101 msg 91
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc7 Receiver: queue Arrival Gate: in1
+
+E # 105 t 0.06042896032 m 5 ce 85 msg 97
+BS id 97 tid 97 eid 97 etid 97 c cMessage n "encrypted data" pe 105
+CL id 97 tid 97 eid 97 etid 97 c cMessage n "encrypted data" pe 105 cid 116
+SH sm 5 sg 3 pd 0.001
+SH sm 13 sg 2
+ES t 0.06142896032
+CM id 117 tid 117 eid 117 etid 117 c cMessage n "encrypted data" pe -1
+BS id 117 tid 117 eid 117 etid 117 c cMessage n "encrypted data" pe 105
+ES t 0.070902796675
+- Node Name: pc4 Message: encrypted data Sender: pc4 Receiver: queue Arrival Gate: in2
+
+E # 106 t 0.06052286343 m 19 ce 102 msg 95
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc3 Receiver: queue Arrival Gate: in1
+
+E # 107 t 0.06073428297 m 3 ce 92 msg 105
+BS id 105 tid 105 eid 105 etid 105 c cMessage n "encrypted data" pe 107
+CL id 105 tid 105 eid 105 etid 105 c cMessage n "encrypted data" pe 107 cid 118
+SH sm 3 sg 3 pd 0.001
+SH sm 12 sg 2
+ES t 0.06173428297
+CM id 119 tid 119 eid 119 etid 119 c cMessage n "encrypted data" pe -1
+BS id 119 tid 119 eid 119 etid 119 c cMessage n "encrypted data" pe 107
+ES t 0.070646583641
+- Node Name: pc2 Message: encrypted data Sender: pc2 Receiver: queue Arrival Gate: in2
+
+E # 108 t 0.061105716474 m 22 ce 103 msg 93
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc10 Receiver: queue Arrival Gate: in2
+
+E # 109 t 0.061332849575 m 9 ce 90 msg 103
+BS id 103 tid 103 eid 103 etid 103 c cMessage n "encrypted data" pe 109
+CL id 103 tid 103 eid 103 etid 103 c cMessage n "encrypted data" pe 109 cid 120
+SH sm 9 sg 3 pd 0.001
+SH sm 15 sg 2
+ES t 0.062332849575
+CM id 121 tid 121 eid 121 etid 121 c cMessage n "encrypted data" pe -1
+BS id 121 tid 121 eid 121 etid 121 c cMessage n "encrypted data" pe 109
+ES t 0.070765950288
+- Node Name: pc8 Message: encrypted data Sender: pc8 Receiver: queue Arrival Gate: in2
+
+E # 110 t 0.061354570745 m 6 ce 87 msg 101
+BS id 101 tid 101 eid 101 etid 101 c cMessage n "encrypted data" pe 110
+CL id 101 tid 101 eid 101 etid 101 c cMessage n "encrypted data" pe 110 cid 122
+SH sm 6 sg 3 pd 0.001
+SH sm 14 sg 0
+ES t 0.062354570745
+CM id 123 tid 123 eid 123 etid 123 c cMessage n "encrypted data" pe -1
+BS id 123 tid 123 eid 123 etid 123 c cMessage n "encrypted data" pe 110
+ES t 0.071491438641
+- Node Name: pc5 Message: encrypted data Sender: pc5 Receiver: queue Arrival Gate: in1
+
+E # 111 t 0.061376580207 m 10 ce 93 msg 107
+BS id 107 tid 107 eid 107 etid 107 c cMessage n "encrypted data" pe 111
+CL id 107 tid 107 eid 107 etid 107 c cMessage n "encrypted data" pe 111 cid 124
+SH sm 10 sg 3 pd 0.001
+SH sm 16 sg 0
+ES t 0.062376580207
+CM id 125 tid 125 eid 125 etid 125 c cMessage n "encrypted data" pe -1
+BS id 125 tid 125 eid 125 etid 125 c cMessage n "encrypted data" pe 111
+ES t 0.070647016553
+- Node Name: pc9 Message: encrypted data Sender: pc9 Receiver: queue Arrival Gate: in1
+
+E # 112 t 0.06142896032 m 19 ce 105 msg 97
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc4 Receiver: queue Arrival Gate: in2
+
+E # 113 t 0.061720258859 m 2 ce 86 msg 99
+BS id 99 tid 99 eid 99 etid 99 c cMessage n "encrypted data" pe 113
+CL id 99 tid 99 eid 99 etid 99 c cMessage n "encrypted data" pe 113 cid 126
+SH sm 2 sg 3 pd 0.001
+SH sm 12 sg 0
+ES t 0.062720258859
+CM id 127 tid 127 eid 127 etid 127 c cMessage n "encrypted data" pe -1
+BS id 127 tid 127 eid 127 etid 127 c cMessage n "encrypted data" pe 113
+ES t 0.070757838455
+- Node Name: pc1 Message: encrypted data Sender: pc1 Receiver: queue Arrival Gate: in1
+
+E # 114 t 0.06173428297 m 18 ce 107 msg 105
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc2 Receiver: queue Arrival Gate: in2
+
+E # 115 t 0.062332849575 m 21 ce 109 msg 103
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc8 Receiver: queue Arrival Gate: in2
+
+E # 116 t 0.062354570745 m 20 ce 110 msg 101
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc5 Receiver: queue Arrival Gate: in1
+
+E # 117 t 0.062376580207 m 22 ce 111 msg 107
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc9 Receiver: queue Arrival Gate: in1
+
+E # 118 t 0.062472019649 m 7 ce 98 msg 109
+BS id 109 tid 109 eid 109 etid 109 c cMessage n "encrypted data" pe 118
+CL id 109 tid 109 eid 109 etid 109 c cMessage n "encrypted data" pe 118 cid 128
+SH sm 7 sg 3 pd 0.001
+SH sm 14 sg 2
+ES t 0.063472019649
+CM id 129 tid 129 eid 129 etid 129 c cMessage n "encrypted data" pe -1
+BS id 129 tid 129 eid 129 etid 129 c cMessage n "encrypted data" pe 118
+ES t 0.072120301657
+- Node Name: pc6 Message: encrypted data Sender: pc6 Receiver: queue Arrival Gate: in2
+
+E # 119 t 0.062720258859 m 18 ce 113 msg 99
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc1 Receiver: queue Arrival Gate: in1
+
+E # 120 t 0.063472019649 m 20 ce 118 msg 109
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- get GATE NAME (in2) Arrival Gate: in2
+- messagae unknown gate Arrival Gate: in2
+- Node Name: queue Message: encrypted data Sender: pc6 Receiver: queue Arrival Gate: in2
+
+E # 121 t 0.068846747541 m 8 ce 101 msg 111
+BS id 111 tid 111 eid 111 etid 111 c cMessage n "encrypted data" pe 121
+CL id 111 tid 111 eid 111 etid 111 c cMessage n "encrypted data" pe 121 cid 130
+SH sm 8 sg 3 pd 0.001
+SH sm 15 sg 0
+ES t 0.069846747541
+CM id 131 tid 131 eid 131 etid 131 c cMessage n "encrypted data" pe -1
+BS id 131 tid 131 eid 131 etid 131 c cMessage n "encrypted data" pe 121
+ES t 0.079082018542
+- Node Name: pc7 Message: encrypted data Sender: pc7 Receiver: queue Arrival Gate: in1
+
+E # 122 t 0.068895528119 m 4 ce 102 msg 113
+BS id 113 tid 113 eid 113 etid 113 c cMessage n "encrypted data" pe 122
+CL id 113 tid 113 eid 113 etid 113 c cMessage n "encrypted data" pe 122 cid 132
+SH sm 4 sg 3 pd 0.001
+SH sm 13 sg 0
+ES t 0.069895528119
+CM id 133 tid 133 eid 133 etid 133 c cMessage n "encrypted data" pe -1
+BS id 133 tid 133 eid 133 etid 133 c cMessage n "encrypted data" pe 122
+ES t 0.078194877846
+- Node Name: pc3 Message: encrypted data Sender: pc3 Receiver: queue Arrival Gate: in1
+
+E # 123 t 0.069846747541 m 21 ce 121 msg 111
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc7 Receiver: queue Arrival Gate: in1
+
+E # 124 t 0.069895528119 m 19 ce 122 msg 113
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- get GATE NAME (in1) Arrival Gate: in1
+- messagae unknown gate Arrival Gate: in1
+- Node Name: queue Message: encrypted data Sender: pc3 Receiver: queue Arrival Gate: in1
+
+E # 125 t 0.070646583641 m 3 ce 107 msg 119
+BS id 119 tid 119 eid 119 etid 119 c cMessage n "encrypted data" pe 125
+CL id 119 tid 119 eid 119 etid 119 c cMessage n "encrypted data" pe 125 cid 134
+SH sm 3 sg 3 pd 0.001
+SH sm 12 sg 2
+ES t 0.071646583641
+CM id 135 tid 135 eid 135 etid 135 c cMessage n "encrypted data" pe -1
+BS id 135 tid 135 eid 135 etid 135 c cMessage n "encrypted data" pe 125
+ES t 0.080870775085
+- Node Name: pc2 Message: encrypted data Sender: pc2 Receiver: queue Arrival Gate: in2
+
+E # 126 t 0.070647016553 m 10 ce 111 msg 125
+BS id 125 tid 125 eid 125 etid 125 c cMessage n "encrypted data" pe 126
+CL id 125 tid 125 eid 125 etid 125 c cMessage n "encrypted data" pe 126 cid 136
+SH sm 10 sg 3 pd 0.001
+SH sm 16 sg 0
+ES t 0.071647016553
+CM id 137 tid 137 eid 137 etid 137 c cMessage n "encrypted data" pe -1
+BS id 137 tid 137 eid 137 etid 137 c cMessage n "encrypted data" pe 126
+ES t 0.080091659324
+- Node Name: pc9 Message: encrypted data Sender: pc9 Receiver: queue Arrival Gate: in1
+
+E # 127 t 0.070654183847 m 11 ce 103 msg 115
+BS id 115 tid 115 eid 115 etid 115 c cMessage n "encrypted data" pe 127
+CL id 115 tid 115 eid 115 etid 115 c cMessage n "encrypted data" pe 127 cid 138
+SH sm 11 sg 3 pd 0.001
+SH sm 16 sg 2
+ES t 0.071654183847
+CM id 139 tid 139 eid 139 etid 139 c cMessage n "encrypted data" pe -1
+BS id 139 tid 139 eid 139 etid 139 c cMessage n "encrypted data" pe 127
+ES t 0.080888051844
+- Node Name: pc10 Message: encrypted data Sender: pc10 Receiver: queue Arrival Gate: in2
+DM id 8 tid 8 eid 8 etid 8 c cMessage n "encrypted data" pe 1
+DM id 6 tid 6 eid 6 etid 6 c cMessage n "encrypted data" pe 2
+DM id 0 tid 0 eid 0 etid 0 c cMessage n "encrypted data" pe 3
+DM id 1 tid 1 eid 1 etid 1 c cMessage n "encrypted data" pe 4
+DM id 4 tid 4 eid 4 etid 4 c cMessage n "encrypted data" pe 5
+DM id 9 tid 9 eid 9 etid 9 c cMessage n "encrypted data" pe 6
+DM id 2 tid 2 eid 2 etid 2 c cMessage n "encrypted data" pe 7
+DM id 3 tid 3 eid 3 etid 3 c cMessage n "encrypted data" pe 8
+DM id 7 tid 7 eid 7 etid 7 c cMessage n "encrypted data" pe 9
+DM id 5 tid 5 eid 5 etid 5 c cMessage n "encrypted data" pe 10
+DM id 21 tid 21 eid 21 etid 21 c cMessage n "encrypted data" pe 21
+DM id 17 tid 17 eid 17 etid 17 c cMessage n "encrypted data" pe 22
+DM id 13 tid 13 eid 13 etid 13 c cMessage n "encrypted data" pe 23
+DM id 15 tid 15 eid 15 etid 15 c cMessage n "encrypted data" pe 24
+DM id 11 tid 11 eid 11 etid 11 c cMessage n "encrypted data" pe 25
+DM id 25 tid 25 eid 25 etid 25 c cMessage n "encrypted data" pe 26
+DM id 27 tid 27 eid 27 etid 27 c cMessage n "encrypted data" pe 28
+DM id 29 tid 29 eid 29 etid 29 c cMessage n "encrypted data" pe 29
+DM id 19 tid 19 eid 19 etid 19 c cMessage n "encrypted data" pe 33
+DM id 23 tid 23 eid 23 etid 23 c cMessage n "encrypted data" pe 36
+DM id 35 tid 35 eid 35 etid 35 c cMessage n "encrypted data" pe 41
+DM id 37 tid 37 eid 37 etid 37 c cMessage n "encrypted data" pe 42
+DM id 31 tid 31 eid 31 etid 31 c cMessage n "encrypted data" pe 43
+DM id 41 tid 41 eid 41 etid 41 c cMessage n "encrypted data" pe 44
+DM id 47 tid 47 eid 47 etid 47 c cMessage n "encrypted data" pe 45
+DM id 39 tid 39 eid 39 etid 39 c cMessage n "encrypted data" pe 46
+DM id 33 tid 33 eid 33 etid 33 c cMessage n "encrypted data" pe 47
+DM id 49 tid 49 eid 49 etid 49 c cMessage n "encrypted data" pe 52
+DM id 43 tid 43 eid 43 etid 43 c cMessage n "encrypted data" pe 55
+DM id 45 tid 45 eid 45 etid 45 c cMessage n "encrypted data" pe 56
+DM id 55 tid 55 eid 55 etid 55 c cMessage n "encrypted data" pe 61
+DM id 51 tid 51 eid 51 etid 51 c cMessage n "encrypted data" pe 62
+DM id 57 tid 57 eid 57 etid 57 c cMessage n "encrypted data" pe 63
+DM id 53 tid 53 eid 53 etid 53 c cMessage n "encrypted data" pe 66
+DM id 65 tid 65 eid 65 etid 65 c cMessage n "encrypted data" pe 67
+DM id 59 tid 59 eid 59 etid 59 c cMessage n "encrypted data" pe 69
+DM id 63 tid 63 eid 63 etid 63 c cMessage n "encrypted data" pe 70
+DM id 61 tid 61 eid 61 etid 61 c cMessage n "encrypted data" pe 71
+DM id 67 tid 67 eid 67 etid 67 c cMessage n "encrypted data" pe 76
+DM id 69 tid 69 eid 69 etid 69 c cMessage n "encrypted data" pe 77
+DM id 73 tid 73 eid 73 etid 73 c cMessage n "encrypted data" pe 81
+DM id 71 tid 71 eid 71 etid 71 c cMessage n "encrypted data" pe 82
+DM id 79 tid 79 eid 79 etid 79 c cMessage n "encrypted data" pe 84
+DM id 75 tid 75 eid 75 etid 75 c cMessage n "encrypted data" pe 85
+DM id 77 tid 77 eid 77 etid 77 c cMessage n "encrypted data" pe 86
+DM id 81 tid 81 eid 81 etid 81 c cMessage n "encrypted data" pe 87
+DM id 87 tid 87 eid 87 etid 87 c cMessage n "encrypted data" pe 90
+DM id 83 tid 83 eid 83 etid 83 c cMessage n "encrypted data" pe 92
+DM id 85 tid 85 eid 85 etid 85 c cMessage n "encrypted data" pe 93
+DM id 89 tid 89 eid 89 etid 89 c cMessage n "encrypted data" pe 98
+DM id 91 tid 91 eid 91 etid 91 c cMessage n "encrypted data" pe 101
+DM id 95 tid 95 eid 95 etid 95 c cMessage n "encrypted data" pe 102
+DM id 93 tid 93 eid 93 etid 93 c cMessage n "encrypted data" pe 103
+DM id 97 tid 97 eid 97 etid 97 c cMessage n "encrypted data" pe 105
+DM id 105 tid 105 eid 105 etid 105 c cMessage n "encrypted data" pe 107
+DM id 103 tid 103 eid 103 etid 103 c cMessage n "encrypted data" pe 109
+DM id 101 tid 101 eid 101 etid 101 c cMessage n "encrypted data" pe 110
+DM id 107 tid 107 eid 107 etid 107 c cMessage n "encrypted data" pe 111
+DM id 99 tid 99 eid 99 etid 99 c cMessage n "encrypted data" pe 113
+DM id 109 tid 109 eid 109 etid 109 c cMessage n "encrypted data" pe 118
+DM id 111 tid 111 eid 111 etid 111 c cMessage n "encrypted data" pe 121
+DM id 113 tid 113 eid 113 etid 113 c cMessage n "encrypted data" pe 122
+DM id 119 tid 119 eid 119 etid 119 c cMessage n "encrypted data" pe 125
+DM id 125 tid 125 eid 125 etid 125 c cMessage n "encrypted data" pe 126
+DM id 115 tid 115 eid 115 etid 115 c cMessage n "encrypted data" pe 127

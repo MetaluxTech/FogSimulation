@@ -1,0 +1,1138 @@
+!SESSION 2023-08-11 10:11:10.933 -----------------------------------------------
+eclipse.buildId=6.0.1.220831-e4f07d04b8
+java.version=17.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.ecf.provider.filetransfer.httpclient45.win32 4 0 2023-08-11 10:11:15.886
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.ecf.provider.filetransfer.httpclient45.win32 [158]
+  Unresolved requirement: Import-Package: org.apache.http.impl.auth.win; version="[4.5.0,5.0.0)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.lambda$1(ModuleContainer.java:1834)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1829)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1775)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1739)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:228)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:339)
+
+!ENTRY org.eclipse.epp.mpc.core.win32 4 0 2023-08-11 10:11:16.699
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.epp.mpc.core.win32 [182]
+  Unresolved requirement: Import-Package: org.apache.http.impl.auth.win; version="4.3.6"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.lambda$1(ModuleContainer.java:1834)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1829)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1775)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1739)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:228)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:339)
+
+!ENTRY org.omnetpp.main 1 0 2023-08-11 10:12:24.441
+!MESSAGE OMNeT++ IDE 6.0.1.220831-e4f07d04b8 started.
+
+!ENTRY org.python.pydev.shared_core 1 1 2023-08-11 10:12:44.424
+!MESSAGE Restoring info for: D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\mingw64\bin\python3.exe
+!STACK 0
+java.lang.RuntimeException: Restoring info for: D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\mingw64\bin\python3.exe
+	at org.python.pydev.ast.interpreter_managers.AbstractInterpreterManager.getInterpretersFromPersistedString(AbstractInterpreterManager.java:461)
+	at org.python.pydev.ast.interpreter_managers.AbstractInterpreterManager.internalRecreateCacheGetInterpreterInfos(AbstractInterpreterManager.java:287)
+	at org.python.pydev.ast.interpreter_managers.AbstractInterpreterManager.setInfos(AbstractInterpreterManager.java:584)
+	at org.omnetpp.scave.ScavePlugin.ensurePyDevInterpreterConfigured(ScavePlugin.java:139)
+	at org.omnetpp.scave.ScavePlugin.start(ScavePlugin.java:62)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.lambda$2(BundleContextImpl.java:808)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:802)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:759)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1019)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:404)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:384)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass0(BundleLoader.java:471)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:403)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.omnetpp.ide.OmnetppStartup.earlyStartup(OmnetppStartup.java:88)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:79)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:55)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.Workbench$40.run(Workbench.java:2667)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Expecting: C:\Users\mohsal\Desktop\app\metalux\fog\simulations\fog6\.metadata\.plugins\org.python.pydev\v1_88bxmbo9rvb8s567ug6vwcw76\modulesKeys to exist (and be a file).
+	at org.python.pydev.ast.codecompletion.revisited.ModulesManager.loadFromFile(ModulesManager.java:330)
+	at org.python.pydev.ast.codecompletion.revisited.SystemModulesManager.load(SystemModulesManager.java:443)
+	at org.python.pydev.ast.interpreter_managers.AbstractInterpreterManager.getInterpretersFromPersistedString(AbstractInterpreterManager.java:459)
+	... 28 more
+
+!ENTRY org.python.pydev.shared_core 1 1 2023-08-11 10:12:57.156
+!MESSAGE Finished restoring information for: D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\mingw64\bin\python3.exe at: C:\Users\mohsal\Desktop\app\metalux\fog\simulations\fog6\.metadata\.plugins\org.python.pydev\v1_88bxmbo9rvb8s567ug6vwcw76
+!STACK 0
+java.lang.RuntimeException: Finished restoring information for: D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\mingw64\bin\python3.exe at: C:\Users\mohsal\Desktop\app\metalux\fog\simulations\fog6\.metadata\.plugins\org.python.pydev\v1_88bxmbo9rvb8s567ug6vwcw76
+	at org.python.pydev.core.log.Log.logInfo(Log.java:45)
+	at org.python.pydev.ast.interpreter_managers.AbstractInterpreterManager.getInterpretersFromPersistedString(AbstractInterpreterManager.java:506)
+	at org.python.pydev.ast.interpreter_managers.AbstractInterpreterManager.internalRecreateCacheGetInterpreterInfos(AbstractInterpreterManager.java:287)
+	at org.python.pydev.ast.interpreter_managers.AbstractInterpreterManager.setInfos(AbstractInterpreterManager.java:584)
+	at org.omnetpp.scave.ScavePlugin.ensurePyDevInterpreterConfigured(ScavePlugin.java:139)
+	at org.omnetpp.scave.ScavePlugin.start(ScavePlugin.java:62)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.lambda$2(BundleContextImpl.java:808)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:802)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:759)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1019)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
+	at org.eclipse.osgi.container.Module.start(Module.java:468)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:404)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:570)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:335)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:384)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass0(BundleLoader.java:471)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:403)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.omnetpp.ide.OmnetppStartup.earlyStartup(OmnetppStartup.java:88)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:79)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:55)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.Workbench$40.run(Workbench.java:2667)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.ui 4 4 2023-08-11 10:14:05.704
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ProblemView.
+
+!ENTRY org.eclipse.ui 4 4 2023-08-11 10:14:05.704
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ProblemView.
+
+!ENTRY org.eclipse.ui 4 4 2023-08-11 10:14:05.720
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ProblemView.
+
+!ENTRY org.eclipse.ui 4 0 2023-08-11 10:14:54.056
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.omnetpp.eventlog.IEventLog.getApproximateNumberOfEvents()" because "this.eventLog" is null
+	at org.omnetpp.sequencechart.widgets.SequenceChart.calculateVirtualSize(SequenceChart.java:2826)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validateVirtualSize(SequenceChart.java:2816)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validate(SequenceChart.java:3231)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3116)
+	at org.omnetpp.common.canvas.CachingCanvas.paint(CachingCanvas.java:311)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3031)
+	at org.omnetpp.common.canvas.CachingCanvas$1.paintControl(CachingCanvas.java:137)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:234)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1069)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1536)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4810)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5010)
+	at org.eclipse.swt.internal.win32.OS.RedrawWindow(Native Method)
+	at org.eclipse.swt.widgets.Control.update(Control.java:4597)
+	at org.eclipse.swt.widgets.Display.update(Display.java:4973)
+	at org.eclipse.e4.ui.workbench.addons.minmax.TrimPaneLayout.dragCorner(TrimPaneLayout.java:225)
+	at org.eclipse.e4.ui.workbench.addons.minmax.TrimPaneLayout.lambda$0(TrimPaneLayout.java:131)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:216)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4060)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3632)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1154)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1045)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui 4 0 2023-08-11 10:14:54.243
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.omnetpp.eventlog.IEventLog.getApproximateNumberOfEvents()" because "this.eventLog" is null
+	at org.omnetpp.sequencechart.widgets.SequenceChart.calculateVirtualSize(SequenceChart.java:2826)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validateVirtualSize(SequenceChart.java:2816)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validate(SequenceChart.java:3231)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3116)
+	at org.omnetpp.common.canvas.CachingCanvas.paint(CachingCanvas.java:311)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3031)
+	at org.omnetpp.common.canvas.CachingCanvas$1.paintControl(CachingCanvas.java:137)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:234)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1069)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1536)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4810)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5010)
+	at org.eclipse.swt.internal.win32.OS.RedrawWindow(Native Method)
+	at org.eclipse.swt.widgets.Control.update(Control.java:4597)
+	at org.eclipse.swt.widgets.Display.update(Display.java:4973)
+	at org.eclipse.e4.ui.workbench.addons.minmax.TrimPaneLayout.dragCorner(TrimPaneLayout.java:225)
+	at org.eclipse.e4.ui.workbench.addons.minmax.TrimPaneLayout.lambda$0(TrimPaneLayout.java:131)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:216)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4060)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3632)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1154)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1045)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui 4 0 2023-08-11 10:14:54.400
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.omnetpp.eventlog.IEventLog.getApproximateNumberOfEvents()" because "this.eventLog" is null
+	at org.omnetpp.sequencechart.widgets.SequenceChart.calculateVirtualSize(SequenceChart.java:2826)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validateVirtualSize(SequenceChart.java:2816)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validate(SequenceChart.java:3231)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3116)
+	at org.omnetpp.common.canvas.CachingCanvas.paint(CachingCanvas.java:311)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3031)
+	at org.omnetpp.common.canvas.CachingCanvas$1.paintControl(CachingCanvas.java:137)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:234)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1069)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1536)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4810)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5010)
+	at org.eclipse.swt.internal.win32.OS.RedrawWindow(Native Method)
+	at org.eclipse.swt.widgets.Control.update(Control.java:4597)
+	at org.eclipse.swt.widgets.Display.update(Display.java:4973)
+	at org.eclipse.e4.ui.workbench.addons.minmax.TrimPaneLayout.dragCorner(TrimPaneLayout.java:225)
+	at org.eclipse.e4.ui.workbench.addons.minmax.TrimPaneLayout.lambda$0(TrimPaneLayout.java:131)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:216)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4060)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3632)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1154)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1045)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui 4 0 2023-08-11 10:14:54.540
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.omnetpp.eventlog.IEventLog.getApproximateNumberOfEvents()" because "this.eventLog" is null
+	at org.omnetpp.sequencechart.widgets.SequenceChart.calculateVirtualSize(SequenceChart.java:2826)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validateVirtualSize(SequenceChart.java:2816)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validate(SequenceChart.java:3231)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3116)
+	at org.omnetpp.common.canvas.CachingCanvas.paint(CachingCanvas.java:311)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3031)
+	at org.omnetpp.common.canvas.CachingCanvas$1.paintControl(CachingCanvas.java:137)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:234)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1069)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1536)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4810)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5010)
+	at org.eclipse.swt.internal.win32.OS.RedrawWindow(Native Method)
+	at org.eclipse.swt.widgets.Control.update(Control.java:4597)
+	at org.eclipse.swt.widgets.Display.update(Display.java:4973)
+	at org.eclipse.e4.ui.workbench.addons.minmax.TrimPaneLayout.dragCorner(TrimPaneLayout.java:225)
+	at org.eclipse.e4.ui.workbench.addons.minmax.TrimPaneLayout.lambda$0(TrimPaneLayout.java:131)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:216)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4060)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3632)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1154)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1045)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui 4 0 2023-08-11 10:14:55.009
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.omnetpp.eventlog.IEventLog.getApproximateNumberOfEvents()" because "this.eventLog" is null
+	at org.omnetpp.sequencechart.widgets.SequenceChart.calculateVirtualSize(SequenceChart.java:2826)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validateVirtualSize(SequenceChart.java:2816)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validate(SequenceChart.java:3231)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3116)
+	at org.omnetpp.common.canvas.CachingCanvas.paint(CachingCanvas.java:311)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3031)
+	at org.omnetpp.common.canvas.CachingCanvas$1.paintControl(CachingCanvas.java:137)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:234)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1069)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1536)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4810)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5010)
+	at org.eclipse.swt.internal.win32.OS.RedrawWindow(Native Method)
+	at org.eclipse.swt.widgets.Control.update(Control.java:4597)
+	at org.eclipse.swt.widgets.Display.update(Display.java:4973)
+	at org.eclipse.e4.ui.workbench.addons.minmax.TrimPaneLayout.dragCorner(TrimPaneLayout.java:225)
+	at org.eclipse.e4.ui.workbench.addons.minmax.TrimPaneLayout.lambda$0(TrimPaneLayout.java:131)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:216)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4060)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3632)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1154)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1045)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui 4 0 2023-08-11 10:14:55.384
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.omnetpp.eventlog.IEventLog.getApproximateNumberOfEvents()" because "this.eventLog" is null
+	at org.omnetpp.sequencechart.widgets.SequenceChart.calculateVirtualSize(SequenceChart.java:2826)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validateVirtualSize(SequenceChart.java:2816)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validate(SequenceChart.java:3231)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3116)
+	at org.omnetpp.common.canvas.CachingCanvas.paint(CachingCanvas.java:311)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3031)
+	at org.omnetpp.common.canvas.CachingCanvas$1.paintControl(CachingCanvas.java:137)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:234)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1069)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1536)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4810)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5010)
+	at org.eclipse.swt.internal.win32.OS.RedrawWindow(Native Method)
+	at org.eclipse.swt.widgets.Control.update(Control.java:4597)
+	at org.eclipse.swt.widgets.Display.update(Display.java:4973)
+	at org.eclipse.e4.ui.workbench.addons.minmax.TrimPaneLayout.dragCorner(TrimPaneLayout.java:225)
+	at org.eclipse.e4.ui.workbench.addons.minmax.TrimPaneLayout.lambda$0(TrimPaneLayout.java:131)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:216)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4060)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3632)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1154)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1045)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui 4 0 2023-08-11 10:14:55.772
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.omnetpp.eventlog.IEventLog.getApproximateNumberOfEvents()" because "this.eventLog" is null
+	at org.omnetpp.sequencechart.widgets.SequenceChart.calculateVirtualSize(SequenceChart.java:2826)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validateVirtualSize(SequenceChart.java:2816)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validate(SequenceChart.java:3231)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3116)
+	at org.omnetpp.common.canvas.CachingCanvas.paint(CachingCanvas.java:311)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3031)
+	at org.omnetpp.common.canvas.CachingCanvas$1.paintControl(CachingCanvas.java:137)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:234)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1069)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1536)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4810)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5010)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1154)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1045)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui 4 0 2023-08-11 10:14:55.772
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.omnetpp.eventlog.IEventLog.getApproximateNumberOfEvents()" because "this.eventLog" is null
+	at org.omnetpp.sequencechart.widgets.SequenceChart.calculateVirtualSize(SequenceChart.java:2826)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validateVirtualSize(SequenceChart.java:2816)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validate(SequenceChart.java:3231)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3116)
+	at org.omnetpp.common.canvas.CachingCanvas.paint(CachingCanvas.java:311)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3031)
+	at org.omnetpp.common.canvas.CachingCanvas$1.paintControl(CachingCanvas.java:137)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:234)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1069)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1536)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4810)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5010)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1154)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1045)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui 4 0 2023-08-11 10:15:05.001
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.omnetpp.eventlog.IEventLog.getApproximateNumberOfEvents()" because "this.eventLog" is null
+	at org.omnetpp.sequencechart.widgets.SequenceChart.calculateVirtualSize(SequenceChart.java:2826)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validateVirtualSize(SequenceChart.java:2816)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validate(SequenceChart.java:3231)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3116)
+	at org.omnetpp.common.canvas.CachingCanvas.paint(CachingCanvas.java:311)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3031)
+	at org.omnetpp.common.canvas.CachingCanvas$1.paintControl(CachingCanvas.java:137)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:234)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1069)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1536)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4810)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5010)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1154)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1045)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui 4 0 2023-08-11 10:15:08.345
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.omnetpp.eventlog.IEventLog.getApproximateNumberOfEvents()" because "this.eventLog" is null
+	at org.omnetpp.sequencechart.widgets.SequenceChart.calculateVirtualSize(SequenceChart.java:2826)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validateVirtualSize(SequenceChart.java:2816)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validate(SequenceChart.java:3231)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3116)
+	at org.omnetpp.common.canvas.CachingCanvas.paint(CachingCanvas.java:311)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3031)
+	at org.omnetpp.common.canvas.CachingCanvas$1.paintControl(CachingCanvas.java:137)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:234)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1069)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1536)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4810)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5010)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1154)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1045)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui 4 0 2023-08-11 10:15:09.390
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.omnetpp.eventlog.IEventLog.getApproximateNumberOfEvents()" because "this.eventLog" is null
+	at org.omnetpp.sequencechart.widgets.SequenceChart.calculateVirtualSize(SequenceChart.java:2826)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validateVirtualSize(SequenceChart.java:2816)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validate(SequenceChart.java:3231)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3116)
+	at org.omnetpp.common.canvas.CachingCanvas.paint(CachingCanvas.java:311)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3031)
+	at org.omnetpp.common.canvas.CachingCanvas$1.paintControl(CachingCanvas.java:137)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:234)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1069)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1536)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4810)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5010)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1154)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1045)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui 4 0 2023-08-11 10:15:09.405
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.omnetpp.eventlog.IEventLog.getApproximateNumberOfEvents()" because "this.eventLog" is null
+	at org.omnetpp.sequencechart.widgets.SequenceChart.calculateVirtualSize(SequenceChart.java:2826)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validateVirtualSize(SequenceChart.java:2816)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validate(SequenceChart.java:3231)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3116)
+	at org.omnetpp.common.canvas.CachingCanvas.paint(CachingCanvas.java:311)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3031)
+	at org.omnetpp.common.canvas.CachingCanvas$1.paintControl(CachingCanvas.java:137)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:234)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1069)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1536)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4810)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5010)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1154)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1045)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui 4 0 2023-08-11 10:15:14.971
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.omnetpp.eventlog.IEventLog.getApproximateNumberOfEvents()" because "this.eventLog" is null
+	at org.omnetpp.sequencechart.widgets.SequenceChart.calculateVirtualSize(SequenceChart.java:2826)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validateVirtualSize(SequenceChart.java:2816)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validate(SequenceChart.java:3231)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3116)
+	at org.omnetpp.common.canvas.CachingCanvas.paint(CachingCanvas.java:311)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3031)
+	at org.omnetpp.common.canvas.CachingCanvas$1.paintControl(CachingCanvas.java:137)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:234)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1069)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1536)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4810)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5010)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1154)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1045)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui 4 0 2023-08-11 10:15:15.096
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.omnetpp.eventlog.IEventLog.getApproximateNumberOfEvents()" because "this.eventLog" is null
+	at org.omnetpp.sequencechart.widgets.SequenceChart.calculateVirtualSize(SequenceChart.java:2826)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validateVirtualSize(SequenceChart.java:2816)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.validate(SequenceChart.java:3231)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3116)
+	at org.omnetpp.common.canvas.CachingCanvas.paint(CachingCanvas.java:311)
+	at org.omnetpp.sequencechart.widgets.SequenceChart.paint(SequenceChart.java:3031)
+	at org.omnetpp.common.canvas.CachingCanvas$1.paintControl(CachingCanvas.java:137)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:234)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1069)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1536)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4810)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5010)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1154)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1045)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+!SESSION 2023-08-11 10:16:18.051 -----------------------------------------------
+eclipse.buildId=6.0.1.220831-e4f07d04b8
+java.version=17.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.ecf.provider.filetransfer.httpclient45.win32 4 0 2023-08-11 10:16:19.847
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.ecf.provider.filetransfer.httpclient45.win32 [158]
+  Unresolved requirement: Import-Package: org.apache.http.impl.auth.win; version="[4.5.0,5.0.0)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.lambda$1(ModuleContainer.java:1834)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1829)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1775)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1739)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:228)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:339)
+
+!ENTRY org.eclipse.epp.mpc.core.win32 4 0 2023-08-11 10:16:20.191
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.epp.mpc.core.win32 [182]
+  Unresolved requirement: Import-Package: org.apache.http.impl.auth.win; version="4.3.6"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.lambda$1(ModuleContainer.java:1834)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1829)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1775)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1739)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:228)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:339)
+
+!ENTRY org.omnetpp.main 1 0 2023-08-11 10:16:28.173
+!MESSAGE OMNeT++ IDE 6.0.1.220831-e4f07d04b8 started.
+
+!ENTRY org.python.pydev.shared_core 4 4 2023-08-11 10:17:00.072
+!MESSAGE Info: Rebuilding internal caches: C:\Users\mohsal\Desktop\app\metalux\fog\simulations\fog6\.metadata\.plugins\com.python.pydev.analysis\python_v1_88bxmbo9rvb8s567ug6vwcw76\python.pydevsysteminfo (Expected error to be provided and got no error!)
+
+!ENTRY org.python.pydev.shared_core 4 4 2023-08-11 10:19:36.669
+!MESSAGE ERROR reading shell. Message sent: @@IMPORTS:pandas._libs.json
+END@@
+
+ProcessInfo:
+
+ - Executed: D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\mingw64\bin\python3.exe -u D:\omnetpp\omnetpp-6.0.1\ide\plugins\org.python.pydev.core_9.3.0.202203051235\pysrc\pycompletionserver.py 63546
+
+ - Environment:
+!;=;\
+ACLOCAL_PATH=D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\mingw64\share\aclocal;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\share\aclocal
+ALLUSERSPROFILE=C:\ProgramData
+ANDROID_SDK_ROOT=C:\Users\mohsal\AppData\Local\android\sdk\emulator\emulator.exe
+APPDATA=C:\Users\mohsal\AppData\Roaming
+COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files
+COMMONPROGRAMFILES=C:\Program Files\Common Files
+COMMONPROGRAMW6432=C:\Program Files\Common Files
+COMPUTERNAME=DESKTOP-TNPJ186
+COMSPEC=C:\WINDOWS\system32\cmd.exe
+CONFIG_SITE=D:/omnetpp/omnetpp-6.0.1/tools/win32.x86_64/etc/config.site
+CONICON=mingw64.ico
+CONTITLE=MinGW x64
+DEVENVDIR=C:\Visual8\Common7\IDE;
+DRIVERDATA=C:\Windows\System32\Drivers\DriverData
+FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer
+FPS_BROWSER_USER_PROFILE_STRING=Default
+FRAMEWORKDIR=C:\Windows\Microsoft.NET\Framework;
+FRAMEWORKSDKDIR=C:\Visual8\SDK\v2.0;
+FRAMEWORKVERSION=v2.0.50727;
+HOME=D:\omnetpp\omnetpp-6.0.1\
+HOMEDRIVE=C:
+HOMEPATH=\Users\mohsal
+HOSTNAME=DESKTOP-TNPJ186
+INCLUDE=C:\Visual8\VC\ATLMFC\INCLUDE;C:\Visual8\VC\INCLUDE;C:\Visual8\VC\PlatformSDK\inclu
+de;C:\Visual8\SDK\v2.0\include;ÿ
+INFOPATH=D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\local\info;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\share\info;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\info;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\share\info
+JAVA_HOME=C:\Program Files\Java\jdk-18.0.2
+LANG=en_US.UTF-8
+LIB=C:\Visual8\VC\ATLMFC\LIB;C:\Visual8\VC\LIB;C:\Visual8\VC\PlatformSDK\lib;C:\Visual8\SD
+K\v2.0\lib;ÿ
+LIBPATH=C:\Windows\Microsoft.NET\Framework\v2.0.50727;C:\Visual8\VC\ATLMFC\LIB;ÿ
+LOCALAPPDATA=C:\Users\mohsal\AppData\Local
+LOGINSHELL=bash
+LOGONSERVER=\\DESKTOP-TNPJ186
+MANPATH=D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\mingw64\local\man;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\mingw64\share\man;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\local\man;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\share\man;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\man;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\share\man
+MINGW_CHOST=x86_64-w64-mingw32
+MINGW_PACKAGE_PREFIX=mingw-w64-x86_64
+MINGW_PREFIX=D:/omnetpp/omnetpp-6.0.1/tools/win32.x86_64/mingw64
+MSYSTEM=MINGW64
+MSYSTEM_CARCH=x86_64
+MSYSTEM_CHOST=x86_64-w64-mingw32
+MSYSTEM_PREFIX=D:/omnetpp/omnetpp-6.0.1/tools/win32.x86_64/mingw64
+NETSAMPLEPATH=C:\Visual8\SDK\v2.0;
+NUMBER_OF_PROCESSORS=4
+OLDPWD=D:/omnetpp/omnetpp-6.0.1/
+OMNETPP_RELEASE=omnetpp-6.0.1
+ONEDRIVE=C:\Users\mohsal\OneDrive
+ONEDRIVECONSUMER=C:\Users\mohsal\OneDrive
+ORIGINAL_PATH=C:\Windows\System32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+ORIGINAL_TEMP=C:/Users/mohsal/AppData/Local/Temp
+ORIGINAL_TMP=C:/Users/mohsal/AppData/Local/Temp
+OS=Windows_NT
+PATH=D:/omnetpp/omnetpp-6.0.1/ide//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.stripped.win32.x86_64_17.0.4.v20220805-1047/jre/bin/server;D:/omnetpp/omnetpp-6.0.1/ide//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.stripped.win32.x86_64_17.0.4.v20220805-1047/jre/bin;D:\omnetpp\omnetpp-6.0.1\bin;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\opt\mingw64\bin;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\mingw64\bin;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\local\bin;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\bin;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\bin;C:\Windows\System32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\bin\site_perl;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\bin\vendor_perl;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\bin\core_perl;D:\omnetpp\omnetpp-6.0.1;
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+PKG_CONFIG_PATH=D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\mingw64\lib\pkgconfig;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\mingw64\share\pkgconfig
+PRINTER=ZARPRN
+PROCESSOR_ARCHITECTURE=AMD64
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+PROCESSOR_LEVEL=6
+PROCESSOR_REVISION=3a09
+PROGRAMDATA=C:\ProgramData
+PROGRAMFILES(X86)=C:\Program Files (x86)
+PROGRAMFILES=C:\Program Files
+PROGRAMW6432=C:\Program Files
+PROMPT=$P$G
+PSMODULEPATH=C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\PowerShell\Modules\
+PUBLIC=C:\Users\Public
+PWD=D:/omnetpp/omnetpp-6.0.1
+PYCHARM COMMUNITY EDITION=C:\Program Files\JetBrains\PyCharm Community Edition 2022.1.2\bin;
+PYTHONPATH=D:\omnetpp\omnetpp-6.0.1\ide\plugins\org.python.pydev.core_9.3.0.202203051235\pysrc\pydev_sitecustomize;D:\omnetpp\omnetpp-6.0.1\ide\plugins\org.omnetpp.scave.pychart_6.0.1.220831-e4f07d04b8\python;D:/omnetpp/omnetpp-6.0.1/python;D:/omnetpp/omnetpp-6.0.1/tools/win32.x86_64/mingw64/lib/python3.10;D:/omnetpp/omnetpp-6.0.1/tools/win32.x86_64/mingw64/lib/python3.10/lib-dynload;D:/omnetpp/omnetpp-6.0.1;D:/omnetpp/omnetpp-6.0.1/tools/win32.x86_64/mingw64/lib/python3.10/site-packages
+QT_LOGGING_RULES=*.debug=false;qt.qpa.*=false
+QT_SELECT=5
+SAL_FORCE_IACCESSIBLE2=1
+SESSIONNAME=Console
+SHELL=D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\bin\bash.exe
+SHLVL=1
+SYSTEMDRIVE=C:
+SYSTEMROOT=C:\WINDOWS
+TEMP=D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\tmp
+TERM=xterm-256color
+TMP=D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\tmp
+USER=mohsal
+USERDOMAIN=DESKTOP-TNPJ186
+USERDOMAIN_ROAMINGPROFILE=DESKTOP-TNPJ186
+USERNAME=mohsal
+USERPROFILE=C:\Users\mohsal
+VCBUILD_DEFAULT_CFG=Debug^|Win32;
+VCBUILD_DEFAULT_OPTIONS=/useenv;
+VCINSTALLDIR=C:\Visual8\VC;
+VSINSTALLDIR=C:\Visual8;
+VSTO_LOGALERTS=0
+WD=D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\bin\
+WINDIR=C:\WINDOWS
+WITHIN_OMNETPP_IDE=yes
+XDG_DATA_DIRS=D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\mingw64\share\;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\local\share\;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\share\
+_=D:/omnetpp/omnetpp-6.0.1/bin/../ide/opp_ide.exe
+__OMNETPP_ROOT_DIR=D:/omnetpp/omnetpp-6.0.1
+
+ - Working Dir:
+D:\omnetpp\omnetpp-6.0.1\ide\plugins\org.python.pydev.core_9.3.0.202203051235\pysrc
+
+ - OS:
+Windows 10
+
+ - Std output:
+
+
+ - Err output:
+
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.SocketChannelImpl.timedRead(Unknown Source)
+	at java.base/sun.nio.ch.SocketChannelImpl.blockingRead(Unknown Source)
+	at java.base/sun.nio.ch.SocketAdaptor$1.read(Unknown Source)
+	at java.base/java.io.InputStream.read(Unknown Source)
+	at org.python.pydev.ast.codecompletion.shell.AbstractShell.read(AbstractShell.java:457)
+	at org.python.pydev.ast.codecompletion.shell.AbstractShell.read(AbstractShell.java:515)
+	at org.python.pydev.ast.codecompletion.shell.AbstractShell.writeAndGetResults(AbstractShell.java:710)
+	at org.python.pydev.ast.codecompletion.shell.AbstractShell.writeAndGetResults(AbstractShell.java:702)
+	at org.python.pydev.ast.codecompletion.shell.CompletionsShell.getImportCompletions(CompletionsShell.java:63)
+	at org.python.pydev.ast.codecompletion.revisited.modules.CompiledModule.createTokensFromServer(CompiledModule.java:378)
+	at org.python.pydev.ast.codecompletion.revisited.modules.CompiledModule.<init>(CompiledModule.java:180)
+	at org.python.pydev.ast.codecompletion.revisited.modules.AbstractModule.createModule(AbstractModule.java:295)
+	at org.python.pydev.ast.codecompletion.revisited.ModulesManager.getModule(ModulesManager.java:1026)
+	at org.python.pydev.ast.codecompletion.revisited.ModulesManager.getModule(ModulesManager.java:857)
+	at org.python.pydev.ast.codecompletion.revisited.SystemModulesManager.getModule(SystemModulesManager.java:421)
+	at com.python.pydev.analysis.additionalinfo.AbstractAdditionalDependencyInfo.updateKeysIfNeededAndSave(AbstractAdditionalDependencyInfo.java:260)
+	at com.python.pydev.analysis.system_info_builder.InterpreterInfoBuilder.syncInfoToPythonPath(InterpreterInfoBuilder.java:171)
+	at com.python.pydev.analysis.system_info_builder.InterpreterInfoBuilder.syncInfoToPythonPath(InterpreterInfoBuilder.java:97)
+	at com.python.pydev.analysis.system_info_builder.InterpreterInfoBuilder.syncInfoToPythonPath(InterpreterInfoBuilder.java:83)
+	at org.python.pydev.ast.codecompletion.revisited.SyncSystemModulesManager.synchronizeManagerToNameToInfoPythonpath(SyncSystemModulesManager.java:392)
+	at org.python.pydev.ast.codecompletion.revisited.SyncSystemModulesManagerScheduler$SynchJob.run(SyncSystemModulesManagerScheduler.java:257)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.python.pydev.shared_core 4 4 2023-08-11 10:19:48.206
+!MESSAGE ERROR reading shell. Message sent: @@IMPORTS:scipy
+END@@
+
+ProcessInfo:
+
+ - Executed: D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\mingw64\bin\python3.exe -u D:\omnetpp\omnetpp-6.0.1\ide\plugins\org.python.pydev.core_9.3.0.202203051235\pysrc\pycompletionserver.py 63553
+
+ - Environment:
+!;=;\
+ACLOCAL_PATH=D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\mingw64\share\aclocal;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\share\aclocal
+ALLUSERSPROFILE=C:\ProgramData
+ANDROID_SDK_ROOT=C:\Users\mohsal\AppData\Local\android\sdk\emulator\emulator.exe
+APPDATA=C:\Users\mohsal\AppData\Roaming
+COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files
+COMMONPROGRAMFILES=C:\Program Files\Common Files
+COMMONPROGRAMW6432=C:\Program Files\Common Files
+COMPUTERNAME=DESKTOP-TNPJ186
+COMSPEC=C:\WINDOWS\system32\cmd.exe
+CONFIG_SITE=D:/omnetpp/omnetpp-6.0.1/tools/win32.x86_64/etc/config.site
+CONICON=mingw64.ico
+CONTITLE=MinGW x64
+DEVENVDIR=C:\Visual8\Common7\IDE;
+DRIVERDATA=C:\Windows\System32\Drivers\DriverData
+FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer
+FPS_BROWSER_USER_PROFILE_STRING=Default
+FRAMEWORKDIR=C:\Windows\Microsoft.NET\Framework;
+FRAMEWORKSDKDIR=C:\Visual8\SDK\v2.0;
+FRAMEWORKVERSION=v2.0.50727;
+HOME=D:\omnetpp\omnetpp-6.0.1\
+HOMEDRIVE=C:
+HOMEPATH=\Users\mohsal
+HOSTNAME=DESKTOP-TNPJ186
+INCLUDE=C:\Visual8\VC\ATLMFC\INCLUDE;C:\Visual8\VC\INCLUDE;C:\Visual8\VC\PlatformSDK\inclu
+de;C:\Visual8\SDK\v2.0\include;ÿ
+INFOPATH=D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\local\info;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\share\info;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\info;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\share\info
+JAVA_HOME=C:\Program Files\Java\jdk-18.0.2
+LANG=en_US.UTF-8
+LIB=C:\Visual8\VC\ATLMFC\LIB;C:\Visual8\VC\LIB;C:\Visual8\VC\PlatformSDK\lib;C:\Visual8\SD
+K\v2.0\lib;ÿ
+LIBPATH=C:\Windows\Microsoft.NET\Framework\v2.0.50727;C:\Visual8\VC\ATLMFC\LIB;ÿ
+LOCALAPPDATA=C:\Users\mohsal\AppData\Local
+LOGINSHELL=bash
+LOGONSERVER=\\DESKTOP-TNPJ186
+MANPATH=D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\mingw64\local\man;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\mingw64\share\man;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\local\man;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\share\man;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\man;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\share\man
+MINGW_CHOST=x86_64-w64-mingw32
+MINGW_PACKAGE_PREFIX=mingw-w64-x86_64
+MINGW_PREFIX=D:/omnetpp/omnetpp-6.0.1/tools/win32.x86_64/mingw64
+MSYSTEM=MINGW64
+MSYSTEM_CARCH=x86_64
+MSYSTEM_CHOST=x86_64-w64-mingw32
+MSYSTEM_PREFIX=D:/omnetpp/omnetpp-6.0.1/tools/win32.x86_64/mingw64
+NETSAMPLEPATH=C:\Visual8\SDK\v2.0;
+NUMBER_OF_PROCESSORS=4
+OLDPWD=D:/omnetpp/omnetpp-6.0.1/
+OMNETPP_RELEASE=omnetpp-6.0.1
+ONEDRIVE=C:\Users\mohsal\OneDrive
+ONEDRIVECONSUMER=C:\Users\mohsal\OneDrive
+ORIGINAL_PATH=C:\Windows\System32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+ORIGINAL_TEMP=C:/Users/mohsal/AppData/Local/Temp
+ORIGINAL_TMP=C:/Users/mohsal/AppData/Local/Temp
+OS=Windows_NT
+PATH=D:/omnetpp/omnetpp-6.0.1/ide//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.stripped.win32.x86_64_17.0.4.v20220805-1047/jre/bin/server;D:/omnetpp/omnetpp-6.0.1/ide//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.stripped.win32.x86_64_17.0.4.v20220805-1047/jre/bin;D:\omnetpp\omnetpp-6.0.1\bin;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\opt\mingw64\bin;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\mingw64\bin;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\local\bin;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\bin;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\bin;C:\Windows\System32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\bin\site_perl;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\bin\vendor_perl;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\bin\core_perl;D:\omnetpp\omnetpp-6.0.1;
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+PKG_CONFIG_PATH=D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\mingw64\lib\pkgconfig;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\mingw64\share\pkgconfig
+PRINTER=ZARPRN
+PROCESSOR_ARCHITECTURE=AMD64
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+PROCESSOR_LEVEL=6
+PROCESSOR_REVISION=3a09
+PROGRAMDATA=C:\ProgramData
+PROGRAMFILES(X86)=C:\Program Files (x86)
+PROGRAMFILES=C:\Program Files
+PROGRAMW6432=C:\Program Files
+PROMPT=$P$G
+PSMODULEPATH=C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\PowerShell\Modules\
+PUBLIC=C:\Users\Public
+PWD=D:/omnetpp/omnetpp-6.0.1
+PYCHARM COMMUNITY EDITION=C:\Program Files\JetBrains\PyCharm Community Edition 2022.1.2\bin;
+PYTHONPATH=D:\omnetpp\omnetpp-6.0.1\ide\plugins\org.python.pydev.core_9.3.0.202203051235\pysrc\pydev_sitecustomize;D:\omnetpp\omnetpp-6.0.1\ide\plugins\org.omnetpp.scave.pychart_6.0.1.220831-e4f07d04b8\python;D:/omnetpp/omnetpp-6.0.1/python;D:/omnetpp/omnetpp-6.0.1/tools/win32.x86_64/mingw64/lib/python3.10;D:/omnetpp/omnetpp-6.0.1/tools/win32.x86_64/mingw64/lib/python3.10/lib-dynload;D:/omnetpp/omnetpp-6.0.1;D:/omnetpp/omnetpp-6.0.1/tools/win32.x86_64/mingw64/lib/python3.10/site-packages
+QT_LOGGING_RULES=*.debug=false;qt.qpa.*=false
+QT_SELECT=5
+SAL_FORCE_IACCESSIBLE2=1
+SESSIONNAME=Console
+SHELL=D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\bin\bash.exe
+SHLVL=1
+SYSTEMDRIVE=C:
+SYSTEMROOT=C:\WINDOWS
+TEMP=D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\tmp
+TERM=xterm-256color
+TMP=D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\tmp
+USER=mohsal
+USERDOMAIN=DESKTOP-TNPJ186
+USERDOMAIN_ROAMINGPROFILE=DESKTOP-TNPJ186
+USERNAME=mohsal
+USERPROFILE=C:\Users\mohsal
+VCBUILD_DEFAULT_CFG=Debug^|Win32;
+VCBUILD_DEFAULT_OPTIONS=/useenv;
+VCINSTALLDIR=C:\Visual8\VC;
+VSINSTALLDIR=C:\Visual8;
+VSTO_LOGALERTS=0
+WD=D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\bin\
+WINDIR=C:\WINDOWS
+WITHIN_OMNETPP_IDE=yes
+XDG_DATA_DIRS=D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\mingw64\share\;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\local\share\;D:\omnetpp\omnetpp-6.0.1\tools\win32.x86_64\usr\share\
+_=D:/omnetpp/omnetpp-6.0.1/bin/../ide/opp_ide.exe
+__OMNETPP_ROOT_DIR=D:/omnetpp/omnetpp-6.0.1
+
+ - Working Dir:
+D:\omnetpp\omnetpp-6.0.1\ide\plugins\org.python.pydev.core_9.3.0.202203051235\pysrc
+
+ - OS:
+Windows 10
+
+ - Std output:
+
+
+ - Err output:
+
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.SocketChannelImpl.timedRead(Unknown Source)
+	at java.base/sun.nio.ch.SocketChannelImpl.blockingRead(Unknown Source)
+	at java.base/sun.nio.ch.SocketAdaptor$1.read(Unknown Source)
+	at java.base/java.io.InputStream.read(Unknown Source)
+	at org.python.pydev.ast.codecompletion.shell.AbstractShell.read(AbstractShell.java:457)
+	at org.python.pydev.ast.codecompletion.shell.AbstractShell.read(AbstractShell.java:515)
+	at org.python.pydev.ast.codecompletion.shell.AbstractShell.writeAndGetResults(AbstractShell.java:710)
+	at org.python.pydev.ast.codecompletion.shell.AbstractShell.writeAndGetResults(AbstractShell.java:702)
+	at org.python.pydev.ast.codecompletion.shell.CompletionsShell.getImportCompletions(CompletionsShell.java:63)
+	at org.python.pydev.ast.codecompletion.revisited.modules.CompiledModule.createTokensFromServer(CompiledModule.java:378)
+	at org.python.pydev.ast.codecompletion.revisited.modules.CompiledModule.<init>(CompiledModule.java:180)
+	at org.python.pydev.ast.codecompletion.revisited.SystemModulesManager.getBuiltinModule(SystemModulesManager.java:376)
+	at org.python.pydev.ast.codecompletion.revisited.SystemModulesManager.getModule(SystemModulesManager.java:416)
+	at com.python.pydev.analysis.additionalinfo.AbstractAdditionalDependencyInfo.updateKeysIfNeededAndSave(AbstractAdditionalDependencyInfo.java:260)
+	at com.python.pydev.analysis.system_info_builder.InterpreterInfoBuilder.syncInfoToPythonPath(InterpreterInfoBuilder.java:171)
+	at com.python.pydev.analysis.system_info_builder.InterpreterInfoBuilder.syncInfoToPythonPath(InterpreterInfoBuilder.java:97)
+	at com.python.pydev.analysis.system_info_builder.InterpreterInfoBuilder.syncInfoToPythonPath(InterpreterInfoBuilder.java:83)
+	at org.python.pydev.ast.codecompletion.revisited.SyncSystemModulesManager.synchronizeManagerToNameToInfoPythonpath(SyncSystemModulesManager.java:392)
+	at org.python.pydev.ast.codecompletion.revisited.SyncSystemModulesManagerScheduler$SynchJob.run(SyncSystemModulesManagerScheduler.java:257)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
