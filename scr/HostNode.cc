@@ -1,5 +1,6 @@
 #include "HostNode.h"
-#include "functions.h"
+#include "messages_globalid.h"
+
 using namespace omnetpp;
 
 Define_Module(HostNode);
@@ -32,10 +33,11 @@ void HostNode::handleMessage(cMessage *msg)
 
 void HostNode::GenerateNewMesssage()
 {
-    std::string host_name=this->getName();
-            cMessage *actualmessage = new cMessage((("encrypted image from " + host_name).c_str()));
+            int uniqueID = GlobalID::getNextID();
+            std::string msgcontent = "new encrypted image-" + std::to_string(uniqueID) + " from " + std::string(this->getName());
+            cMessage *actualmessage = new cMessage(msgcontent.c_str());
             send(actualmessage, "out");
-            Display(actualmessage,(("New Message generated from " + host_name).c_str()));
+            functions.Display(actualmessage);
 
 
 }

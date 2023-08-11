@@ -5,9 +5,9 @@ using namespace omnetpp;
 
 Define_Module(FogNode);
 
+
 void FogNode::initialize()
 {
-
 }
 
 void FogNode::handleMessage(cMessage *msg)
@@ -15,9 +15,8 @@ void FogNode::handleMessage(cMessage *msg)
     if(msg == processTimeEvent) {
             // Received a processing time event
             forwardMessage(recivedMessage);  // forward the currently processing message
-            std::string displayStr = "msg sent at " + std::to_string(simTime().dbl())
-                                     + " from " + msg->getArrivalModule()->getName();
-            Display(msg, displayStr.c_str());
+
+            functions.Display(msg, "msg sent at " + std::to_string(simTime().dbl()) + " from " +std::string( msg->getArrivalModule()->getName()) );
 
             if(waitingMessagePool.empty()) {
                 status = "idle";
@@ -31,9 +30,8 @@ void FogNode::handleMessage(cMessage *msg)
 
 
   }else {   // Received a regular message
-      std::string displayStr = "msg recived at " + std::to_string(simTime().dbl())
-                                          + " from " + msg->getArrivalModule()->getName();
-                 Display(msg, displayStr.c_str());
+      functions.Display(msg, "msg recived at " + std::to_string(simTime().dbl()) + " from " +std::string( msg->getArrivalModule()->getName()) );
+
       if(status == "idle") {
           status = "processing";
           recivedMessage = msg;
@@ -48,7 +46,15 @@ void FogNode::handleMessage(cMessage *msg)
 
 void FogNode::addToQueue(cMessage *message)
 {
-    waitingMessagePool.push(message);
+    if (waitingMessagePool.size() < queue_size)
+       {
+           waitingMessagePool.push(message);
+       }
+       else
+       {
+           delete message;
+           functions.Display(message,"message deleted in "+std::string(this->getName()) + " queue full !!!");
+       }
 }
 
 
@@ -56,7 +62,7 @@ void FogNode::forwardMessage(cMessage *msg)
 {
   std::string nodename=this->getName();
   std::string inputgate= msg->getArrivalGate()->getName();
-  std::string desGate=getDestGate(nodename, inputgate, msg);
+  std::string desGate=functions.getDestGate(nodename, inputgate, msg);
  send (msg,desGate.c_str());
   }
 

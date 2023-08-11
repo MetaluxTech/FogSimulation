@@ -66,8 +66,8 @@ network net1
         fogNode1.out1 --> {  delay = 1ms; } --> pc1.in;
         fogNode1.in2 <-- {  delay = 1ms; } <-- pc2.out;
         fogNode1.out2 --> {  delay = 1ms; } --> pc2.in;
-        fogNode1.in3 <-- {  delay = 1ms; } <-- Server.out1;
-        fogNode1.out3 --> {  delay = 1ms; } --> Server.in1;
+        fogNode1.in3 <-- {  delay = 10ms; } <-- Server.out1;
+        fogNode1.out3 --> {  delay = 10ms; } --> Server.in1;
         fogNode1.in4 <-- {  delay = 1ms; } <-- fogNode2.out4;
         fogNode1.out4 --> {  delay = 1ms; } --> fogNode2.in4;
         fogNode1.in5 <-- {  delay = 1ms; } <-- fogNode1.out5;
@@ -77,8 +77,8 @@ network net1
         fogNode2.out1 --> {  delay = 1ms; } --> pc3.in;
         fogNode2.in2 <-- {  delay = 1ms; } <-- pc4.out;
         fogNode2.out2 --> {  delay = 1ms; } --> pc4.in;
-        fogNode2.in3 <-- {  delay = 1ms; } <-- Server.out2;
-        fogNode2.out3 --> {  delay = 1ms; } --> Server.in2;
+        fogNode2.in3 <-- {  delay = 10ms; } <-- Server.out2;
+        fogNode2.out3 --> {  delay = 10ms; } --> Server.in2;
         fogNode2.in5 <-- {  delay = 1ms; } <-- fogNode3.out4;
         fogNode2.out5 --> {  delay = 1ms; } --> fogNode3.in4;
 
@@ -86,8 +86,8 @@ network net1
         fogNode3.out1 --> {  delay = 1ms; } --> pc5.in;
         fogNode3.in2 <-- {  delay = 1ms; } <-- pc6.out;
         fogNode3.out2 --> {  delay = 1ms; } --> pc6.in;
-        fogNode3.in3 <-- {  delay = 1ms; } <-- Server.out3;
-        fogNode3.out3 --> {  delay = 1ms; } --> Server.in3;
+        fogNode3.in3 <-- {  delay = 10ms; } <-- Server.out3;
+        fogNode3.out3 --> {  delay = 10ms; } --> Server.in3;
         fogNode3.in5 <-- {  delay = 1ms; } <-- fogNode4.out4;
         fogNode3.out5 --> {  delay = 1ms; } --> fogNode4.in4;
 
@@ -95,8 +95,8 @@ network net1
         fogNode4.out1 --> {  delay = 1ms; } --> pc7.in;
         fogNode4.in2 <-- {  delay = 1ms; } <-- pc8.out;
         fogNode4.out2 --> {  delay = 1ms; } --> pc8.in;
-        fogNode4.in3 <-- {  delay = 1ms; } <-- Server.out4;
-        fogNode4.out3 --> {  delay = 1ms; } --> Server.in4;
+        fogNode4.in3 <-- {  delay = 10ms; } <-- Server.out4;
+        fogNode4.out3 --> {  delay = 10ms; } --> Server.in4;
         fogNode4.in5 <-- {  delay = 1ms; } <-- fogNode5.out4;
         fogNode4.out5 --> {  delay = 1ms; } --> fogNode5.in4;
 
@@ -104,8 +104,8 @@ network net1
         fogNode5.out1 --> {  delay = 1ms; } --> pc9.in;
         fogNode5.in2 <-- {  delay = 1ms; } <-- pc10.out;
         fogNode5.out2 --> {  delay = 1ms; } --> pc10.in;
-        fogNode5.in3 <-- {  delay = 1ms; } <-- Server.out5;
-        fogNode5.out3 --> {  delay = 1ms; } --> Server.in5;
+        fogNode5.in3 <-- {  delay = 10ms; } <-- Server.out5;
+        fogNode5.out3 --> {  delay = 10ms; } --> Server.in5;
         fogNode5.in5 <-- {  delay = 1ms; } <-- fogNode5.out5;
 
 

@@ -2,18 +2,22 @@
 #ifndef __FOGSIM1_FOGNODE_H_
 #define __FOGSIM1_FOGNODE_H_
 #include <queue>
-
+#include "functions.h"
 #include <omnetpp.h>
 using namespace omnetpp;
 
 
 class FogNode : public cSimpleModule
 {
+
     private:
+    Functions functions;
+
     cMessage *recivedMessage = nullptr;
     cMessage *processTimeEvent = nullptr;
     std::string status="idle"; ///ether idle or now_processing
-    double processing_delay=1;
+    double processing_delay=0.001;
+    int queue_size=5;
     std::queue<cMessage *> waitingMessagePool;
     public:
         virtual ~FogNode();
