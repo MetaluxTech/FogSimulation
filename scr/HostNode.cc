@@ -6,23 +6,18 @@ Define_Module(HostNode);
 
 void HostNode::initialize()
 {
-    double delay = uniform(0.009, 0.011);
-    sendMessageEvent = new cMessage("sendMessageEvent");
-       scheduleAt(simTime()+delay, sendMessageEvent);
+
+    generateMessageEvent = new cMessage("timer event");
+    scheduleAt(simTime()+generate_message_delay, generateMessageEvent);
 
 
 }
 
 void HostNode::handleMessage(cMessage *msg)
 {
-    if(msg == sendMessageEvent){
-      std::string host_name=this->getName();
-      double delay = uniform(0.009, 0.011);
-        cMessage *actualmessage = new cMessage((("encrypted image from " + host_name).c_str()));
-        send(actualmessage, "out");
-        Display(msg,(("New Message generated from " + host_name).c_str()));
-        scheduleAt(simTime() + delay, sendMessageEvent);
-
+    if(msg == generateMessageEvent){
+            GenerateNewMesssage();
+            scheduleAt(simTime() + generate_message_delay, generateMessageEvent);
 
     }
     else{
@@ -36,4 +31,13 @@ void HostNode::handleMessage(cMessage *msg)
 
 
 
+void HostNode::GenerateNewMesssage()
+{
+    std::string host_name=this->getName();
+            cMessage *actualmessage = new cMessage((("encrypted image from " + host_name).c_str()));
+            send(actualmessage, "out");
+            Display(actualmessage,(("New Message generated from " + host_name).c_str()));
+
+
+}
 

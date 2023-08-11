@@ -8,7 +8,8 @@ using namespace omnetpp;
 class HostNode : public cSimpleModule
 {
   private:
-    cMessage *sendMessageEvent = nullptr;
+    cMessage *generateMessageEvent = nullptr;
+    double generate_message_delay=uniform(10e-3, 15e-3);
 
   public:
     virtual ~HostNode();
@@ -16,12 +17,13 @@ class HostNode : public cSimpleModule
   protected:
     virtual void initialize() override;
     virtual void handleMessage(cMessage *msg) override;
+    void GenerateNewMesssage();
 };
 
 
 
 HostNode::~HostNode()
 {
-    cancelAndDelete(sendMessageEvent);
+    cancelAndDelete(generateMessageEvent);
 }
 #endif

@@ -33,7 +33,7 @@ PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc, .msg and .sm files
-OBJS = $O/scr/FogNode.o $O/scr/FogProcessor.o $O/scr/HostNode.o $O/scr/MyQueue.o $O/scr/ServerNode.o
+OBJS = $O/scr/FogNode.o $O/scr/HostNode.o $O/scr/MyQueue.o $O/scr/ServerNode.o
 
 # Message files
 MSGFILES =
