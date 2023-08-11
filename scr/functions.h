@@ -44,14 +44,11 @@ inline std::string getDestinationHostGateByMessage(cMessage *msg)
 
 inline std::string getFogOut(std::string inputgate,cMessage *msg=nullptr)
 {
-    Display(msg,"iam in gotfogout inputgate= ");
 
     if (FogioDic.count(inputgate)) {
-            Display(msg,"iam in gotgogout found input gate in dictionary "+inputgate);
 
               return FogioDic[inputgate];
           } else {
-             Display(msg, "iam in gotgogout found input gate not in dictionary "+inputgate);
 
             return  getDestinationHostGateByMessage(msg);
           }
@@ -70,10 +67,8 @@ inline std::string getServerOut(std::string inputgate,cMessage *msg=nullptr)
 
 inline std::string getDestGate(const std::string& nodeName, const std::string& inputgate, cMessage *msg)
 {
-    Display(msg,"iam in getDestGate   "+inputgate);
 
     if (nodeName.find("fog") != std::string::npos) {
-        Display(msg,"iam in getDestGate fognode   "+inputgate);
 
 
         return getFogOut(inputgate, msg);
@@ -85,7 +80,6 @@ inline std::string getDestGate(const std::string& nodeName, const std::string& i
         return getServerOut(inputgate, msg);
     }
     else {
-        Display(msg, "not known node name error in getOutGate function");
         return "out3";
     }
 }

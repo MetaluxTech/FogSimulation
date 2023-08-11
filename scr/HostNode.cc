@@ -6,7 +6,6 @@ Define_Module(HostNode);
 
 void HostNode::initialize()
 {
-
     generateMessageEvent = new cMessage("timer event");
     scheduleAt(simTime()+generate_message_delay, generateMessageEvent);
 

@@ -9,7 +9,7 @@ class HostNode : public cSimpleModule
 {
   private:
     cMessage *generateMessageEvent = nullptr;
-    double generate_message_delay=uniform(10e-3, 15e-3);
+    double generate_message_delay=uniform(0.10, 0.15);
 
   public:
     virtual ~HostNode();

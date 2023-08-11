@@ -3,7 +3,7 @@
 
 
 
-
+gdfdfds
 std::string getDestinationHostGateByMessage(cMessage *msg)
 {
     std::string desgate="in1";
