@@ -1,7 +1,21 @@
 
 package fogsim1;
 
-
+channel hostsFogChannel extends ned.DatarateChannel {
+    datarate = 1Gbps; // Example datarate, adjust accordingly
+    delay = 1ms;     // default delay, you can change it in connections as needed
+    
+}
+channel fogFogChannel extends ned.DatarateChannel {
+    datarate = 1Gbps; // Example datarate, adjust accordingly
+    delay = 0.1ms;     // default delay, you can change it in connections as needed
+    
+}
+channel fogsServerChannel extends ned.DatarateChannel {
+    datarate = 1Gbps; // Example datarate, adjust accordingly
+    delay = 5ms;     // default delay, you can change it in connections as needed
+    
+}
 
 network net1
 {
@@ -62,51 +76,51 @@ network net1
         }
        
     connections:
-        fogNode1.in1 <-- {  delay = 1ms; } <-- pc1.out;
-        fogNode1.out1 --> {  delay = 1ms; } --> pc1.in;
-        fogNode1.in2 <-- {  delay = 1ms; } <-- pc2.out;
-        fogNode1.out2 --> {  delay = 1ms; } --> pc2.in;
-        fogNode1.in3 <-- {  delay = 10ms; } <-- Server.out1;
-        fogNode1.out3 --> {  delay = 10ms; } --> Server.in1;
-        fogNode1.in4 <-- {  delay = 1ms; } <-- fogNode2.out4;
-        fogNode1.out4 --> {  delay = 1ms; } --> fogNode2.in4;
-        fogNode1.in5 <-- {  delay = 1ms; } <-- fogNode1.out5;
+        fogNode1.in1 <-- hostsFogChannel <-- pc1.out;
+        fogNode1.out1 --> hostsFogChannel --> pc1.in;
+        fogNode1.in2 <-- hostsFogChannel <-- pc2.out;
+        fogNode1.out2 --> hostsFogChannel --> pc2.in;
+        fogNode1.in3 <-- fogsServerChannel <-- Server.out1;
+        fogNode1.out3 --> fogsServerChannel --> Server.in1;
+        fogNode1.in4 <-- fogFogChannel <-- fogNode2.out4;
+        fogNode1.out4 --> fogFogChannel --> fogNode2.in4;
+        fogNode1.in5 <-- fogFogChannel <-- fogNode1.out5;
 
 
-        fogNode2.in1 <-- {  delay = 1ms; } <-- pc3.out;
-        fogNode2.out1 --> {  delay = 1ms; } --> pc3.in;
-        fogNode2.in2 <-- {  delay = 1ms; } <-- pc4.out;
-        fogNode2.out2 --> {  delay = 1ms; } --> pc4.in;
-        fogNode2.in3 <-- {  delay = 10ms; } <-- Server.out2;
-        fogNode2.out3 --> {  delay = 10ms; } --> Server.in2;
-        fogNode2.in5 <-- {  delay = 1ms; } <-- fogNode3.out4;
-        fogNode2.out5 --> {  delay = 1ms; } --> fogNode3.in4;
+        fogNode2.in1 <-- hostsFogChannel <-- pc3.out;
+        fogNode2.out1 --> hostsFogChannel --> pc3.in;
+        fogNode2.in2 <-- hostsFogChannel <-- pc4.out;
+        fogNode2.out2 --> hostsFogChannel --> pc4.in;
+        fogNode2.in3 <-- fogsServerChannel <-- Server.out2;
+        fogNode2.out3 --> fogsServerChannel --> Server.in2;
+        fogNode2.in5 <-- fogFogChannel <-- fogNode3.out4;
+        fogNode2.out5 --> fogFogChannel --> fogNode3.in4;
 
-        fogNode3.in1 <-- {  delay = 1ms; } <-- pc5.out;
-        fogNode3.out1 --> {  delay = 1ms; } --> pc5.in;
-        fogNode3.in2 <-- {  delay = 1ms; } <-- pc6.out;
-        fogNode3.out2 --> {  delay = 1ms; } --> pc6.in;
-        fogNode3.in3 <-- {  delay = 10ms; } <-- Server.out3;
-        fogNode3.out3 --> {  delay = 10ms; } --> Server.in3;
-        fogNode3.in5 <-- {  delay = 1ms; } <-- fogNode4.out4;
-        fogNode3.out5 --> {  delay = 1ms; } --> fogNode4.in4;
+        fogNode3.in1 <-- hostsFogChannel <-- pc5.out;
+        fogNode3.out1 --> hostsFogChannel --> pc5.in;
+        fogNode3.in2 <-- hostsFogChannel <-- pc6.out;
+        fogNode3.out2 --> hostsFogChannel --> pc6.in;
+        fogNode3.in3 <-- fogsServerChannel <-- Server.out3;
+        fogNode3.out3 --> fogsServerChannel --> Server.in3;
+        fogNode3.in5 <-- fogFogChannel <-- fogNode4.out4;
+        fogNode3.out5 --> fogFogChannel --> fogNode4.in4;
 
-        fogNode4.in1 <-- {  delay = 1ms; } <-- pc7.out;
-        fogNode4.out1 --> {  delay = 1ms; } --> pc7.in;
-        fogNode4.in2 <-- {  delay = 1ms; } <-- pc8.out;
-        fogNode4.out2 --> {  delay = 1ms; } --> pc8.in;
-        fogNode4.in3 <-- {  delay = 10ms; } <-- Server.out4;
-        fogNode4.out3 --> {  delay = 10ms; } --> Server.in4;
-        fogNode4.in5 <-- {  delay = 1ms; } <-- fogNode5.out4;
-        fogNode4.out5 --> {  delay = 1ms; } --> fogNode5.in4;
+        fogNode4.in1 <-- hostsFogChannel <-- pc7.out;
+        fogNode4.out1 --> hostsFogChannel --> pc7.in;
+        fogNode4.in2 <-- hostsFogChannel <-- pc8.out;
+        fogNode4.out2 --> hostsFogChannel --> pc8.in;
+        fogNode4.in3 <-- fogsServerChannel <-- Server.out4;
+        fogNode4.out3 --> fogsServerChannel --> Server.in4;
+        fogNode4.in5 <-- fogFogChannel <-- fogNode5.out4;
+        fogNode4.out5 --> fogFogChannel --> fogNode5.in4;
 
-        fogNode5.in1 <-- {  delay = 1ms; } <-- pc9.out;
-        fogNode5.out1 --> {  delay = 1ms; } --> pc9.in;
-        fogNode5.in2 <-- {  delay = 1ms; } <-- pc10.out;
-        fogNode5.out2 --> {  delay = 1ms; } --> pc10.in;
-        fogNode5.in3 <-- {  delay = 10ms; } <-- Server.out5;
-        fogNode5.out3 --> {  delay = 10ms; } --> Server.in5;
-        fogNode5.in5 <-- {  delay = 1ms; } <-- fogNode5.out5;
+        fogNode5.in1 <-- hostsFogChannel <-- pc9.out;
+        fogNode5.out1 --> hostsFogChannel --> pc9.in;
+        fogNode5.in2 <-- hostsFogChannel <-- pc10.out;
+        fogNode5.out2 --> hostsFogChannel --> pc10.in;
+        fogNode5.in3 <-- fogsServerChannel <-- Server.out5;
+        fogNode5.out3 --> fogsServerChannel --> Server.in5;
+        fogNode5.in5 <-- fogFogChannel <-- fogNode5.out5;
 
 
 }
