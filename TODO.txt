@@ -1,0 +1,11 @@
+TODO
+
+1 - add commincation between FogNodes ❌
+2 - replace messages with packets ❌
+2 - adjust channels and nodes delays ❌
+3 - collect the  measurments ' what is it ?? '   ❌
+4 - add serverm response ✔
+5 - choose wether first or last message deleted from queue pool ❌
+6 - fix issus in python server GUI ❌
+7 - fix python run simulation script issue ❌
+
