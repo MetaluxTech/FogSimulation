@@ -61,7 +61,9 @@ void ServerNode::forwardMessage(cMessage *msg)
 
    std::string  outputGateName=functions.getDestGate(std::string( this->getName()),std::string( msg->getArrivalGate()->getName()), msg);
     cMessage *respMessage = new cMessage(("image-" + functions.getMessageID(msg) +" processed "+ functions.getPcName(msg)).c_str());
-        delete msg;
+    bubble((" image served with id: " + functions.getMessageID(msg)).c_str());
+
+    delete msg;
 
    send(respMessage, outputGateName.c_str());
   }

@@ -16,7 +16,7 @@ class FogNode : public cSimpleModule
     cMessage *recivedMessage = nullptr;
     cMessage *processTimeEvent = nullptr;
     std::string status="idle"; ///ether idle or now_processing
-    double processing_delay=0.07;
+    double processing_delay=0.01;
     int queue_size=2;
     static std::map<cMessage*, int> hopCounter;  // Declare hopCounter as static
 
