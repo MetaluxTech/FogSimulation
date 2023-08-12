@@ -37,7 +37,7 @@ void HostNode::GenerateNewMesssage()
             std::string msgcontent = "encrypted image-" + std::to_string(uniqueID) + " from " + std::string(this->getName());
             cMessage *actualmessage = new cMessage(msgcontent.c_str());
             send(actualmessage, "out");
-            functions.Display(actualmessage);
+//            functions.Display(actualmessage);
 
 
 }

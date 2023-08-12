@@ -8,19 +8,25 @@
 using namespace omnetpp;
 
 class Functions {
+
 public:
         Functions();
         ~Functions();
-        std::map<std::string, std::string> ServerioDic;
-        std::map<std::string, std::string> FogioDic;
-        std::map<std::string, std::string> HostioDic;
-    void Display(cMessage *msg, const std::string& displayedText = "");
+    void Display(cMessage *msg);
+    void Display(std::string displayedText);
+    std::map<std::string, std::string> ServerioDic;
+    std::map<std::string, std::string> FogioDic;
+    std::map<std::string, std::string> HostioDic;
     std::string getDestinationHostGateByMessage(cMessage *msg);
     std::string getFogOut(std::string inputgate, cMessage *msg = nullptr);
     std::string getHostOut(std::string inputgate, cMessage *msg = nullptr);
     std::string getServerOut(std::string inputgate, cMessage *msg = nullptr);
-    std::string getDestGate(const std::string& nodeName, const std::string& inputgate, cMessage *msg);
+    std::string getDestGate(std::string nodeName, std::string inputgate, cMessage *msg);
     std::string getMessageID(cMessage* msg);
+    std::string getPcName(cMessage* msg);
+
+
+
 
 
 };

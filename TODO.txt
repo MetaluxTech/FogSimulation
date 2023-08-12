@@ -1,11 +1,16 @@
 TODO
 
-1 - add commincation between FogNodes ❌
-2 - replace messages with packets ❌
-2 - adjust channels and nodes delays ❌
-3 - collect the  measurments ' what is it ?? '   ❌
-4 - add serverm response ✔
-5 - choose wether first or last message deleted from queue pool ❌
-6 - fix issus in python server GUI ❌
-7 - fix python run simulation script issue ❌
+
+1 - add server response ✔
+2 - choose wether first or last message deleted from queue pool?  choosed last *  ✔
+4 - add commincation between FogNodes ✔
+5 - adjust channels and nodes delays ❌
+
+6 - replace messages with packets ❌
+7 - collect the  measurments ' what is it ?? '   ❌
+
+
+
+6 - fix issus in python server GUI ❌ asmaa
+7 - fix python run simulation script issue ❌  essam
 

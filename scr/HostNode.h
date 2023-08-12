@@ -12,7 +12,7 @@ class HostNode : public cSimpleModule
     Functions functions;
 
     cMessage *generateMessageEvent = nullptr;
-    double generate_message_delay=uniform(0.10, 0.15);
+    double generate_message_delay=uniform(0.01, 0.3);
     int messageCounter = 0;
 
   public:

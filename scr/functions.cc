@@ -5,7 +5,7 @@ using namespace omnetpp;
 
 
 Functions::Functions() {
-    ServerioDic = { {"in1", "out1"}, {"in2", "out2"}, {"in3", "out3"} };
+    ServerioDic = { {"in1", "out1"}, {"in2", "out2"}, {"in3", "out3"}, {"in4", "out4"}, {"in5", "out5"} };
     FogioDic = { {"in1", "out3"}, {"in2", "out3"} };
     HostioDic = { {"in", "out"} };
 }
@@ -16,17 +16,18 @@ Functions::~Functions() {
 
 
 
-void Functions::Display(cMessage *msg, const std::string& displayedText)
+void Functions::Display(cMessage *msg)
 {
-    if(!displayedText.empty())  {
-        EV << displayedText << "\n";
-    } else {
-
          EV  << " Message: " << msg->getName()
            << " Sender: " << msg->getSenderModule()->getFullName()
            << " Receiver: " << msg->getArrivalModule()->getFullName()
            << " Arrival Gate: " << msg->getArrivalGate()->getName() << "\n";
-    }
+}
+
+void Functions::Display( std::string displayedText)
+{
+        EV << displayedText << "\n";
+
 }
 
 std::string Functions::getDestinationHostGateByMessage(cMessage *msg)
@@ -59,12 +60,11 @@ std::string Functions::getDestinationHostGateByMessage(cMessage *msg)
     return HostioDic[inputgate];
 }
  std::string Functions::getServerOut(std::string inputgate,cMessage *msg)
-{
-           return ServerioDic[inputgate];
+{          return ServerioDic[inputgate];
 
 }
 
- std::string Functions::getDestGate(const std::string& nodeName, const std::string& inputgate, cMessage *msg)
+ std::string Functions::getDestGate(std::string nodeName,std::string inputgate, cMessage *msg)
 {
 
     if (nodeName.find("fog") != std::string::npos) {
@@ -96,5 +96,22 @@ std::string Functions::getDestinationHostGateByMessage(cMessage *msg)
     }
     return "??";
  }
+
+ std::string Functions::getPcName(cMessage* msg){
+     const char* message = msg->getName();
+      int pcNumber = -1; // Initialize to an invalid number
+      const char* patternStart = strstr(message, "pc");
+
+      if (patternStart) {
+          sscanf(patternStart, "pc%d", &pcNumber);
+              return "pc" + std::to_string(pcNumber);
+      }
+      return "??";
+
+
+
+ }
+
+
 
 
