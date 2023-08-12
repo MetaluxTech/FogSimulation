@@ -12,12 +12,15 @@ class ServerNode : public cSimpleModule
 {
     private:
     Functions functions;
+    simsignal_t arrivalSignal;
+
 
        cMessage *recivedMessage = nullptr;
        cMessage *processTimeEvent = nullptr;
        std::string status="idle"; ///ether idle or now_processing
        double processing_delay=0.01;
        int queue_size=10;
+       int emitted_count;
        std::queue<cMessage *> waitingMessagePool;
   protected:
     virtual void initialize();

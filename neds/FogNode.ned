@@ -4,6 +4,7 @@ package fogsim1;
 
 simple FogNode
 {
+        @display("i=device/accesspoint");
     gates:
         input in1;
         input in2;

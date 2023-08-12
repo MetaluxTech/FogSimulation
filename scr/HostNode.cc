@@ -23,7 +23,7 @@ void HostNode::handleMessage(cMessage *msg)
 
     }
     else{
-        bubble(("response arrive image id: " + std::to_string(uniqueID) ).c_str());
+        bubble(("response arrive image id: " + functions.getMessageID(msg) ).c_str());
 
         delete msg;
     }

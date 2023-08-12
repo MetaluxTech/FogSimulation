@@ -33,11 +33,19 @@ PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc, .msg and .sm files
-OBJS = $O/scr/FogNode.o $O/scr/functions.o $O/scr/HostNode.o $O/scr/ServerNode.o $O/scr/CustomPackets_m.o
+OBJS = \
+    $O/scr/FogNode.o \
+    $O/scr/functions.o \
+    $O/scr/HostNode.o \
+    $O/scr/ServerNode.o \
+    $O/tictoctrash/txc16.o \
+    $O/scr/CustomPackets_m.o \
+    $O/tictoctrash/tictoc16_m.o
 
 # Message files
 MSGFILES = \
-    scr/CustomPackets.msg
+    scr/CustomPackets.msg \
+    tictoctrash/tictoc16.msg
 
 # SM files
 SMFILES =

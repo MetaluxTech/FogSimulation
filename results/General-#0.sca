@@ -1,0 +1,599 @@
+version 3
+run General-0-20230812-22:32:18-1184
+attr configname General
+attr datetime 20230812-22:32:18
+attr datetimef 20230812-223218
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network fogsim1.net1
+attr processid 1184
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network fogsim1.net1
+config **.Server.hopCount.result-recording-modes +histogram
+config **.Server.hopCount.result-recording-modes -vector
+
+par net1.pc1.out.channel typename "\"fogsim1.hostsFogChannel\""
+par net1.pc1.out.channel disabled false
+attr mutable ""
+par net1.pc1.out.channel delay 0.001s
+attr mutable ""
+attr unit s
+par net1.pc1.out.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.pc1.out.channel ber 0
+attr mutable ""
+par net1.pc1.out.channel per 0
+attr mutable ""
+par net1.fogNode1.out1.channel typename "\"fogsim1.hostsFogChannel\""
+par net1.fogNode1.out1.channel disabled false
+attr mutable ""
+par net1.fogNode1.out1.channel delay 0.001s
+attr mutable ""
+attr unit s
+par net1.fogNode1.out1.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.fogNode1.out1.channel ber 0
+attr mutable ""
+par net1.fogNode1.out1.channel per 0
+attr mutable ""
+par net1.pc2.out.channel typename "\"fogsim1.hostsFogChannel\""
+par net1.pc2.out.channel disabled false
+attr mutable ""
+par net1.pc2.out.channel delay 0.001s
+attr mutable ""
+attr unit s
+par net1.pc2.out.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.pc2.out.channel ber 0
+attr mutable ""
+par net1.pc2.out.channel per 0
+attr mutable ""
+par net1.fogNode1.out2.channel typename "\"fogsim1.hostsFogChannel\""
+par net1.fogNode1.out2.channel disabled false
+attr mutable ""
+par net1.fogNode1.out2.channel delay 0.001s
+attr mutable ""
+attr unit s
+par net1.fogNode1.out2.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.fogNode1.out2.channel ber 0
+attr mutable ""
+par net1.fogNode1.out2.channel per 0
+attr mutable ""
+par net1.Server.out1.channel typename "\"fogsim1.fogsServerChannel\""
+par net1.Server.out1.channel disabled false
+attr mutable ""
+par net1.Server.out1.channel delay 0.005s
+attr mutable ""
+attr unit s
+par net1.Server.out1.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.Server.out1.channel ber 0
+attr mutable ""
+par net1.Server.out1.channel per 0
+attr mutable ""
+par net1.fogNode1.out3.channel typename "\"fogsim1.fogsServerChannel\""
+par net1.fogNode1.out3.channel disabled false
+attr mutable ""
+par net1.fogNode1.out3.channel delay 0.005s
+attr mutable ""
+attr unit s
+par net1.fogNode1.out3.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.fogNode1.out3.channel ber 0
+attr mutable ""
+par net1.fogNode1.out3.channel per 0
+attr mutable ""
+par net1.fogNode2.out4.channel typename "\"fogsim1.fogFogChannel\""
+par net1.fogNode2.out4.channel disabled false
+attr mutable ""
+par net1.fogNode2.out4.channel delay 0.0001s
+attr mutable ""
+attr unit s
+par net1.fogNode2.out4.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.fogNode2.out4.channel ber 0
+attr mutable ""
+par net1.fogNode2.out4.channel per 0
+attr mutable ""
+par net1.fogNode1.out4.channel typename "\"fogsim1.fogFogChannel\""
+par net1.fogNode1.out4.channel disabled false
+attr mutable ""
+par net1.fogNode1.out4.channel delay 0.0001s
+attr mutable ""
+attr unit s
+par net1.fogNode1.out4.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.fogNode1.out4.channel ber 0
+attr mutable ""
+par net1.fogNode1.out4.channel per 0
+attr mutable ""
+par net1.fogNode1.out5.channel typename "\"fogsim1.fogFogChannel\""
+par net1.fogNode1.out5.channel disabled false
+attr mutable ""
+par net1.fogNode1.out5.channel delay 0.0001s
+attr mutable ""
+attr unit s
+par net1.fogNode1.out5.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.fogNode1.out5.channel ber 0
+attr mutable ""
+par net1.fogNode1.out5.channel per 0
+attr mutable ""
+par net1.pc3.out.channel typename "\"fogsim1.hostsFogChannel\""
+par net1.pc3.out.channel disabled false
+attr mutable ""
+par net1.pc3.out.channel delay 0.001s
+attr mutable ""
+attr unit s
+par net1.pc3.out.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.pc3.out.channel ber 0
+attr mutable ""
+par net1.pc3.out.channel per 0
+attr mutable ""
+par net1.fogNode2.out1.channel typename "\"fogsim1.hostsFogChannel\""
+par net1.fogNode2.out1.channel disabled false
+attr mutable ""
+par net1.fogNode2.out1.channel delay 0.001s
+attr mutable ""
+attr unit s
+par net1.fogNode2.out1.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.fogNode2.out1.channel ber 0
+attr mutable ""
+par net1.fogNode2.out1.channel per 0
+attr mutable ""
+par net1.pc4.out.channel typename "\"fogsim1.hostsFogChannel\""
+par net1.pc4.out.channel disabled false
+attr mutable ""
+par net1.pc4.out.channel delay 0.001s
+attr mutable ""
+attr unit s
+par net1.pc4.out.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.pc4.out.channel ber 0
+attr mutable ""
+par net1.pc4.out.channel per 0
+attr mutable ""
+par net1.fogNode2.out2.channel typename "\"fogsim1.hostsFogChannel\""
+par net1.fogNode2.out2.channel disabled false
+attr mutable ""
+par net1.fogNode2.out2.channel delay 0.001s
+attr mutable ""
+attr unit s
+par net1.fogNode2.out2.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.fogNode2.out2.channel ber 0
+attr mutable ""
+par net1.fogNode2.out2.channel per 0
+attr mutable ""
+par net1.Server.out2.channel typename "\"fogsim1.fogsServerChannel\""
+par net1.Server.out2.channel disabled false
+attr mutable ""
+par net1.Server.out2.channel delay 0.005s
+attr mutable ""
+attr unit s
+par net1.Server.out2.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.Server.out2.channel ber 0
+attr mutable ""
+par net1.Server.out2.channel per 0
+attr mutable ""
+par net1.fogNode2.out3.channel typename "\"fogsim1.fogsServerChannel\""
+par net1.fogNode2.out3.channel disabled false
+attr mutable ""
+par net1.fogNode2.out3.channel delay 0.005s
+attr mutable ""
+attr unit s
+par net1.fogNode2.out3.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.fogNode2.out3.channel ber 0
+attr mutable ""
+par net1.fogNode2.out3.channel per 0
+attr mutable ""
+par net1.fogNode3.out4.channel typename "\"fogsim1.fogFogChannel\""
+par net1.fogNode3.out4.channel disabled false
+attr mutable ""
+par net1.fogNode3.out4.channel delay 0.0001s
+attr mutable ""
+attr unit s
+par net1.fogNode3.out4.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.fogNode3.out4.channel ber 0
+attr mutable ""
+par net1.fogNode3.out4.channel per 0
+attr mutable ""
+par net1.fogNode2.out5.channel typename "\"fogsim1.fogFogChannel\""
+par net1.fogNode2.out5.channel disabled false
+attr mutable ""
+par net1.fogNode2.out5.channel delay 0.0001s
+attr mutable ""
+attr unit s
+par net1.fogNode2.out5.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.fogNode2.out5.channel ber 0
+attr mutable ""
+par net1.fogNode2.out5.channel per 0
+attr mutable ""
+par net1.pc5.out.channel typename "\"fogsim1.hostsFogChannel\""
+par net1.pc5.out.channel disabled false
+attr mutable ""
+par net1.pc5.out.channel delay 0.001s
+attr mutable ""
+attr unit s
+par net1.pc5.out.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.pc5.out.channel ber 0
+attr mutable ""
+par net1.pc5.out.channel per 0
+attr mutable ""
+par net1.fogNode3.out1.channel typename "\"fogsim1.hostsFogChannel\""
+par net1.fogNode3.out1.channel disabled false
+attr mutable ""
+par net1.fogNode3.out1.channel delay 0.001s
+attr mutable ""
+attr unit s
+par net1.fogNode3.out1.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.fogNode3.out1.channel ber 0
+attr mutable ""
+par net1.fogNode3.out1.channel per 0
+attr mutable ""
+par net1.pc6.out.channel typename "\"fogsim1.hostsFogChannel\""
+par net1.pc6.out.channel disabled false
+attr mutable ""
+par net1.pc6.out.channel delay 0.001s
+attr mutable ""
+attr unit s
+par net1.pc6.out.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.pc6.out.channel ber 0
+attr mutable ""
+par net1.pc6.out.channel per 0
+attr mutable ""
+par net1.fogNode3.out2.channel typename "\"fogsim1.hostsFogChannel\""
+par net1.fogNode3.out2.channel disabled false
+attr mutable ""
+par net1.fogNode3.out2.channel delay 0.001s
+attr mutable ""
+attr unit s
+par net1.fogNode3.out2.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.fogNode3.out2.channel ber 0
+attr mutable ""
+par net1.fogNode3.out2.channel per 0
+attr mutable ""
+par net1.Server.out3.channel typename "\"fogsim1.fogsServerChannel\""
+par net1.Server.out3.channel disabled false
+attr mutable ""
+par net1.Server.out3.channel delay 0.005s
+attr mutable ""
+attr unit s
+par net1.Server.out3.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.Server.out3.channel ber 0
+attr mutable ""
+par net1.Server.out3.channel per 0
+attr mutable ""
+par net1.fogNode3.out3.channel typename "\"fogsim1.fogsServerChannel\""
+par net1.fogNode3.out3.channel disabled false
+attr mutable ""
+par net1.fogNode3.out3.channel delay 0.005s
+attr mutable ""
+attr unit s
+par net1.fogNode3.out3.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.fogNode3.out3.channel ber 0
+attr mutable ""
+par net1.fogNode3.out3.channel per 0
+attr mutable ""
+par net1.fogNode4.out4.channel typename "\"fogsim1.fogFogChannel\""
+par net1.fogNode4.out4.channel disabled false
+attr mutable ""
+par net1.fogNode4.out4.channel delay 0.0001s
+attr mutable ""
+attr unit s
+par net1.fogNode4.out4.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.fogNode4.out4.channel ber 0
+attr mutable ""
+par net1.fogNode4.out4.channel per 0
+attr mutable ""
+par net1.fogNode3.out5.channel typename "\"fogsim1.fogFogChannel\""
+par net1.fogNode3.out5.channel disabled false
+attr mutable ""
+par net1.fogNode3.out5.channel delay 0.0001s
+attr mutable ""
+attr unit s
+par net1.fogNode3.out5.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.fogNode3.out5.channel ber 0
+attr mutable ""
+par net1.fogNode3.out5.channel per 0
+attr mutable ""
+par net1.pc7.out.channel typename "\"fogsim1.hostsFogChannel\""
+par net1.pc7.out.channel disabled false
+attr mutable ""
+par net1.pc7.out.channel delay 0.001s
+attr mutable ""
+attr unit s
+par net1.pc7.out.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.pc7.out.channel ber 0
+attr mutable ""
+par net1.pc7.out.channel per 0
+attr mutable ""
+par net1.fogNode4.out1.channel typename "\"fogsim1.hostsFogChannel\""
+par net1.fogNode4.out1.channel disabled false
+attr mutable ""
+par net1.fogNode4.out1.channel delay 0.001s
+attr mutable ""
+attr unit s
+par net1.fogNode4.out1.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.fogNode4.out1.channel ber 0
+attr mutable ""
+par net1.fogNode4.out1.channel per 0
+attr mutable ""
+par net1.pc8.out.channel typename "\"fogsim1.hostsFogChannel\""
+par net1.pc8.out.channel disabled false
+attr mutable ""
+par net1.pc8.out.channel delay 0.001s
+attr mutable ""
+attr unit s
+par net1.pc8.out.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.pc8.out.channel ber 0
+attr mutable ""
+par net1.pc8.out.channel per 0
+attr mutable ""
+par net1.fogNode4.out2.channel typename "\"fogsim1.hostsFogChannel\""
+par net1.fogNode4.out2.channel disabled false
+attr mutable ""
+par net1.fogNode4.out2.channel delay 0.001s
+attr mutable ""
+attr unit s
+par net1.fogNode4.out2.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.fogNode4.out2.channel ber 0
+attr mutable ""
+par net1.fogNode4.out2.channel per 0
+attr mutable ""
+par net1.Server.out4.channel typename "\"fogsim1.fogsServerChannel\""
+par net1.Server.out4.channel disabled false
+attr mutable ""
+par net1.Server.out4.channel delay 0.005s
+attr mutable ""
+attr unit s
+par net1.Server.out4.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.Server.out4.channel ber 0
+attr mutable ""
+par net1.Server.out4.channel per 0
+attr mutable ""
+par net1.fogNode4.out3.channel typename "\"fogsim1.fogsServerChannel\""
+par net1.fogNode4.out3.channel disabled false
+attr mutable ""
+par net1.fogNode4.out3.channel delay 0.005s
+attr mutable ""
+attr unit s
+par net1.fogNode4.out3.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.fogNode4.out3.channel ber 0
+attr mutable ""
+par net1.fogNode4.out3.channel per 0
+attr mutable ""
+par net1.fogNode5.out4.channel typename "\"fogsim1.fogFogChannel\""
+par net1.fogNode5.out4.channel disabled false
+attr mutable ""
+par net1.fogNode5.out4.channel delay 0.0001s
+attr mutable ""
+attr unit s
+par net1.fogNode5.out4.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.fogNode5.out4.channel ber 0
+attr mutable ""
+par net1.fogNode5.out4.channel per 0
+attr mutable ""
+par net1.fogNode4.out5.channel typename "\"fogsim1.fogFogChannel\""
+par net1.fogNode4.out5.channel disabled false
+attr mutable ""
+par net1.fogNode4.out5.channel delay 0.0001s
+attr mutable ""
+attr unit s
+par net1.fogNode4.out5.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.fogNode4.out5.channel ber 0
+attr mutable ""
+par net1.fogNode4.out5.channel per 0
+attr mutable ""
+par net1.pc9.out.channel typename "\"fogsim1.hostsFogChannel\""
+par net1.pc9.out.channel disabled false
+attr mutable ""
+par net1.pc9.out.channel delay 0.001s
+attr mutable ""
+attr unit s
+par net1.pc9.out.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.pc9.out.channel ber 0
+attr mutable ""
+par net1.pc9.out.channel per 0
+attr mutable ""
+par net1.fogNode5.out1.channel typename "\"fogsim1.hostsFogChannel\""
+par net1.fogNode5.out1.channel disabled false
+attr mutable ""
+par net1.fogNode5.out1.channel delay 0.001s
+attr mutable ""
+attr unit s
+par net1.fogNode5.out1.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.fogNode5.out1.channel ber 0
+attr mutable ""
+par net1.fogNode5.out1.channel per 0
+attr mutable ""
+par net1.pc10.out.channel typename "\"fogsim1.hostsFogChannel\""
+par net1.pc10.out.channel disabled false
+attr mutable ""
+par net1.pc10.out.channel delay 0.001s
+attr mutable ""
+attr unit s
+par net1.pc10.out.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.pc10.out.channel ber 0
+attr mutable ""
+par net1.pc10.out.channel per 0
+attr mutable ""
+par net1.fogNode5.out2.channel typename "\"fogsim1.hostsFogChannel\""
+par net1.fogNode5.out2.channel disabled false
+attr mutable ""
+par net1.fogNode5.out2.channel delay 0.001s
+attr mutable ""
+attr unit s
+par net1.fogNode5.out2.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.fogNode5.out2.channel ber 0
+attr mutable ""
+par net1.fogNode5.out2.channel per 0
+attr mutable ""
+par net1.Server.out5.channel typename "\"fogsim1.fogsServerChannel\""
+par net1.Server.out5.channel disabled false
+attr mutable ""
+par net1.Server.out5.channel delay 0.005s
+attr mutable ""
+attr unit s
+par net1.Server.out5.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.Server.out5.channel ber 0
+attr mutable ""
+par net1.Server.out5.channel per 0
+attr mutable ""
+par net1.fogNode5.out3.channel typename "\"fogsim1.fogsServerChannel\""
+par net1.fogNode5.out3.channel disabled false
+attr mutable ""
+par net1.fogNode5.out3.channel delay 0.005s
+attr mutable ""
+attr unit s
+par net1.fogNode5.out3.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.fogNode5.out3.channel ber 0
+attr mutable ""
+par net1.fogNode5.out3.channel per 0
+attr mutable ""
+par net1.fogNode5.out5.channel typename "\"fogsim1.fogFogChannel\""
+par net1.fogNode5.out5.channel disabled false
+attr mutable ""
+par net1.fogNode5.out5.channel delay 0.0001s
+attr mutable ""
+attr unit s
+par net1.fogNode5.out5.channel datarate 1e+09bps
+attr mutable ""
+attr unit bps
+par net1.fogNode5.out5.channel ber 0
+attr mutable ""
+par net1.fogNode5.out5.channel per 0
+attr mutable ""
+par net1.Server typename "\"fogsim1.ServerNode\""
+statistic net1.Server hopCount:stats
+field count 240385
+field mean 5.0085238263619
+field stddev 3.1631349509861
+field min 0
+field max 10
+field sum 1203974
+field sqrsum 8435276
+attr interpolationmode none
+attr recordingmode stats
+attr source arrival
+attr title "hop count"
+statistic net1.Server hopCount:histogram
+field count 240385
+field mean 5.0085238263619
+field stddev 3.1631349509861
+field min 0
+field max 10
+field sum 1203974
+field sqrsum 8435276
+attr interpolationmode none
+attr recordingmode histogram
+attr source arrival
+attr title "hop count"
+bin	-inf	0
+bin	0	21823
+bin	1	21705
+bin	2	21655
+bin	3	22084
+bin	4	21902
+bin	5	21745
+bin	6	21640
+bin	7	21946
+bin	8	22033
+bin	9	21872
+bin	10	21980
+bin	11	0
+bin	12	0
+bin	13	0
+par net1.pc1 typename "\"fogsim1.HostNode\""
+par net1.pc2 typename "\"fogsim1.HostNode\""
+par net1.pc3 typename "\"fogsim1.HostNode\""
+par net1.pc4 typename "\"fogsim1.HostNode\""
+par net1.pc5 typename "\"fogsim1.HostNode\""
+par net1.pc6 typename "\"fogsim1.HostNode\""
+par net1.pc7 typename "\"fogsim1.HostNode\""
+par net1.pc8 typename "\"fogsim1.HostNode\""
+par net1.pc9 typename "\"fogsim1.HostNode\""
+par net1.pc10 typename "\"fogsim1.HostNode\""
+par net1.fogNode1 typename "\"fogsim1.FogNode\""
+par net1.fogNode2 typename "\"fogsim1.FogNode\""
+par net1.fogNode3 typename "\"fogsim1.FogNode\""
+par net1.fogNode4 typename "\"fogsim1.FogNode\""
+par net1.fogNode5 typename "\"fogsim1.FogNode\""
+par net1 typename "\"fogsim1.net1\""
+

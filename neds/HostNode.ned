@@ -2,8 +2,9 @@
 package fogsim1;
 simple HostNode
 {
-    parameters:
-    gates:
+        @display("i=device/pc");
+
+        gates:
         input in ;
         output out;
          

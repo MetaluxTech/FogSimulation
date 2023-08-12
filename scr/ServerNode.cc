@@ -7,11 +7,14 @@ Define_Module(ServerNode);
 
 void ServerNode::initialize()
 {
-    // TODO - Generated method body
+    arrivalSignal = registerSignal("arrival");
+
+
 }
 
 void ServerNode::handleMessage(cMessage *msg)
 {
+    emitted_count=intuniform(0, 10);
     if(msg == processTimeEvent) {
           // Received a processing time event
            forwardMessage(recivedMessage);  // forward the currently processing message
@@ -29,7 +32,7 @@ void ServerNode::handleMessage(cMessage *msg)
 
 
  }else {   // Received a regular message
-//     functions.Display(msg, "server recive msg at" + std::to_string(simTime().dbl()) + " from " +std::string(this->getName()) );
+     emit(arrivalSignal,emitted_count );
 
      if(status == "idle") {
          status = "processing";
@@ -62,9 +65,7 @@ void ServerNode::forwardMessage(cMessage *msg)
    std::string  outputGateName=functions.getDestGate(std::string( this->getName()),std::string( msg->getArrivalGate()->getName()), msg);
     cMessage *respMessage = new cMessage(("image-" + functions.getMessageID(msg) +" processed "+ functions.getPcName(msg)).c_str());
     bubble((" image served with id: " + functions.getMessageID(msg)).c_str());
-
     delete msg;
-
    send(respMessage, outputGateName.c_str());
   }
 

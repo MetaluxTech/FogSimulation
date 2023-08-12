@@ -3,8 +3,15 @@
 package fogsim1;
 simple ServerNode
 {
-    gates:
-       input in1 ;
+ parameters:
+        @signal[arrival](type="long");
+        @statistic[hopCount](title="hop count"; source="arrival"; record=vector,stats; interpolationmode=none);
+
+        @display("i=device/server");
+        
+        gates:
+        
+        input in1 ;
         input in2;
         input in3 ;
         input in4;

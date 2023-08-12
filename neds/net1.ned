@@ -24,6 +24,14 @@ network net1
 
 
     submodules:
+         Server: ServerNode {
+            @display("p=414,33");
+           
+@statistic[sendEvent](record=vector;source=sendEvent;checkSignals=false);
+
+
+}
+       
         pc1: HostNode {
             @display("p=33,406");
         }
@@ -70,9 +78,6 @@ network net1
         }
         fogNode5: FogNode {
             @display("p=778,288");
-        }
-        Server: ServerNode {
-            @display("p=414,33");
         }
        
     connections:

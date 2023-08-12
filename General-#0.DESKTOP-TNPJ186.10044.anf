@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<analysis version="2">
-    <inputs>
-        <input pattern="/fogsim1/results/General-#0.DESKTOP-TNPJ186.10044.vec"/>
-        <input pattern="/fogsim1/results/General-#0.DESKTOP-TNPJ186.10044.sca"/>
-    </inputs>
-    <charts/>
-</analysis>
