@@ -38,14 +38,15 @@ OBJS = \
     $O/scr/functions.o \
     $O/scr/HostNode.o \
     $O/scr/ServerNode.o \
-    $O/tictoctrash/txc16.o \
-    $O/scr/CustomPackets_m.o \
-    $O/tictoctrash/tictoc16_m.o
+    $O/scr/measurment/message_delay.o \
+    $O/scr/measurment/messages_rate.o \
+    $O/scr/measurment/PacketLossTracker.o \
+    $O/scr/measurment/power_manager.o \
+    $O/scr/CustomPackets_m.o
 
 # Message files
 MSGFILES = \
-    scr/CustomPackets.msg \
-    tictoctrash/tictoc16.msg
+    scr/CustomPackets.msg
 
 # SM files
 SMFILES =

@@ -20,6 +20,4 @@ To install OMNeT++ 6.0 IDE, follow the instructions in the linked video:
    ```
    **Note**: Replace the path with your project's path and name.
 
-### Known Issues
 
-- Running using python script still poses some issues. Investigations are ongoing.

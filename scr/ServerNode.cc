@@ -8,8 +8,6 @@ Define_Module(ServerNode);
 void ServerNode::initialize()
 {
     arrivalSignal = registerSignal("arrival");
-
-
 }
 
 void ServerNode::handleMessage(cMessage *msg)
