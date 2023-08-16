@@ -36,21 +36,31 @@ void FogNode::handleMessage(cMessage *msg)
            }
        }
 }
-void FogNode::addToQueue(cMessage *message)
+void FogNode::addToQueue(cMessage *msg)
 {
     if (waitingMessagePool.size() < queue_size)
-       {
-           waitingMessagePool.push(message);
-       }
-       else
-       {
-           forwardMessage(message,true);
-       }
+      {
+          waitingMessagePool.push(msg);
+      }
+      else if (strcmp(msg->getArrivalGate()->getName(),"in3") == 3)
+      {
+          cMessage* lastMessage = waitingMessagePool.back();
+          waitingMessagePool.pop();
+          delete lastMessage;
+          waitingMessagePool.push(msg);
+      }
+      else
+      {
+          forwardMessage(msg, true);
+      }
+
+
 }
 
 
-void FogNode::forwardMessage(cMessage *msg, BOOLEAN queue_full)
-{
+void FogNode::forwardMessage(cMessage *msg, BOOLEAN queue_full){
+
+
     if (!queue_full)
     {
         std::string outputGateName = functions.getDestGate(std::string(this->getName()), std::string(msg->getArrivalGate()->getName()), msg);
@@ -76,7 +86,6 @@ std::string FogNode::getBestFogGate(cMessage *msg) //Neighbor
 
      int fog_node_number = std::stoi(std::string(msg->getArrivalModule()->getName()).substr(7));
      std:: string arrivall_gate=msg->getArrivalGate()->getName();
-     bubble(("fog" + std::to_string(fog_node_number) + " queue full !!!  input gate: " + arrivall_gate + " hops: " + std::to_string(getHopCounter(msg))).c_str());
 
      if (getHopCounter(msg) == 0 ){
 
@@ -89,7 +98,7 @@ std::string FogNode::getBestFogGate(cMessage *msg) //Neighbor
          case 1:
              return "out4";
          case 5:
-                 bubble(("Deleting image-" + functions.getMessageID(msg) + "all queues full  !!!").c_str());
+                 bubble("Deleting image queues full  !!!");
                     delete msg;
              break;
          default:

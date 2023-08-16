@@ -14,8 +14,7 @@ class HostNode : public cSimpleModule
     Measurments measurments;
     cOutVector messagesdelayVector;
     cMessage *msgevent;
-    double gen_delay=uniform(0.2,1);
-    int messageCounter = 0;
+        int messageCounter = 0;
 
   public:
     virtual ~HostNode();
@@ -24,6 +23,8 @@ class HostNode : public cSimpleModule
     virtual void initialize() override;
     virtual void handleMessage(cMessage *msg) override;
     void GenerateNewMesssage();
+    double nextRandomDelay(double lowerBound=30.0/1000.0, double upperBound=40.0/1000.0);
+
 };
 
 

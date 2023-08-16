@@ -12,6 +12,7 @@ void ServerNode::initialize()
 
 void ServerNode::handleMessage(cMessage *msg)
 {
+    EV << "msg arrrived at " << getName() << " - " << (simTime().dbl() * 1000) << " ms" << endl;
 
             EV<<"returned ";
     if (!msg->isSelfMessage()){
@@ -46,6 +47,8 @@ void ServerNode::addToQueue(cMessage *msg){
 
 void ServerNode::forwardMessage(cMessage *msg)
 {
+    EV << "msg sent at " << getName() << " - " << (simTime().dbl() * 1000) << " ms" << endl;
+
     std::string outputGateName = functions.getDestGate(std::string(this->getName()), std::string(msg->getArrivalGate()->getName()), msg);
     msg->setName(("Image-" + functions.getMessageID(msg) + " processed " + functions.getPcName(msg)).c_str());
     bubble(("Image served with id: " + functions.getMessageID(msg)).c_str());

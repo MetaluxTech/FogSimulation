@@ -16,8 +16,8 @@ class ServerNode : public cSimpleModule
 
        cMessage *scheduleEvent ;
        std::string status="idle"; ///ether idle or now_processing
-       double processing_delay=0.07;
-       int queue_size=10;
+       double processing_delay = 10.0/1000.0;
+       int queue_size=100;
        std::queue<cMessage *> waitingMessagePool;
 
 
