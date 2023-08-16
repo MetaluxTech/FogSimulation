@@ -5,47 +5,37 @@ using namespace omnetpp;
 
 Define_Module(FogNode);
 
-std::map<cMessage*, int> FogNode::hopCounter;
 
 void FogNode::initialize()
 {
+
+
+
+
+    scheduleEvent = new cMessage("scheduleEvent");
+
 
 }
 
 void FogNode::handleMessage(cMessage *msg)
 {
-    if(msg == processTimeEvent) {
+    if (!msg->isSelfMessage()){
+           addToQueue(msg);
 
-            forwardMessage(recivedMessage);  // forward the currently processing message
+           if (!scheduleEvent->isScheduled()){
+              scheduleAfter(processing_delay, scheduleEvent); //wait until get last message in queue
+           }
+       }
+       else if (msg == scheduleEvent){
 
-            if(waitingMessagePool.empty()) {
-                status = "idle";
-                delete processTimeEvent;
-                processTimeEvent = nullptr;
-            }  else {
-                recivedMessage = waitingMessagePool.front();
-                waitingMessagePool.pop();
-                startProcessingDelay();
-            }
-
-
-  }else
-
-  {
-      // Received a regular message
-
-      if(status == "idle") {
-          status = "processing";
-          recivedMessage = msg;
-          startProcessingDelay();
-      } else if(status == "processing") {
-          addToQueue(msg);
-      }
-  }
-  }
-
-
-
+           if (!waitingMessagePool.empty()) {
+               msg = waitingMessagePool.front();
+               waitingMessagePool.pop(); //take the message
+               forwardMessage(msg);
+               scheduleAfter(processing_delay, scheduleEvent);
+           }
+       }
+}
 void FogNode::addToQueue(cMessage *message)
 {
     if (waitingMessagePool.size() < queue_size)
@@ -113,17 +103,9 @@ std::string FogNode::getBestFogGate(cMessage *msg) //Neighbor
 
 
 
-void FogNode::startProcessingDelay()
-{
-    if(!processTimeEvent) {
-        processTimeEvent = new cMessage("processTimeEvent");
-    }
-    scheduleAt(simTime() + processing_delay, processTimeEvent);
-}
- void FogNode::incrementHopCounter(cMessage* msg) {
+void FogNode::incrementHopCounter(cMessage* msg) {
      hopCounter[msg]++;
  }
-
  int FogNode::getHopCounter(cMessage* msg) const {
      auto it = hopCounter.find(msg);
      if (it != hopCounter.end()) {
@@ -133,4 +115,18 @@ void FogNode::startProcessingDelay()
  }
 
 
+ FogNode :: ~FogNode(){
+     while(!waitingMessagePool.empty()) {
+               cMessage* msg = waitingMessagePool.front();
+               waitingMessagePool.pop();
+               delete msg;
+           }
+
+           if (scheduleEvent) {
+               cancelAndDelete(scheduleEvent);
+               scheduleEvent = nullptr;
+           }
+
+
+ }
 

@@ -1,0 +1,25 @@
+version 3
+run general-0-20230816-16:38:46-336
+attr configname general
+attr datetime 20230816-16:38:46
+attr datetimef 20230816-163846
+attr experiment general
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network fogsim1.net1
+attr processid 336
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network fogsim1.net1
+
+vector 0 net1.pc9 "Messages Delay" ETV
+vector 1 net1.pc7 "Messages Delay" ETV
+0	9	0.627956605431	0.089032768
+1	34	0.697956605431	0.062050063525
+

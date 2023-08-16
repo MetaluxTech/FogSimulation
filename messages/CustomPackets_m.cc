@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by opp_msgtool 6.0 from scr/CustomPackets.msg.
+// Generated file, do not edit! Created by opp_msgtool 6.0 from messages/CustomPackets.msg.
 //
 
 // Disable warnings about unused variables, empty switch stmts, etc:

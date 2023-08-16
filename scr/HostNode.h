@@ -4,15 +4,17 @@
 
 #include <omnetpp.h>
 #include "functions.h"
+#include "Measurments.h"
 using namespace omnetpp;
 
 class HostNode : public cSimpleModule
 {
   private:
     Functions functions;
-
-    cMessage *generateMessageEvent = nullptr;
-    double generate_message_delay=uniform(0.01, 0.3);
+    Measurments measurments;
+    cOutVector messagesdelayVector;
+    cMessage *msgevent;
+    double gen_delay=uniform(0.2,1);
     int messageCounter = 0;
 
   public:
@@ -25,9 +27,4 @@ class HostNode : public cSimpleModule
 };
 
 
-
-HostNode::~HostNode()
-{
-    cancelAndDelete(generateMessageEvent);
-}
 #endif

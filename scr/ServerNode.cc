@@ -1,4 +1,3 @@
-
 #include "ServerNode.h"
 
 using namespace omnetpp;
@@ -7,72 +6,62 @@ Define_Module(ServerNode);
 
 void ServerNode::initialize()
 {
-    arrivalSignal = registerSignal("arrival");
+    // Corrected the spelling
+    scheduleEvent = new cMessage("scheduleEvent");
 }
 
 void ServerNode::handleMessage(cMessage *msg)
 {
-    emitted_count=intuniform(0, 10);
-    if(msg == processTimeEvent) {
-          // Received a processing time event
-           forwardMessage(recivedMessage);  // forward the currently processing message
 
-//           functions.Display(msg, "server sent msg at " + std::to_string(simTime().dbl()) + " from " +std::string(this->getName()) );
-           if(waitingMessagePool.empty()) {
-               status = "idle";
-               delete processTimeEvent;
-               processTimeEvent = nullptr;
-           }  else {
-               recivedMessage = waitingMessagePool.front();
-               waitingMessagePool.pop();
-               startProcessingDelay();
-           }
+            EV<<"returned ";
+    if (!msg->isSelfMessage()){
+        addToQueue(msg);
 
+        if (!scheduleEvent->isScheduled()){
+           scheduleAfter(processing_delay, scheduleEvent); //wait until get last message in queue
+        }
+    }
+    else if (msg == scheduleEvent){
 
- }else {   // Received a regular message
-     emit(arrivalSignal,emitted_count );
-
-     if(status == "idle") {
-         status = "processing";
-         recivedMessage = msg;
-         startProcessingDelay();
-     } else if(status == "processing") {
-         addToQueue(msg);
-     }
- }
- }
-
-void ServerNode::addToQueue(cMessage *message)
-{
-    if (waitingMessagePool.size() < queue_size)
-       {
-           waitingMessagePool.push(message);
-       }
-       else
-       {
-           this->bubble(("queue full deleted image -" + functions.getMessageID(message)).c_str());
-           delete message;
-//           functions.Display(message,"message deleted in  "+std::string(this->getName()) + " queue full !!!");
-       }
+        if (!waitingMessagePool.empty()) {
+            msg = waitingMessagePool.front();
+            waitingMessagePool.pop(); //take the message
+            forwardMessage(msg);
+            scheduleAfter(processing_delay, scheduleEvent);
+        }
+    }
 }
 
+void ServerNode::addToQueue(cMessage *msg){
+    if (waitingMessagePool.size() < queue_size)
+    {
+        waitingMessagePool.push(msg);
+    }
+    else
+    {
+        bubble(("Queue full, deleted image -" + functions.getMessageID(msg)).c_str());
+        delete msg;
+    }
+}
 
 void ServerNode::forwardMessage(cMessage *msg)
 {
+    std::string outputGateName = functions.getDestGate(std::string(this->getName()), std::string(msg->getArrivalGate()->getName()), msg);
+    msg->setName(("Image-" + functions.getMessageID(msg) + " processed " + functions.getPcName(msg)).c_str());
+    bubble(("Image served with id: " + functions.getMessageID(msg)).c_str());
+    send(msg, outputGateName.c_str());
+}
 
-   std::string  outputGateName=functions.getDestGate(std::string( this->getName()),std::string( msg->getArrivalGate()->getName()), msg);
-    cMessage *respMessage = new cMessage(("image-" + functions.getMessageID(msg) +" processed "+ functions.getPcName(msg)).c_str());
-    bubble((" image served with id: " + functions.getMessageID(msg)).c_str());
-    delete msg;
-   send(respMessage, outputGateName.c_str());
-  }
-
-
-
-void ServerNode::startProcessingDelay()
+ServerNode::~ServerNode()
 {
-    if(!processTimeEvent) {
-        processTimeEvent = new cMessage("processTimeEvent");
+    while (!waitingMessagePool.empty()) {
+        cMessage* msg = waitingMessagePool.front();
+        waitingMessagePool.pop();
+        delete msg;
     }
-    scheduleAt(simTime() + processing_delay, processTimeEvent);
+
+    if (scheduleEvent) {
+        cancelAndDelete(scheduleEvent);
+        scheduleEvent = nullptr;
+    }
 }

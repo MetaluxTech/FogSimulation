@@ -13,13 +13,11 @@ class FogNode : public cSimpleModule
     private:
     Functions functions;
 
-    cMessage *recivedMessage = nullptr;
-    cMessage *processTimeEvent = nullptr;
+    cMessage *scheduleEvent ;
     std::string status="idle"; ///ether idle or now_processing
-    double processing_delay=0.3;
+    double processing_delay=0.003;
     int queue_size=3;
-    static std::map<cMessage*, int> hopCounter;  // Declare hopCounter as static
-
+    std::map<cMessage*, int> hopCounter;
     std::queue<cMessage *> waitingMessagePool;
     public:
         virtual ~FogNode();
@@ -36,24 +34,5 @@ class FogNode : public cSimpleModule
 
 };
 
-FogNode :: ~FogNode(){
-    while(!waitingMessagePool.empty()) {
-              cMessage* msg = waitingMessagePool.front();
-              waitingMessagePool.pop();
-              delete msg;
-          }
-
-          // Cancel and delete the other messages
-          if (recivedMessage) {
-              cancelAndDelete(recivedMessage);
-              recivedMessage = nullptr;
-          }
-          if (processTimeEvent) {
-              cancelAndDelete(processTimeEvent);
-              processTimeEvent = nullptr;
-          }
-
-
-}
 
 #endif

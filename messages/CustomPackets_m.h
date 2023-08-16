@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by opp_msgtool 6.0 from scr/CustomPackets.msg.
+// Generated file, do not edit! Created by opp_msgtool 6.0 from messages/CustomPackets.msg.
 //
 
 #ifndef __CUSTOMPACKETS_M_H
@@ -18,7 +18,7 @@
 
 class Image;
 /**
- * Class generated from <tt>scr/CustomPackets.msg:3</tt> by opp_msgtool.
+ * Class generated from <tt>messages/CustomPackets.msg:3</tt> by opp_msgtool.
  * <pre>
  * packet Image
  * {

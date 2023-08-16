@@ -1,1 +1,0 @@
--g -Wall   -I/usr/include -fno-stack-protector -DXMLPARSER=libxml -DWITH_PARSIM -DWITH_NETBUILDER  -I. -IModules -Iresults -Iscr -ID:/fog_simulator/omnetpp-4.6/include

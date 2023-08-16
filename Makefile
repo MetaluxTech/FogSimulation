@@ -34,19 +34,20 @@ O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc, .msg and .sm files
 OBJS = \
+    $O/measurment/message_delay.o \
+    $O/measurment/messages_rate.o \
+    $O/measurment/PacketLossTracker.o \
+    $O/measurment/power_manager.o \
     $O/scr/FogNode.o \
     $O/scr/functions.o \
     $O/scr/HostNode.o \
+    $O/scr/Measurments.o \
     $O/scr/ServerNode.o \
-    $O/scr/measurment/message_delay.o \
-    $O/scr/measurment/messages_rate.o \
-    $O/scr/measurment/PacketLossTracker.o \
-    $O/scr/measurment/power_manager.o \
-    $O/scr/CustomPackets_m.o
+    $O/messages/CustomPackets_m.o
 
 # Message files
 MSGFILES = \
-    scr/CustomPackets.msg
+    messages/CustomPackets.msg
 
 # SM files
 SMFILES =
