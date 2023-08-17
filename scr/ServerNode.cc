@@ -1,4 +1,6 @@
 #include "ServerNode.h"
+#include <cmath>
+#include <iomanip>
 
 using namespace omnetpp;
 
@@ -6,36 +8,42 @@ Define_Module(ServerNode);
 
 void ServerNode::initialize()
 {
-    // Corrected the spelling
+
     scheduleEvent = new cMessage("scheduleEvent");
 }
 
 void ServerNode::handleMessage(cMessage *msg)
 {
-    EV << "msg arrrived at " << getName() << " - " << (simTime().dbl() * 1000) << " ms" << endl;
 
-            EV<<"returned ";
-    if (!msg->isSelfMessage()){
+
+    if (! msg->isSelfMessage() ){
         addToQueue(msg);
 
-        if (!scheduleEvent->isScheduled()){
-           scheduleAfter(processing_delay, scheduleEvent); //wait until get last message in queue
-        }
-    }
-    else if (msg == scheduleEvent){
+        if (!scheduleEvent->isScheduled())
+                    scheduleAfter(processing_delay, scheduleEvent); //wait until get last message in queue
 
-        if (!waitingMessagePool.empty()) {
+    }
+    else if (msg == scheduleEvent && !waitingMessagePool.empty()){
+
+
             msg = waitingMessagePool.front();
             waitingMessagePool.pop(); //take the message
             forwardMessage(msg);
             scheduleAfter(processing_delay, scheduleEvent);
-        }
     }
+        else{
+
+
+        }
+
+
 }
 
 void ServerNode::addToQueue(cMessage *msg){
     if (waitingMessagePool.size() < queue_size)
     {
+        sum_utilize_time+=processing_delay;
+        EV<<"sum processing time: "+sum_utilize_time.str()<<endl;
         waitingMessagePool.push(msg);
     }
     else
@@ -47,10 +55,10 @@ void ServerNode::addToQueue(cMessage *msg){
 
 void ServerNode::forwardMessage(cMessage *msg)
 {
-    EV << "msg sent at " << getName() << " - " << (simTime().dbl() * 1000) << " ms" << endl;
+    EV << "msg sent at " << getName() << " - " << (simTime().dbl() )  << endl;
 
     std::string outputGateName = functions.getDestGate(std::string(this->getName()), std::string(msg->getArrivalGate()->getName()), msg);
-    msg->setName(("Image-" + functions.getMessageID(msg) + " processed " + functions.getPcName(msg)).c_str());
+    msg->setName(("image-" + functions.getMessageID(msg) + " processed " + functions.getPcName(msg)).c_str());
     bubble(("Image served with id: " + functions.getMessageID(msg)).c_str());
     send(msg, outputGateName.c_str());
 }
@@ -68,3 +76,12 @@ ServerNode::~ServerNode()
         scheduleEvent = nullptr;
     }
 }
+
+
+void ServerNode::finish() {
+     double utlztime=measurments.getServerUtilizationPrecent(sum_utilize_time.dbl(),waitingMessagePool.size(),processing_delay);
+
+     EV << "server ulitization: " << std::fixed << std::setprecision(2) << utlztime << "%\n";
+     }
+
+

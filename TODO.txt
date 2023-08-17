@@ -6,10 +6,23 @@ TODO
 4 - add commincation between FogNodes ✔
 5 - adjust channels and nodes delays ✔
 6 - replace messages with images 1MB packets ✔
+
 7 - collect the  measurments ' what is it ??  ask '   ❌
+Measurmets
+
+ a average jobs in system   			❌
+  Mean whole server utilization			✔		
+  Mean FogNodes utilization				✔
+  Mean Response  time					✔
+  Throughput							✔
+  Cost Cloud							❌
+
+
+
+
+
 
 
 
 6 - fix issus in python server GUI ❌ ' ask '
 7 - fix python run simulation script issue ❌ ' ask '
-

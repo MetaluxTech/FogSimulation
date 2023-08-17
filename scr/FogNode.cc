@@ -1,6 +1,8 @@
+#include <iomanip>
 
 #include "FogNode.h"
 #include "functions.h"
+
 using namespace omnetpp;
 
 Define_Module(FogNode);
@@ -20,6 +22,8 @@ void FogNode::initialize()
 void FogNode::handleMessage(cMessage *msg)
 {
     if (!msg->isSelfMessage()){
+        Image *pkt = dynamic_cast<Image*>(msg);
+        measurments.analyseIncomingPacket(pkt);
            addToQueue(msg);
 
            if (!scheduleEvent->isScheduled()){
@@ -40,6 +44,7 @@ void FogNode::addToQueue(cMessage *msg)
 {
     if (waitingMessagePool.size() < queue_size)
       {
+        sum_utilize_time+=processing_delay;
           waitingMessagePool.push(msg);
       }
       else if (strcmp(msg->getArrivalGate()->getName(),"in3") == 3)
@@ -138,4 +143,11 @@ void FogNode::incrementHopCounter(cMessage* msg) {
 
 
  }
+ void FogNode::finish() {
+     double utlztime=measurments.getServerUtilizationPrecent(sum_utilize_time.dbl(),waitingMessagePool.size(),processing_delay);
+
+     EV << "FogNode ulitization: " << std::fixed << std::setprecision(2) << utlztime << "%\n";
+     }
+
+
 

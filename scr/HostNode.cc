@@ -12,7 +12,8 @@ void HostNode::initialize()
     messagesdelayVector.setName("Messages Delay");
     msgevent = new cMessage("timer event");
 //if (strcmp(getName(), "pc1")==0)
-    scheduleAfter(nextRandomDelay(), msgevent);
+    firstmessage_time=nextRandomDelay();
+    scheduleAfter(firstmessage_time, (msgevent));
 
 
 }
@@ -25,8 +26,9 @@ void HostNode::handleMessage(cMessage *msg)
 
     }
     else{
-        double  msgdly=measurments.getMesageDelayTime(msg)*1000;
+        double  msgdly=measurments.getResponseTime(msg)*1000;//in ms
         messagesdelayVector.recordWithTimestamp(simTime(), msgdly);
+        totalMBytesRecived+=message_size;
         EV<<"message ms recorded delay: "+std::to_string(msgdly);
         bubble(("response arrive image id: " + functions.getMessageID(msg) ).c_str());
         delete msg;
@@ -45,7 +47,7 @@ void HostNode::GenerateNewMesssage()
     Image *packet1 = new Image(msgcontent.c_str());
     packet1->setUniqueID(uniqueID);
     packet1->setContent((msgcontent).c_str());
-    packet1->setByteLength(1024);  // Example packet size
+    packet1->setByteLength(4);  // Example packet size 1Byte
     bubble(("generate new image id: " + std::to_string(uniqueID)).c_str());
 
     (gate("out")->getTransmissionChannel()->isBusy()) ? delete packet1 : send(packet1, "out");
@@ -56,11 +58,15 @@ void HostNode::GenerateNewMesssage()
 double HostNode::nextRandomDelay(double lowerBound, double upperBound) {
     double dly=uniform(lowerBound,upperBound);
 
-    EV<< "new delay  >>> "+std::to_string(dly)<<endl;
     return dly;
 }
 
 HostNode::~HostNode()
 {
     cancelAndDelete(msgevent);
+}
+void HostNode::finish() {
+    EV << "Average System Response: " <<std::to_string(measurments.getAverageResponseTime())  << " ms\n";  // EV is OMNeT++'s way to log data
+    EV << "SystemThroughput: " <<std::to_string(measurments.getThrouPut_bps(totalMBytesRecived *message_size,firstmessage_time))  << " Mbps\n";  // EV is OMNeT++'s way to log data
+
 }
