@@ -37,8 +37,15 @@ double Measurments::getThrouPut_bps(int total_bytes,double frist_msg_time) {
 
 }
 
-void Measurments::analyseIncomingPacket(Image *pkt) {
-    int packetSize = pkt->getByteLength();
 
+double Measurments::getPowerConsume(simtime_t runtime,int wps){
+    return runtime.dbl()*wps;
 }
+double Measurments::getPacketsLostsPrecent(double sent_pkts,double recieve_pkts){
+    double precent =((sent_pkts-recieve_pkts)/sent_pkts)*100;
+    return  precent;
+}
+double Measurments::   getMessagesRate(double sent_pkts){
 
+    return  sent_pkts/simTime().dbl();
+}

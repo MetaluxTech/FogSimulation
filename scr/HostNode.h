@@ -18,6 +18,8 @@ class HostNode : public cSimpleModule
     int message_size=4;//in MB
     cMessage *msgevent;
         int messageCounter = 0;
+    int sum_recieved_packets=0;
+    int sum_sent_packets=0;
 
   public:
     virtual ~HostNode();

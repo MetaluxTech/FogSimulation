@@ -1,0 +1,44 @@
+file 4905 1692348820                                            
+version 3
+run general-0-20230818-11:53:36-5312
+attr configname general
+attr datetime 20230818-11:53:36
+attr datetimef 20230818-115336
+attr experiment general
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network fogsim1.net1
+attr processid 5312
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network fogsim1.net1
+config sim-time-limit 5000ms
+config simtime-resolution 10us
+
+vector 0 net1.pc9 "Messages Delay" ETV
+vector 1 net1.pc7 "Messages Delay" ETV
+vector 2 net1.pc1 "Messages Delay" ETV
+vector 3 net1.pc2 "Messages Delay" ETV
+vector 4 net1.pc5 "Messages Delay" ETV
+vector 5 net1.pc10 "Messages Delay" ETV
+vector 6 net1.pc3 "Messages Delay" ETV
+vector 7 net1.pc4 "Messages Delay" ETV
+vector 8 net1.pc8 "Messages Delay" ETV
+vector 9 net1.pc6 "Messages Delay" ETV
+0	922 398 28 1826 0.33471 4.95946 19 104.81 139.88 2315.5 283312.73
+1	1320 445 53 1746 0.39472 4.72863 21 97.92 162.19 2519.6 305619.8662
+2	1765 443 58 1752 0.40472 4.75056 21 105.36 137.8 2520.52 303588.6516
+3	2208 432 64 1806 0.41972 4.92584 20 106.35 134.09 2373.33 282759.0559
+4	2640 341 70 1812 0.42472 4.93584 16 116.44 139.6 1991.15 248260.9635
+5	2981 430 76 1845 0.43472 4.98946 20 104.49 139.47 2424.9 295546.713
+6	3411 366 93 1681 0.47291 4.57103 17 105.54 139.33 2066.12 252326.5972
+7	3777 436 125 1758 0.54898 4.77056 20 101.12 128.33 2402.61 289491.0211
+8	4213 321 128 1720 0.55291 4.65863 15 110.24 128.62 1814.87 220031.1491
+9	4534 369 135 1832 0.56291 4.96946 17 110.21 133.69 2054 249097.3984
+

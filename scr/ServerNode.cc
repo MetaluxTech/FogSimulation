@@ -79,9 +79,12 @@ ServerNode::~ServerNode()
 
 
 void ServerNode::finish() {
-     double utlztime=measurments.getServerUtilizationPrecent(sum_utilize_time.dbl(),waitingMessagePool.size(),processing_delay);
 
+     double utlztime=measurments.getServerUtilizationPrecent(sum_utilize_time.dbl(),waitingMessagePool.size(),processing_delay);
+     double powr_cunsume=measurments.getPowerConsume(sum_utilize_time, watts_per_second);
+
+     EV << "server power consume: " << std::fixed << std::setprecision(1) << powr_cunsume << " Joule" << endl;
      EV << "server ulitization: " << std::fixed << std::setprecision(2) << utlztime << "%\n";
-     }
+          }
 
 

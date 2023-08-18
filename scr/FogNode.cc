@@ -23,7 +23,7 @@ void FogNode::handleMessage(cMessage *msg)
 {
     if (!msg->isSelfMessage()){
         Image *pkt = dynamic_cast<Image*>(msg);
-        measurments.analyseIncomingPacket(pkt);
+
            addToQueue(msg);
 
            if (!scheduleEvent->isScheduled()){
