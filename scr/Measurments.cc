@@ -10,7 +10,6 @@ Measurments::~Measurments() {
     // TODO Auto-generated destructor stub
 }
 
-
 double Measurments::getResponseTime(cMessage *msg) {
      double dly =( simTime()- msg->getCreationTime()).dbl();
     responses_time_vector.push_back(dly);

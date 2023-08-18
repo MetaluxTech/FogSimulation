@@ -13,13 +13,18 @@ class HostNode : public cSimpleModule
     Functions functions;
     Measurments measurments;
     cOutVector messagesdelayVector;
+    cMessage *msgevent;
     int totalMBytesRecived=0;
     double firstmessage_time=0;
-    int message_size=4;//in MB
-    cMessage *msgevent;
-        int messageCounter = 0;
     int sum_recieved_packets=0;
     int sum_sent_packets=0;
+    int message_size;
+    int events=0;
+    const char *configName;
+    double lowerBound;
+    double upperBound;
+
+
 
   public:
     virtual ~HostNode();
@@ -28,7 +33,7 @@ class HostNode : public cSimpleModule
     virtual void initialize() override;
     virtual void handleMessage(cMessage *msg) override;
     void GenerateNewMesssage();
-    double nextRandomDelay(double lowerBound=5.0/1000.0, double upperBound=500/1000.0);
+    double nextRandomDelay();
     virtual void finish() override;
 
 

@@ -4,6 +4,13 @@ package fogsim1;
 
 simple FogNode
 {
+    parameters:
+        
+        double processingDelay = default(15.0e-3);     // 15 ms delay for process every message
+      	int queueSize = default(2);     //  queue size 
+      	  
+      
+    
         @display("i=device/accesspoint");
     gates:
         input in1;

@@ -8,6 +8,11 @@ Define_Module(ServerNode);
 
 void ServerNode::initialize()
 {
+    processing_delay=par("processingDelay").doubleValue();
+    queue_size=par("queueSize").intValue();
+    watts_per_second=par("wattsConsumePerSecond").intValue();
+
+
 
     scheduleEvent = new cMessage("scheduleEvent");
 }

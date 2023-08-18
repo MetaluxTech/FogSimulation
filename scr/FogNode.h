@@ -17,8 +17,8 @@ class FogNode : public cSimpleModule
     Measurments measurments;
     cMessage *scheduleEvent ;
     std::string status="idle"; ///ether idle or now_processing
-    double processing_delay =15.0/1000.0;
-    int queue_size=3;
+    double processing_delay;
+    int queue_size;
     simtime_t sum_utilize_time=0.0;
     simtime_t start_utilize_time=0.0;
     std::map<cMessage*, int> hopCounter;

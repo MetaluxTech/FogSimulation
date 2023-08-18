@@ -28,5 +28,5 @@ Measurmets
 
 
 
-6 - fix issus in python server GUI ❌ ' ask '
+6 - fix issus in python server GUI ✔
 7 - fix python run simulation script issue ❌ ' ask '

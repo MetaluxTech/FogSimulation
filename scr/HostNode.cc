@@ -10,17 +10,33 @@ Define_Module(HostNode);
 
 void HostNode::initialize()
 {
-    messagesdelayVector.setName("Messages Delay");
-    msgevent = new cMessage("timer event");
-//if (strcmp(getName(), "pc1")==0)
-    firstmessage_time=nextRandomDelay();
-    scheduleAfter(firstmessage_time, (msgevent));
+    lowerBound=par("messagesGenerateLowerBound").doubleValue();
+    upperBound=par("messagesGenerateUpperBound").doubleValue();
+    message_size=par("messageSize").intValue();
 
+   configName = cSimulation::getActiveEnvir()->getConfigEx()->getActiveConfigName();
+      messagesdelayVector.setName("Messages Delay");
+    msgevent = new cMessage("timer event");
+    firstmessage_time=nextRandomDelay();
+
+    if (strcmp(configName, "one-request") == 0) {
+        if (strcmp(getName(), "pc1")==0)  scheduleAfter(firstmessage_time, (msgevent));
+
+    }else
+    {
+       scheduleAfter(firstmessage_time, (msgevent));
+
+    }
 
 }
 
 void HostNode::handleMessage(cMessage *msg)
 {
+    events++;
+
+    if  (strcmp(configName, "one-request") == 0 && events==2)
+       endSimulation();
+
     if(msg->isSelfMessage()){
             GenerateNewMesssage();
             scheduleAfter(nextRandomDelay(), msgevent);
@@ -63,7 +79,7 @@ void HostNode::GenerateNewMesssage()
 }
 
 
-double HostNode::nextRandomDelay(double lowerBound, double upperBound) {
+double HostNode::nextRandomDelay() {
     double dly=uniform(lowerBound,upperBound);
 
     return dly;
@@ -78,7 +94,8 @@ void HostNode::finish() {
     double thrput = measurments.getThrouPut_bps(totalMBytesRecived *message_size, firstmessage_time);
     double pkt_lost_prcent = measurments.getPacketsLostsPrecent(sum_sent_packets, sum_recieved_packets);
     double message_rate=measurments.getMessagesRate(sum_sent_packets);
-    if (strcmp(getName(), "pc1") == 0) {
+    if (strcmp(getName(), "pc1") == 0 && strcmp(configName, "one-request") != 0) {
+
         EV << "Average System Response: " << std::fixed << std::setprecision(2) << avrg_respnse_time << " ms\n";
         EV << "SystemThroughput: " << std::fixed << std::setprecision(2) << thrput << " Mbps\n";
         EV << "packet Lost Precentage: " << std::fixed << std::setprecision(2) << pkt_lost_prcent << "%\n";

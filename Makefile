@@ -34,7 +34,6 @@ O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc, .msg and .sm files
 OBJS = \
-    $O/measurment/messages_rate.o \
     $O/scr/FogNode.o \
     $O/scr/functions.o \
     $O/scr/HostNode.o \
