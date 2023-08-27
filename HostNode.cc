@@ -8,8 +8,7 @@
 Define_Module(HostNode);
 
 void HostNode::initialize()
-{
-    username=  functions.findLastModifiedNpzFile("C:/Users/mohsal/Desktop/app/metalux/fog/python/files");
+{   username="";
 
     lowerBound=par("messagesGenerateLowerBound").doubleValue();
     upperBound=par("messagesGenerateUpperBound").doubleValue();
@@ -20,7 +19,9 @@ void HostNode::initialize()
     msgevent = new cMessage("timer event");
     firstmessage_time=nextRandomDelay();
 
-    if (strcmp(configName, "one-request") == 0) {
+    if (strcmp(configName, "one-user") == 0) {
+        username=  functions.findLastModifiedNpzFile("C:/Users/mohsal/Desktop/app/metalux/fog/python/files");
+
         if (strcmp(getName(), "pc1")==0)  scheduleAt(simTime()+ firstmessage_time, (msgevent));
 
     }else
@@ -35,7 +36,7 @@ void HostNode::handleMessage(cMessage *msg)
 {
     events++;
 
-    if  (strcmp(configName, "one-request") == 0 && events==2)
+    if  (strcmp(configName, "one-user") == 0 && events==2)
        endSimulation();
 
     if(msg->isSelfMessage()){
@@ -95,7 +96,7 @@ void HostNode::finish() {
     double thrput = measurments.getThrouPut_bps(totalMBytesRecived *message_size, firstmessage_time);
     double pkt_lost_prcent = measurments.getPacketsLostsPrecent(sum_sent_packets, sum_recieved_packets);
     double message_rate=measurments.getMessagesRate(sum_sent_packets);
-    if (strcmp(getName(), "pc1") == 0 && strcmp(configName, "one-request") != 0) {
+    if (strcmp(getName(), "pc1") == 0 && strcmp(configName, "one-user") != 0) {
 
         EV << "Average System Response: " << std::fixed << std::setprecision(2) << avrg_respnse_time << " ms\n";
         EV << "SystemThroughput: " << std::fixed << std::setprecision(2) << thrput << " Mbps\n";

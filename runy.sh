@@ -1,2 +1,3 @@
 
-./fogsimulation2.exe
+./fogsimulation2.exe -c one-user
+
