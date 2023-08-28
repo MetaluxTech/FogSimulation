@@ -1,3 +1,3 @@
-package fogsim1;
+package fogsim6;
 
 @license(LGPL);

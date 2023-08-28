@@ -1,20 +1,25 @@
 #
-# OMNeT++/OMNEST Makefile for fogsimulation2
+# OMNeT++/OMNEST Makefile for fogsim6
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out
+#  opp_makemake -f --deep -O out -I.
 #
 
 # Name of target to be created (-o option)
-TARGET = fogsimulation2$(EXE_SUFFIX)
+TARGET_DIR = .
+TARGET_NAME = fogsim6$(D)
+TARGET = $(TARGET_NAME)$(EXE_SUFFIX)
+TARGET_IMPLIB = $(TARGET_NAME)$(IMPLIB_SUFFIX)
+TARGET_IMPDEF = $(TARGET_NAME)$(IMPDEF_SUFFIX)
+TARGET_FILES = $(TARGET_DIR)/$(TARGET)
 
 # User interface (uncomment one) (-u option)
-USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(CMDENV_LIBS)
+USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(QTENV_LIBS) $(CMDENV_LIBS)
 #USERIF_LIBS = $(CMDENV_LIBS)
-#USERIF_LIBS = $(TKENV_LIBS)
+#USERIF_LIBS = $(QTENV_LIBS)
 
 # C++ include paths (with -I)
-INCLUDE_PATH = -I. -Iresults
+INCLUDE_PATH = -I.
 
 # Additional object and library files to link with
 EXTRA_OBJS =
@@ -27,7 +32,7 @@ PROJECT_OUTPUT_DIR = out
 PROJECTRELATIVE_PATH =
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
-# Object files for local .cc and .msg files
+# Object files for local .cc, .msg and .sm files
 OBJS = \
     $O/FogNode.o \
     $O/functions.o \
@@ -40,18 +45,17 @@ OBJS = \
 MSGFILES = \
     CustomPackets.msg
 
+# SM files
+SMFILES =
+
 #------------------------------------------------------------------------------
 
-# Pull in OMNeT++ configuration (Makefile.inc or configuser.vc)
+# Pull in OMNeT++ configuration (Makefile.inc)
 
 ifneq ("$(OMNETPP_CONFIGFILE)","")
 CONFIGFILE = $(OMNETPP_CONFIGFILE)
 else
-ifneq ("$(OMNETPP_ROOT)","")
-CONFIGFILE = $(OMNETPP_ROOT)/Makefile.inc
-else
 CONFIGFILE = $(shell opp_configfilepath)
-endif
 endif
 
 ifeq ("$(wildcard $(CONFIGFILE))","")
@@ -61,88 +65,81 @@ endif
 include $(CONFIGFILE)
 
 # Simulation kernel and user interface libraries
-OMNETPP_LIB_SUBDIR = $(OMNETPP_LIB_DIR)/$(TOOLCHAIN_NAME)
-OMNETPP_LIBS = -L"$(OMNETPP_LIB_SUBDIR)" -L"$(OMNETPP_LIB_DIR)" -loppmain$D $(USERIF_LIBS) $(KERNEL_LIBS) $(SYS_LIBS)
+OMNETPP_LIBS = $(OPPMAIN_LIB) $(USERIF_LIBS) $(KERNEL_LIBS) $(SYS_LIBS)
 
-COPTS = $(CFLAGS)  $(INCLUDE_PATH) -I$(OMNETPP_INCL_DIR)
+COPTS = $(CFLAGS) $(IMPORT_DEFINES)  $(INCLUDE_PATH) -I$(OMNETPP_INCL_DIR)
 MSGCOPTS = $(INCLUDE_PATH)
+SMCOPTS =
 
 # we want to recompile everything if COPTS changes,
-# so we store COPTS into $COPTS_FILE and have object
-# files depend on it (except when "make depend" was called)
+# so we store COPTS into $COPTS_FILE (if COPTS has changed since last build)
+# and make the object files depend on it
 COPTS_FILE = $O/.last-copts
-ifneq ($(MAKECMDGOALS),depend)
 ifneq ("$(COPTS)","$(shell cat $(COPTS_FILE) 2>/dev/null || echo '')")
-$(shell $(MKPATH) "$O" && echo "$(COPTS)" >$(COPTS_FILE))
-endif
+  $(shell $(MKPATH) "$O")
+  $(file >$(COPTS_FILE),$(COPTS))
 endif
 
 #------------------------------------------------------------------------------
 # User-supplied makefile fragment(s)
-# >>>
-# <<<
+-include makefrag
+
 #------------------------------------------------------------------------------
 
 # Main target
-all: $O/$(TARGET)
-	$(Q)$(LN) $O/$(TARGET) .
+all: $(TARGET_FILES)
 
-$O/$(TARGET): $(OBJS)  $(wildcard $(EXTRA_OBJS)) Makefile
+$(TARGET_DIR)/% :: $O/%
+	@mkdir -p $(TARGET_DIR)
+	$(Q)$(LN) $< $@
+ifeq ($(TOOLCHAIN_NAME),clang-msabi)
+	-$(Q)-$(LN) $(<:%.dll=%.lib) $(@:%.dll=%.lib) 2>/dev/null
+
+$O/$(TARGET_NAME).pdb: $O/$(TARGET)
+endif
+
+$O/$(TARGET): $(OBJS)  $(wildcard $(EXTRA_OBJS)) Makefile $(CONFIGFILE)
 	@$(MKPATH) $O
 	@echo Creating executable: $@
-	$(Q)$(CXX) $(LDFLAGS) -o $O/$(TARGET)  $(OBJS) $(EXTRA_OBJS) $(AS_NEEDED_OFF) $(WHOLE_ARCHIVE_ON) $(LIBS) $(WHOLE_ARCHIVE_OFF) $(OMNETPP_LIBS)
+	$(Q)$(CXX) $(LDFLAGS) -o $O/$(TARGET) $(OBJS) $(EXTRA_OBJS) $(AS_NEEDED_OFF) $(WHOLE_ARCHIVE_ON) $(LIBS) $(WHOLE_ARCHIVE_OFF) $(OMNETPP_LIBS)
 
-.PHONY: all clean cleanall depend msgheaders
+.PHONY: all clean cleanall depend msgheaders smheaders
 
-.SUFFIXES: .cc
+# disabling all implicit rules
+.SUFFIXES :
 
-$O/%.o: %.cc $(COPTS_FILE)
+$O/%.o: %.cc $(COPTS_FILE) | msgheaders smheaders
 	@$(MKPATH) $(dir $@)
 	$(qecho) "$<"
 	$(Q)$(CXX) -c $(CXXFLAGS) $(COPTS) -o $@ $<
 
 %_m.cc %_m.h: %.msg
 	$(qecho) MSGC: $<
-	$(Q)$(MSGC) -s _m.cc $(MSGCOPTS) $?
+	$(Q)$(MSGC) -s _m.cc -MD -MP -MF $O/$(basename $<)_m.h.d $(MSGCOPTS) $?
+
+%_sm.cc %_sm.h: %.sm
+	$(qecho) SMC: $<
+	$(Q)$(SMC) -c++ -suffix cc $(SMCOPTS) $?
 
 msgheaders: $(MSGFILES:.msg=_m.h)
 
-clean:
-	$(qecho) Cleaning...
-	$(Q)-rm -rf $O
-	$(Q)-rm -f fogsimulation2 fogsimulation2.exe libfogsimulation2.so libfogsimulation2.a libfogsimulation2.dll libfogsimulation2.dylib
-	$(Q)-rm -f ./*_m.cc ./*_m.h
-	$(Q)-rm -f results/*_m.cc results/*_m.h
+smheaders: $(SMFILES:.sm=_sm.h)
 
-cleanall: clean
+clean:
+	$(qecho) Cleaning $(TARGET)
+	$(Q)-rm -rf $O
+	$(Q)-rm -f $(TARGET_FILES)
+	$(Q)-rm -f $(call opp_rwildcard, . , *_m.cc *_m.h *_sm.cc *_sm.h)
+
+cleanall:
+	$(Q)$(CLEANALL_COMMAND)
 	$(Q)-rm -rf $(PROJECT_OUTPUT_DIR)
 
-depend:
-	$(qecho) Creating dependencies...
-	$(Q)$(MAKEDEPEND) $(INCLUDE_PATH) -f Makefile -P\$$O/ -- $(MSG_CC_FILES)  ./*.cc results/*.cc
+help:
+	@echo "$$HELP_SYNOPSYS"
+	@echo "$$HELP_TARGETS"
+	@echo "$$HELP_VARIABLES"
+	@echo "$$HELP_EXAMPLES"
 
-# DO NOT DELETE THIS LINE -- make depend depends on it.
-$O/CustomPackets_m.o: CustomPackets_m.cc \
-	CustomPackets_m.h
-$O/FogNode.o: FogNode.cc \
-	CustomPackets_m.h \
-	FogNode.h \
-	Measurments.h \
-	functions.h
-$O/HostNode.o: HostNode.cc \
-	CustomPackets_m.h \
-	HostNode.h \
-	Measurments.h \
-	functions.h \
-	messages_globalid.h
-$O/Measurments.o: Measurments.cc \
-	CustomPackets_m.h \
-	Measurments.h
-$O/ServerNode.o: ServerNode.cc \
-	CustomPackets_m.h \
-	Measurments.h \
-	ServerNode.h \
-	functions.h
-$O/functions.o: functions.cc \
-	functions.h
-
+# include all dependencies
+-include $(OBJS:%=%.d) $(MSGFILES:%.msg=$O/%_m.h.d)

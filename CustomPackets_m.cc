@@ -1,5 +1,5 @@
 //
-// Generated file, do not edit! Created by nedtool 4.6 from CustomPackets.msg.
+// Generated file, do not edit! Created by opp_msgtool 6.0 from CustomPackets.msg.
 //
 
 // Disable warnings about unused variables, empty switch stmts, etc:
@@ -8,60 +8,155 @@
 #  pragma warning(disable:4065)
 #endif
 
+#if defined(__clang__)
+#  pragma clang diagnostic ignored "-Wshadow"
+#  pragma clang diagnostic ignored "-Wconversion"
+#  pragma clang diagnostic ignored "-Wunused-parameter"
+#  pragma clang diagnostic ignored "-Wc++98-compat"
+#  pragma clang diagnostic ignored "-Wunreachable-code-break"
+#  pragma clang diagnostic ignored "-Wold-style-cast"
+#elif defined(__GNUC__)
+#  pragma GCC diagnostic ignored "-Wshadow"
+#  pragma GCC diagnostic ignored "-Wconversion"
+#  pragma GCC diagnostic ignored "-Wunused-parameter"
+#  pragma GCC diagnostic ignored "-Wold-style-cast"
+#  pragma GCC diagnostic ignored "-Wsuggest-attribute=noreturn"
+#  pragma GCC diagnostic ignored "-Wfloat-conversion"
+#endif
+
 #include <iostream>
 #include <sstream>
+#include <memory>
+#include <type_traits>
 #include "CustomPackets_m.h"
 
-USING_NAMESPACE
+namespace omnetpp {
 
+// Template pack/unpack rules. They are declared *after* a1l type-specific pack functions for multiple reasons.
+// They are in the omnetpp namespace, to allow them to be found by argument-dependent lookup via the cCommBuffer argument
 
-// Another default rule (prevents compiler from choosing base class' doPacking())
-template<typename T>
-void doPacking(cCommBuffer *, T& t) {
-    throw cRuntimeError("Parsim error: no doPacking() function for type %s or its base class (check .msg and _m.cc/h files!)",opp_typename(typeid(t)));
-}
-
-template<typename T>
-void doUnpacking(cCommBuffer *, T& t) {
-    throw cRuntimeError("Parsim error: no doUnpacking() function for type %s or its base class (check .msg and _m.cc/h files!)",opp_typename(typeid(t)));
-}
-
-
-
-
-// Template rule for outputting std::vector<T> types
+// Packing/unpacking an std::vector
 template<typename T, typename A>
-inline std::ostream& operator<<(std::ostream& out, const std::vector<T,A>& vec)
+void doParsimPacking(omnetpp::cCommBuffer *buffer, const std::vector<T,A>& v)
 {
-    out.put('{');
-    for(typename std::vector<T,A>::const_iterator it = vec.begin(); it != vec.end(); ++it)
-    {
-        if (it != vec.begin()) {
-            out.put(','); out.put(' ');
-        }
-        out << *it;
+    int n = v.size();
+    doParsimPacking(buffer, n);
+    for (int i = 0; i < n; i++)
+        doParsimPacking(buffer, v[i]);
+}
+
+template<typename T, typename A>
+void doParsimUnpacking(omnetpp::cCommBuffer *buffer, std::vector<T,A>& v)
+{
+    int n;
+    doParsimUnpacking(buffer, n);
+    v.resize(n);
+    for (int i = 0; i < n; i++)
+        doParsimUnpacking(buffer, v[i]);
+}
+
+// Packing/unpacking an std::list
+template<typename T, typename A>
+void doParsimPacking(omnetpp::cCommBuffer *buffer, const std::list<T,A>& l)
+{
+    doParsimPacking(buffer, (int)l.size());
+    for (typename std::list<T,A>::const_iterator it = l.begin(); it != l.end(); ++it)
+        doParsimPacking(buffer, (T&)*it);
+}
+
+template<typename T, typename A>
+void doParsimUnpacking(omnetpp::cCommBuffer *buffer, std::list<T,A>& l)
+{
+    int n;
+    doParsimUnpacking(buffer, n);
+    for (int i = 0; i < n; i++) {
+        l.push_back(T());
+        doParsimUnpacking(buffer, l.back());
     }
-    out.put('}');
-    
-    char buf[32];
-    sprintf(buf, " (size=%u)", (unsigned int)vec.size());
-    out.write(buf, strlen(buf));
-    return out;
 }
 
-// Template rule which fires if a struct or class doesn't have operator<<
-template<typename T>
-inline std::ostream& operator<<(std::ostream& out,const T&) {return out;}
-
-Register_Class(Image);
-
-Image::Image(const char *name, int kind) : ::cPacket(name,kind)
+// Packing/unpacking an std::set
+template<typename T, typename Tr, typename A>
+void doParsimPacking(omnetpp::cCommBuffer *buffer, const std::set<T,Tr,A>& s)
 {
-    this->uniqueID_var = 0;
-    this->content_var = 0;
+    doParsimPacking(buffer, (int)s.size());
+    for (typename std::set<T,Tr,A>::const_iterator it = s.begin(); it != s.end(); ++it)
+        doParsimPacking(buffer, *it);
 }
 
-Image::Image(const Image& other) : ::cPacket(other)
+template<typename T, typename Tr, typename A>
+void doParsimUnpacking(omnetpp::cCommBuffer *buffer, std::set<T,Tr,A>& s)
+{
+    int n;
+    doParsimUnpacking(buffer, n);
+    for (int i = 0; i < n; i++) {
+        T x;
+        doParsimUnpacking(buffer, x);
+        s.insert(x);
+    }
+}
+
+// Packing/unpacking an std::map
+template<typename K, typename V, typename Tr, typename A>
+void doParsimPacking(omnetpp::cCommBuffer *buffer, const std::map<K,V,Tr,A>& m)
+{
+    doParsimPacking(buffer, (int)m.size());
+    for (typename std::map<K,V,Tr,A>::const_iterator it = m.begin(); it != m.end(); ++it) {
+        doParsimPacking(buffer, it->first);
+        doParsimPacking(buffer, it->second);
+    }
+}
+
+template<typename K, typename V, typename Tr, typename A>
+void doParsimUnpacking(omnetpp::cCommBuffer *buffer, std::map<K,V,Tr,A>& m)
+{
+    int n;
+    doParsimUnpacking(buffer, n);
+    for (int i = 0; i < n; i++) {
+        K k; V v;
+        doParsimUnpacking(buffer, k);
+        doParsimUnpacking(buffer, v);
+        m[k] = v;
+    }
+}
+
+// Default pack/unpack function for arrays
+template<typename T>
+void doParsimArrayPacking(omnetpp::cCommBuffer *b, const T *t, int n)
+{
+    for (int i = 0; i < n; i++)
+        doParsimPacking(b, t[i]);
+}
+
+template<typename T>
+void doParsimArrayUnpacking(omnetpp::cCommBuffer *b, T *t, int n)
+{
+    for (int i = 0; i < n; i++)
+        doParsimUnpacking(b, t[i]);
+}
+
+// Default rule to prevent compiler from choosing base class' doParsimPacking() function
+template<typename T>
+void doParsimPacking(omnetpp::cCommBuffer *, const T& t)
+{
+    throw omnetpp::cRuntimeError("Parsim error: No doParsimPacking() function for type %s", omnetpp::opp_typename(typeid(t)));
+}
+
+template<typename T>
+void doParsimUnpacking(omnetpp::cCommBuffer *, T& t)
+{
+    throw omnetpp::cRuntimeError("Parsim error: No doParsimUnpacking() function for type %s", omnetpp::opp_typename(typeid(t)));
+}
+
+}  // namespace omnetpp
+
+Register_Class(Image)
+
+Image::Image(const char *name, short kind) : ::omnetpp::cPacket(name, kind)
+{
+}
+
+Image::Image(const Image& other) : ::omnetpp::cPacket(other)
 {
     copy(other);
 }
@@ -72,240 +167,364 @@ Image::~Image()
 
 Image& Image::operator=(const Image& other)
 {
-    if (this==&other) return *this;
-    ::cPacket::operator=(other);
+    if (this == &other) return *this;
+    ::omnetpp::cPacket::operator=(other);
     copy(other);
     return *this;
 }
 
 void Image::copy(const Image& other)
 {
-    this->uniqueID_var = other.uniqueID_var;
-    this->content_var = other.content_var;
+    this->uniqueID = other.uniqueID;
+    this->content = other.content;
 }
 
-void Image::parsimPack(cCommBuffer *b)
+void Image::parsimPack(omnetpp::cCommBuffer *b) const
 {
-    ::cPacket::parsimPack(b);
-    doPacking(b,this->uniqueID_var);
-    doPacking(b,this->content_var);
+    ::omnetpp::cPacket::parsimPack(b);
+    doParsimPacking(b,this->uniqueID);
+    doParsimPacking(b,this->content);
 }
 
-void Image::parsimUnpack(cCommBuffer *b)
+void Image::parsimUnpack(omnetpp::cCommBuffer *b)
 {
-    ::cPacket::parsimUnpack(b);
-    doUnpacking(b,this->uniqueID_var);
-    doUnpacking(b,this->content_var);
+    ::omnetpp::cPacket::parsimUnpack(b);
+    doParsimUnpacking(b,this->uniqueID);
+    doParsimUnpacking(b,this->content);
 }
 
 int Image::getUniqueID() const
 {
-    return uniqueID_var;
+    return this->uniqueID;
 }
 
 void Image::setUniqueID(int uniqueID)
 {
-    this->uniqueID_var = uniqueID;
+    this->uniqueID = uniqueID;
 }
 
 const char * Image::getContent() const
 {
-    return content_var.c_str();
+    return this->content.c_str();
 }
 
 void Image::setContent(const char * content)
 {
-    this->content_var = content;
+    this->content = content;
 }
 
-class ImageDescriptor : public cClassDescriptor
+class ImageDescriptor : public omnetpp::cClassDescriptor
 {
+  private:
+    mutable const char **propertyNames;
+    enum FieldConstants {
+        FIELD_uniqueID,
+        FIELD_content,
+    };
   public:
     ImageDescriptor();
     virtual ~ImageDescriptor();
 
-    virtual bool doesSupport(cObject *obj) const;
-    virtual const char *getProperty(const char *propertyname) const;
-    virtual int getFieldCount(void *object) const;
-    virtual const char *getFieldName(void *object, int field) const;
-    virtual int findField(void *object, const char *fieldName) const;
-    virtual unsigned int getFieldTypeFlags(void *object, int field) const;
-    virtual const char *getFieldTypeString(void *object, int field) const;
-    virtual const char *getFieldProperty(void *object, int field, const char *propertyname) const;
-    virtual int getArraySize(void *object, int field) const;
+    virtual bool doesSupport(omnetpp::cObject *obj) const override;
+    virtual const char **getPropertyNames() const override;
+    virtual const char *getProperty(const char *propertyName) const override;
+    virtual int getFieldCount() const override;
+    virtual const char *getFieldName(int field) const override;
+    virtual int findField(const char *fieldName) const override;
+    virtual unsigned int getFieldTypeFlags(int field) const override;
+    virtual const char *getFieldTypeString(int field) const override;
+    virtual const char **getFieldPropertyNames(int field) const override;
+    virtual const char *getFieldProperty(int field, const char *propertyName) const override;
+    virtual int getFieldArraySize(omnetpp::any_ptr object, int field) const override;
+    virtual void setFieldArraySize(omnetpp::any_ptr object, int field, int size) const override;
 
-    virtual std::string getFieldAsString(void *object, int field, int i) const;
-    virtual bool setFieldAsString(void *object, int field, int i, const char *value) const;
+    virtual const char *getFieldDynamicTypeString(omnetpp::any_ptr object, int field, int i) const override;
+    virtual std::string getFieldValueAsString(omnetpp::any_ptr object, int field, int i) const override;
+    virtual void setFieldValueAsString(omnetpp::any_ptr object, int field, int i, const char *value) const override;
+    virtual omnetpp::cValue getFieldValue(omnetpp::any_ptr object, int field, int i) const override;
+    virtual void setFieldValue(omnetpp::any_ptr object, int field, int i, const omnetpp::cValue& value) const override;
 
-    virtual const char *getFieldStructName(void *object, int field) const;
-    virtual void *getFieldStructPointer(void *object, int field, int i) const;
+    virtual const char *getFieldStructName(int field) const override;
+    virtual omnetpp::any_ptr getFieldStructValuePointer(omnetpp::any_ptr object, int field, int i) const override;
+    virtual void setFieldStructValuePointer(omnetpp::any_ptr object, int field, int i, omnetpp::any_ptr ptr) const override;
 };
 
-Register_ClassDescriptor(ImageDescriptor);
+Register_ClassDescriptor(ImageDescriptor)
 
-ImageDescriptor::ImageDescriptor() : cClassDescriptor("Image", "cPacket")
+ImageDescriptor::ImageDescriptor() : omnetpp::cClassDescriptor(omnetpp::opp_typename(typeid(Image)), "omnetpp::cPacket")
 {
+    propertyNames = nullptr;
 }
 
 ImageDescriptor::~ImageDescriptor()
 {
+    delete[] propertyNames;
 }
 
-bool ImageDescriptor::doesSupport(cObject *obj) const
+bool ImageDescriptor::doesSupport(omnetpp::cObject *obj) const
 {
-    return dynamic_cast<Image *>(obj)!=NULL;
+    return dynamic_cast<Image *>(obj)!=nullptr;
 }
 
-const char *ImageDescriptor::getProperty(const char *propertyname) const
+const char **ImageDescriptor::getPropertyNames() const
 {
-    cClassDescriptor *basedesc = getBaseClassDescriptor();
-    return basedesc ? basedesc->getProperty(propertyname) : NULL;
+    if (!propertyNames) {
+        static const char *names[] = {  nullptr };
+        omnetpp::cClassDescriptor *base = getBaseClassDescriptor();
+        const char **baseNames = base ? base->getPropertyNames() : nullptr;
+        propertyNames = mergeLists(baseNames, names);
+    }
+    return propertyNames;
 }
 
-int ImageDescriptor::getFieldCount(void *object) const
+const char *ImageDescriptor::getProperty(const char *propertyName) const
 {
-    cClassDescriptor *basedesc = getBaseClassDescriptor();
-    return basedesc ? 2+basedesc->getFieldCount(object) : 2;
+    omnetpp::cClassDescriptor *base = getBaseClassDescriptor();
+    return base ? base->getProperty(propertyName) : nullptr;
 }
 
-unsigned int ImageDescriptor::getFieldTypeFlags(void *object, int field) const
+int ImageDescriptor::getFieldCount() const
 {
-    cClassDescriptor *basedesc = getBaseClassDescriptor();
-    if (basedesc) {
-        if (field < basedesc->getFieldCount(object))
-            return basedesc->getFieldTypeFlags(object, field);
-        field -= basedesc->getFieldCount(object);
+    omnetpp::cClassDescriptor *base = getBaseClassDescriptor();
+    return base ? 2+base->getFieldCount() : 2;
+}
+
+unsigned int ImageDescriptor::getFieldTypeFlags(int field) const
+{
+    omnetpp::cClassDescriptor *base = getBaseClassDescriptor();
+    if (base) {
+        if (field < base->getFieldCount())
+            return base->getFieldTypeFlags(field);
+        field -= base->getFieldCount();
     }
     static unsigned int fieldTypeFlags[] = {
-        FD_ISEDITABLE,
-        FD_ISEDITABLE,
+        FD_ISEDITABLE,    // FIELD_uniqueID
+        FD_ISEDITABLE,    // FIELD_content
     };
-    return (field>=0 && field<2) ? fieldTypeFlags[field] : 0;
+    return (field >= 0 && field < 2) ? fieldTypeFlags[field] : 0;
 }
 
-const char *ImageDescriptor::getFieldName(void *object, int field) const
+const char *ImageDescriptor::getFieldName(int field) const
 {
-    cClassDescriptor *basedesc = getBaseClassDescriptor();
-    if (basedesc) {
-        if (field < basedesc->getFieldCount(object))
-            return basedesc->getFieldName(object, field);
-        field -= basedesc->getFieldCount(object);
+    omnetpp::cClassDescriptor *base = getBaseClassDescriptor();
+    if (base) {
+        if (field < base->getFieldCount())
+            return base->getFieldName(field);
+        field -= base->getFieldCount();
     }
     static const char *fieldNames[] = {
         "uniqueID",
         "content",
     };
-    return (field>=0 && field<2) ? fieldNames[field] : NULL;
+    return (field >= 0 && field < 2) ? fieldNames[field] : nullptr;
 }
 
-int ImageDescriptor::findField(void *object, const char *fieldName) const
+int ImageDescriptor::findField(const char *fieldName) const
 {
-    cClassDescriptor *basedesc = getBaseClassDescriptor();
-    int base = basedesc ? basedesc->getFieldCount(object) : 0;
-    if (fieldName[0]=='u' && strcmp(fieldName, "uniqueID")==0) return base+0;
-    if (fieldName[0]=='c' && strcmp(fieldName, "content")==0) return base+1;
-    return basedesc ? basedesc->findField(object, fieldName) : -1;
+    omnetpp::cClassDescriptor *base = getBaseClassDescriptor();
+    int baseIndex = base ? base->getFieldCount() : 0;
+    if (strcmp(fieldName, "uniqueID") == 0) return baseIndex + 0;
+    if (strcmp(fieldName, "content") == 0) return baseIndex + 1;
+    return base ? base->findField(fieldName) : -1;
 }
 
-const char *ImageDescriptor::getFieldTypeString(void *object, int field) const
+const char *ImageDescriptor::getFieldTypeString(int field) const
 {
-    cClassDescriptor *basedesc = getBaseClassDescriptor();
-    if (basedesc) {
-        if (field < basedesc->getFieldCount(object))
-            return basedesc->getFieldTypeString(object, field);
-        field -= basedesc->getFieldCount(object);
+    omnetpp::cClassDescriptor *base = getBaseClassDescriptor();
+    if (base) {
+        if (field < base->getFieldCount())
+            return base->getFieldTypeString(field);
+        field -= base->getFieldCount();
     }
     static const char *fieldTypeStrings[] = {
-        "int",
-        "string",
+        "int",    // FIELD_uniqueID
+        "string",    // FIELD_content
     };
-    return (field>=0 && field<2) ? fieldTypeStrings[field] : NULL;
+    return (field >= 0 && field < 2) ? fieldTypeStrings[field] : nullptr;
 }
 
-const char *ImageDescriptor::getFieldProperty(void *object, int field, const char *propertyname) const
+const char **ImageDescriptor::getFieldPropertyNames(int field) const
 {
-    cClassDescriptor *basedesc = getBaseClassDescriptor();
-    if (basedesc) {
-        if (field < basedesc->getFieldCount(object))
-            return basedesc->getFieldProperty(object, field, propertyname);
-        field -= basedesc->getFieldCount(object);
+    omnetpp::cClassDescriptor *base = getBaseClassDescriptor();
+    if (base) {
+        if (field < base->getFieldCount())
+            return base->getFieldPropertyNames(field);
+        field -= base->getFieldCount();
     }
     switch (field) {
-        default: return NULL;
+        default: return nullptr;
     }
 }
 
-int ImageDescriptor::getArraySize(void *object, int field) const
+const char *ImageDescriptor::getFieldProperty(int field, const char *propertyName) const
 {
-    cClassDescriptor *basedesc = getBaseClassDescriptor();
-    if (basedesc) {
-        if (field < basedesc->getFieldCount(object))
-            return basedesc->getArraySize(object, field);
-        field -= basedesc->getFieldCount(object);
+    omnetpp::cClassDescriptor *base = getBaseClassDescriptor();
+    if (base) {
+        if (field < base->getFieldCount())
+            return base->getFieldProperty(field, propertyName);
+        field -= base->getFieldCount();
     }
-    Image *pp = (Image *)object; (void)pp;
+    switch (field) {
+        default: return nullptr;
+    }
+}
+
+int ImageDescriptor::getFieldArraySize(omnetpp::any_ptr object, int field) const
+{
+    omnetpp::cClassDescriptor *base = getBaseClassDescriptor();
+    if (base) {
+        if (field < base->getFieldCount())
+            return base->getFieldArraySize(object, field);
+        field -= base->getFieldCount();
+    }
+    Image *pp = omnetpp::fromAnyPtr<Image>(object); (void)pp;
     switch (field) {
         default: return 0;
     }
 }
 
-std::string ImageDescriptor::getFieldAsString(void *object, int field, int i) const
+void ImageDescriptor::setFieldArraySize(omnetpp::any_ptr object, int field, int size) const
 {
-    cClassDescriptor *basedesc = getBaseClassDescriptor();
-    if (basedesc) {
-        if (field < basedesc->getFieldCount(object))
-            return basedesc->getFieldAsString(object,field,i);
-        field -= basedesc->getFieldCount(object);
+    omnetpp::cClassDescriptor *base = getBaseClassDescriptor();
+    if (base) {
+        if (field < base->getFieldCount()){
+            base->setFieldArraySize(object, field, size);
+            return;
+        }
+        field -= base->getFieldCount();
     }
-    Image *pp = (Image *)object; (void)pp;
+    Image *pp = omnetpp::fromAnyPtr<Image>(object); (void)pp;
     switch (field) {
-        case 0: return long2string(pp->getUniqueID());
-        case 1: return oppstring2string(pp->getContent());
+        default: throw omnetpp::cRuntimeError("Cannot set array size of field %d of class 'Image'", field);
+    }
+}
+
+const char *ImageDescriptor::getFieldDynamicTypeString(omnetpp::any_ptr object, int field, int i) const
+{
+    omnetpp::cClassDescriptor *base = getBaseClassDescriptor();
+    if (base) {
+        if (field < base->getFieldCount())
+            return base->getFieldDynamicTypeString(object,field,i);
+        field -= base->getFieldCount();
+    }
+    Image *pp = omnetpp::fromAnyPtr<Image>(object); (void)pp;
+    switch (field) {
+        default: return nullptr;
+    }
+}
+
+std::string ImageDescriptor::getFieldValueAsString(omnetpp::any_ptr object, int field, int i) const
+{
+    omnetpp::cClassDescriptor *base = getBaseClassDescriptor();
+    if (base) {
+        if (field < base->getFieldCount())
+            return base->getFieldValueAsString(object,field,i);
+        field -= base->getFieldCount();
+    }
+    Image *pp = omnetpp::fromAnyPtr<Image>(object); (void)pp;
+    switch (field) {
+        case FIELD_uniqueID: return long2string(pp->getUniqueID());
+        case FIELD_content: return oppstring2string(pp->getContent());
         default: return "";
     }
 }
 
-bool ImageDescriptor::setFieldAsString(void *object, int field, int i, const char *value) const
+void ImageDescriptor::setFieldValueAsString(omnetpp::any_ptr object, int field, int i, const char *value) const
 {
-    cClassDescriptor *basedesc = getBaseClassDescriptor();
-    if (basedesc) {
-        if (field < basedesc->getFieldCount(object))
-            return basedesc->setFieldAsString(object,field,i,value);
-        field -= basedesc->getFieldCount(object);
+    omnetpp::cClassDescriptor *base = getBaseClassDescriptor();
+    if (base) {
+        if (field < base->getFieldCount()){
+            base->setFieldValueAsString(object, field, i, value);
+            return;
+        }
+        field -= base->getFieldCount();
     }
-    Image *pp = (Image *)object; (void)pp;
+    Image *pp = omnetpp::fromAnyPtr<Image>(object); (void)pp;
     switch (field) {
-        case 0: pp->setUniqueID(string2long(value)); return true;
-        case 1: pp->setContent((value)); return true;
-        default: return false;
+        case FIELD_uniqueID: pp->setUniqueID(string2long(value)); break;
+        case FIELD_content: pp->setContent((value)); break;
+        default: throw omnetpp::cRuntimeError("Cannot set field %d of class 'Image'", field);
     }
 }
 
-const char *ImageDescriptor::getFieldStructName(void *object, int field) const
+omnetpp::cValue ImageDescriptor::getFieldValue(omnetpp::any_ptr object, int field, int i) const
 {
-    cClassDescriptor *basedesc = getBaseClassDescriptor();
-    if (basedesc) {
-        if (field < basedesc->getFieldCount(object))
-            return basedesc->getFieldStructName(object, field);
-        field -= basedesc->getFieldCount(object);
+    omnetpp::cClassDescriptor *base = getBaseClassDescriptor();
+    if (base) {
+        if (field < base->getFieldCount())
+            return base->getFieldValue(object,field,i);
+        field -= base->getFieldCount();
+    }
+    Image *pp = omnetpp::fromAnyPtr<Image>(object); (void)pp;
+    switch (field) {
+        case FIELD_uniqueID: return pp->getUniqueID();
+        case FIELD_content: return pp->getContent();
+        default: throw omnetpp::cRuntimeError("Cannot return field %d of class 'Image' as cValue -- field index out of range?", field);
+    }
+}
+
+void ImageDescriptor::setFieldValue(omnetpp::any_ptr object, int field, int i, const omnetpp::cValue& value) const
+{
+    omnetpp::cClassDescriptor *base = getBaseClassDescriptor();
+    if (base) {
+        if (field < base->getFieldCount()){
+            base->setFieldValue(object, field, i, value);
+            return;
+        }
+        field -= base->getFieldCount();
+    }
+    Image *pp = omnetpp::fromAnyPtr<Image>(object); (void)pp;
+    switch (field) {
+        case FIELD_uniqueID: pp->setUniqueID(omnetpp::checked_int_cast<int>(value.intValue())); break;
+        case FIELD_content: pp->setContent(value.stringValue()); break;
+        default: throw omnetpp::cRuntimeError("Cannot set field %d of class 'Image'", field);
+    }
+}
+
+const char *ImageDescriptor::getFieldStructName(int field) const
+{
+    omnetpp::cClassDescriptor *base = getBaseClassDescriptor();
+    if (base) {
+        if (field < base->getFieldCount())
+            return base->getFieldStructName(field);
+        field -= base->getFieldCount();
     }
     switch (field) {
-        default: return NULL;
+        default: return nullptr;
     };
 }
 
-void *ImageDescriptor::getFieldStructPointer(void *object, int field, int i) const
+omnetpp::any_ptr ImageDescriptor::getFieldStructValuePointer(omnetpp::any_ptr object, int field, int i) const
 {
-    cClassDescriptor *basedesc = getBaseClassDescriptor();
-    if (basedesc) {
-        if (field < basedesc->getFieldCount(object))
-            return basedesc->getFieldStructPointer(object, field, i);
-        field -= basedesc->getFieldCount(object);
+    omnetpp::cClassDescriptor *base = getBaseClassDescriptor();
+    if (base) {
+        if (field < base->getFieldCount())
+            return base->getFieldStructValuePointer(object, field, i);
+        field -= base->getFieldCount();
     }
-    Image *pp = (Image *)object; (void)pp;
+    Image *pp = omnetpp::fromAnyPtr<Image>(object); (void)pp;
     switch (field) {
-        default: return NULL;
+        default: return omnetpp::any_ptr(nullptr);
     }
 }
 
+void ImageDescriptor::setFieldStructValuePointer(omnetpp::any_ptr object, int field, int i, omnetpp::any_ptr ptr) const
+{
+    omnetpp::cClassDescriptor *base = getBaseClassDescriptor();
+    if (base) {
+        if (field < base->getFieldCount()){
+            base->setFieldStructValuePointer(object, field, i, ptr);
+            return;
+        }
+        field -= base->getFieldCount();
+    }
+    Image *pp = omnetpp::fromAnyPtr<Image>(object); (void)pp;
+    switch (field) {
+        default: throw omnetpp::cRuntimeError("Cannot set field %d of class 'Image'", field);
+    }
+}
+
+namespace omnetpp {
+
+}  // namespace omnetpp
 

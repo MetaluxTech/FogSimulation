@@ -1,6 +1,6 @@
 
 
-package fogsim1;
+package fogsim6;
 simple ServerNode
 {
  parameters:

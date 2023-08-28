@@ -6,6 +6,8 @@
 
 #include "CustomPackets_m.h"
 #include <omnetpp.h>
+using namespace omnetpp;
+
 class Measurments {
 private:
   std::vector<double> responses_time_vector;

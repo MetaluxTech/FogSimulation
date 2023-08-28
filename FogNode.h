@@ -1,10 +1,11 @@
 
-#ifndef __FOGSIM1_FOGNODE_H_
-#define __FOGSIM1_FOGNODE_H_
+#ifndef __fogsim6_FOGNODE_H_
+#define __fogsim6_FOGNODE_H_
 #include <queue>
 #include "functions.h"
 #include <omnetpp.h>
 #include "Measurments.h"
+using namespace omnetpp;
 
 
 

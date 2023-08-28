@@ -1,4 +1,4 @@
-package fogsim1;
+package fogsim6;
 
 channel hostsFogChannel extends ned.DatarateChannel {
     datarate = 1Gbps; // Example datarate, adjust accordingly

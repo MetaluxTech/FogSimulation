@@ -9,6 +9,8 @@ namespace GlobalID {
 #endif
 
 #include <omnetpp.h>
+using namespace omnetpp;
+
 
 namespace GlobalID {
     static int counter = 0;  // This will be shared across all nodes

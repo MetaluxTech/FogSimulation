@@ -4,7 +4,7 @@
 #include <omnetpp.h>
 #include <map>
 #include <string>
-
+using namespace omnetpp;
 
 class Functions {
 

@@ -12,7 +12,7 @@ void HostNode::initialize()
 
     lowerBound=par("messagesGenerateLowerBound").doubleValue();
     upperBound=par("messagesGenerateUpperBound").doubleValue();
-    message_size=par("messageSize").longValue();
+    message_size=par("messageSize").intValue();
 
    configName = cSimulation::getActiveEnvir()->getConfigEx()->getActiveConfigName();
       messagesdelayVector.setName("Messages Delay");

@@ -1,12 +1,13 @@
 
 
-#ifndef __FOGSIM1_SERVERNODE_H_
-#define __FOGSIM1_SERVERNODE_H_
+#ifndef __fogsim6_SERVERNODE_H_
+#define __fogsim6_SERVERNODE_H_
 
 #include <omnetpp.h>
 #include <queue>
 #include "functions.h"
 #include  "Measurments.h"
+using namespace omnetpp;
 
 
 class ServerNode : public cSimpleModule

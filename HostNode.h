@@ -1,10 +1,11 @@
 
-#ifndef __FOGSIM1_HOSTNODE_H_
-#define __FOGSIM1_HOSTNODE_H_
+#ifndef __fogsim6_HOSTNODE_H_
+#define __fogsim6_HOSTNODE_H_
 
 #include <omnetpp.h>
 #include "functions.h"
 #include "Measurments.h"
+using namespace omnetpp;
 
 class HostNode : public cSimpleModule
 {

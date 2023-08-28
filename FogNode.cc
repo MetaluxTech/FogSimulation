@@ -2,6 +2,7 @@
 
 #include "FogNode.h"
 #include "functions.h"
+using namespace omnetpp;
 
 
 Define_Module(FogNode);
@@ -11,7 +12,7 @@ void FogNode::initialize()
 {
 
      processing_delay=par("processingDelay").doubleValue();
-     queue_size=par("queueSize").longValue();
+     queue_size=par("queueSize").intValue();
 
 
 

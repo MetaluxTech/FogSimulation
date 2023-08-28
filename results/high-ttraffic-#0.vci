@@ -1,0 +1,51 @@
+file 198580 1693235504                                          
+version 3
+run high-ttraffic-0-20230828-18:11:35-11932
+attr configname high-ttraffic
+attr datetime 20230828-18:11:35
+attr datetimef 20230828-181135
+attr experiment high-ttraffic
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network fogsim6.net1
+attr processid 11932
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config sim-time-limit 100s
+config **.pc*.messagesGenerateLowerBound "100.0e-3  //10ms"
+config **.pc*.messagesGenerateUpperBound "150.0e-3   //150ms"
+config **.fogNode*.queueSize "5// set queue size to 5 for example"
+config **.fogNode*.processingDelay "10.0e-3  // 10 ms delay for example"
+config **.Server.processingDelay 20.0e-3
+config **.Server.queueSize 50
+config **.Server.wattsConsumePerSecond 40
+config network fogsim6.net1
+config sim-time-limit 5s
+
+vector 0 net1.pc9 "Messages Delay" ETV
+vector 1 net1.pc7 "Messages Delay" ETV
+vector 2 net1.pc1 "Messages Delay" ETV
+vector 3 net1.pc5 "Messages Delay" ETV
+vector 4 net1.pc10 "Messages Delay" ETV
+vector 5 net1.pc3 "Messages Delay" ETV
+vector 6 net1.pc8 "Messages Delay" ETV
+vector 7 net1.pc2 "Messages Delay" ETV
+vector 8 net1.pc6 "Messages Delay" ETV
+vector 9 net1.pc4 "Messages Delay" ETV
+0	1316 19421 54 60421 0.241182867839 99.763864306005 491 120.000128 1125.356095588 528066.58028458 571711941.02899
+1	20737 20343 69 60534 0.261182867839 99.941182867839 514 133.93870897 1124.107307446 552520.73338431 598159052.21117
+2	41080 19661 99 60455 0.294519025082 99.821182867839 497 167.078349967 1117.548126196 535010.39826043 579592494.09247
+3	60741 20290 106 60551 0.306780600575 99.974626722284 513 176.642432056 1118.369566699 551884.3565183 597087317.3105
+4	81031 19891 115 60509 0.321182867839 99.901182867839 503 190.004683019 1117.210367059 540849.95662856 585548618.1403
+5	100922 19377 122 60482 0.341182867839 99.861182867839 490 205.42339959 1112.688550114 526888.90464991 570228526.35959
+6	120299 19012 127 60284 0.361182867839 99.550962012015 481 218.820280976 1119.020397095 517641.16065645 560487884.99375
+7	139311 19789 137 60521 0.381182867839 99.921182867839 501 251.54063702 1114.82210045 539023.55188437 583465233.60539
+8	159100 18744 156 60545 0.401182867839 99.964626722284 474 258.285586847 1115.896991292 510325.31930664 552491594.61217
+9	177844 20734 169 60442 0.415485405589 99.801182867839 524 273.272118384 1112.477946905 563554.03587651 609616432.25495
+
