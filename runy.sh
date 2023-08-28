@@ -1,3 +1,3 @@
 
-./fogsimulation2.exe -c one-user
+./fogsim6.exe -c one-user
 
